@@ -1,0 +1,69 @@
+/* COMMON */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+span {
+  display: inline-block;
+}
+
+/* TOP BANNER */
+.shippingBanner-body {
+  background-color: #252525;
+  color: #fff;
+  font-size: 14px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shippingBanner-body a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.shippingBanner-body a:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: #fff;
+}
+.shippingBanner-body span {
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+
+/* HEADER */
+header {
+  display: flex;
+  background-color: #333;
+  color: #fff;
+  height: 80px;
+  position: relative;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+header .main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header .main-menu li > a:hover {
+  color: #f6f5e8;
+}
+header .sub-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+  gap: 20px;
+}

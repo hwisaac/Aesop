@@ -1,0 +1,105 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #fffef2;
+  --color-black: #000000;
+  --color-dark-gray: #252525;
+  --color-semi-dark-gray: #333333;
+
+  /* Font Size */
+  --font-regular: 14px;
+  --font-medium: 22px;
+
+  /* Font Weight */
+  --weight-blod: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+  line-height: 1.5;
+  color: var(--color-light-white);
+  font-size: var(--font-regular);
+}
+
+/* Typograhy */
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-light-white);
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-dark-gray);
+  padding: 12px 20px 13px;
+  box-sizing: border-box;
+}
+
+.header-btn {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  box-sizing: border-box;
+}
+
+.header-btn:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.header-icon {
+  font-size: 16px;
+}
+
+/* GNB */
+.gnb {
+  background-color: var(--color-semi-dark-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 35px;
+  font-size: var(--font-regular);
+}
+
+.gnb-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.gnb-container span {
+  font-size: var(--font-medium);
+}
+
+.gnb-item {
+  padding: 4px;
+}
+
+.gnb-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.gnb-list__item button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: inherit;
+}
