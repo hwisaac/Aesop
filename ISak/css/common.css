@@ -1,0 +1,23 @@
+body {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: "Nanum gothic", sans-serif;
+
+  /* 삭제 */
+  height: 3000px;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+.inner {
+  display: flex;
+  width: 1414px;
+  position: relative;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
