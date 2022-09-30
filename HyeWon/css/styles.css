@@ -1,9 +1,38 @@
-body {
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #fffef2;
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #fffef2;
+  --color-black: #000000;
+  --color-dark-gray: #252525;
+  --color-semi-dark-gray: #333333;
+
+  /* Font Size */
+  --font-regular: 14px;
+  --font-medium: 22px;
+
+  /* Font Weight */
+  --weight-blod: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+}
+
+/* Universal tags */
+* {
   box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+  line-height: 1.5;
+  color: var(--color-light-white);
+  font-size: var(--font-regular);
+}
+
+/* Typograhy */
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-light-white);
 }
 
 /* header */
@@ -12,8 +41,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  background-color: #252525;
-  font-size: 14px;
+  background-color: var(--color-dark-gray);
   padding: 12px 20px 13px;
   box-sizing: border-box;
 }
@@ -39,11 +67,12 @@ body {
 
 /* GNB */
 .gnb {
-  background-color: #333333;
+  background-color: var(--color-semi-dark-gray);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 26px 35px;
+  font-size: var(--font-regular);
 }
 
 .gnb-container {
@@ -54,7 +83,7 @@ body {
 }
 
 .gnb-container span {
-  font-size: 22px;
+  font-size: var(--font-medium);
 }
 
 .gnb-item {
