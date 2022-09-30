@@ -3,12 +3,55 @@ a {
   text-decoration: none;
 }
 
+/* SHIPPING-BANNER */
+.shipping-banner {
+  background-color: #252525;
+  width: 100%;
+}
+.shipping-banner .banner-inner {
+  padding: 12px;
+  background-color: #252525;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  
+}
+.shipping-banner .banner-inner .banner-btn {
+  margin: auto;
+  color: #fffef2;
+  background-color: #252525;
+  border: .3px solid #252525;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+}
+.shipping-banner .banner-inner .banner-btn:hover {
+  border-bottom: .3px solid #fffef2;
+  transition: 1s;
+}
+.shipping-banner .banner-inner .banner-btn p.banner-btn-content {
+  font-size: 14px;
+  font-family: 'Suisse Medium', sans-serif;
+}
+.shipping-banner .banner-inner .banner-btn span.banner-btn-icon {
+  fill: #fffef2;
+  margin-left: 20px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 0
+}
+
+
 /* HEADER */
 .header {
   width: 100%;
   background-color: #333;
 }
-.header .inner {
+.header .header-inner {
   height: 80px;
   margin: 0 40px;
   box-sizing: border-box;
@@ -18,35 +61,35 @@ a {
   position: relative;
   color: #fffef2;
 }
-.header .inner ul.menu {
+.header .header-inner ul.menu {
   height: 80px;
   display: flex;
   align-items: center;
   position: absolute;
   left: 0;
 }
-.header .inner ul.menu li {
+.header .header-inner ul.menu li {
   margin-right: 1.3vw;
   font-family: 'Suisse Medium', sans-serif;
   color: #fffef2;
 }
-.header .inner ul.menu li a {
+.header .header-inner ul.menu li a {
   margin: auto;
   font-size: 14px;
   font-family: 'Suisse Medium', sans-serif;
   color: #fffef2;
 }
-.header .inner ul.login-menu {
+.header .header-inner ul.login-menu {
   height: 80px;
   display: flex;
   align-items: center;
   position: absolute;
   right: 0;
 }
-.header .inner ul.login-menu li {
+.header .header-inner ul.login-menu li {
   margin-right: 1.3vw;
 }
-.header .inner ul.login-menu li a {
+.header .header-inner ul.login-menu li a {
   font-size: 14px;
   font-family: 'Suisse Medium', sans-serif;
   color: #fffef2;
