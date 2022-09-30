@@ -1,0 +1,53 @@
+/* COMMON */
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  background-color: #333;
+}
+.header .inner {
+  height: 80px;
+  margin: 0 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  color: #fffef2;
+}
+.header .inner ul.menu {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+}
+.header .inner ul.menu li {
+  margin-right: 1.3vw;
+  font-family: 'Suisse Medium', sans-serif;
+  color: #fffef2;
+}
+.header .inner ul.menu li a {
+  margin: auto;
+  font-size: 14px;
+  font-family: 'Suisse Medium', sans-serif;
+  color: #fffef2;
+}
+.header .inner ul.login-menu {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+.header .inner ul.login-menu li {
+  margin-right: 1.3vw;
+}
+.header .inner ul.login-menu li a {
+  font-size: 14px;
+  font-family: 'Suisse Medium', sans-serif;
+  color: #fffef2;
+}
