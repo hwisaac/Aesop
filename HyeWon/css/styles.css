@@ -1,0 +1,76 @@
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fffef2;
+  box-sizing: border-box;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: #252525;
+  font-size: 14px;
+  padding: 12px 20px 13px;
+  box-sizing: border-box;
+}
+
+.header-btn {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  box-sizing: border-box;
+}
+
+.header-btn:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.header-icon {
+  font-size: 16px;
+}
+
+/* GNB */
+.gnb {
+  background-color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 35px;
+}
+
+.gnb-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.gnb-container span {
+  font-size: 22px;
+}
+
+.gnb-item {
+  padding: 4px;
+}
+
+.gnb-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.gnb-list__item button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: inherit;
+}
