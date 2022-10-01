@@ -2,6 +2,9 @@
 a {
   text-decoration: none;
 }
+.inner {
+  display: relative;
+}
 
 /* SHIPPING-BANNER */
 .shipping-banner {
@@ -9,7 +12,7 @@ a {
   width: 100%;
 }
 .shipping-banner .banner-inner {
-  padding: 12px;
+  padding: 8px;
   background-color: #252525;
   margin: auto;
   display: flex;
@@ -69,7 +72,7 @@ a {
   left: 0;
 }
 .header .header-inner ul.menu li {
-  margin-right: 1.3vw;
+  margin-right: 27px;
   font-family: 'Suisse Medium', sans-serif;
   color: #fffef2;
 }
@@ -87,10 +90,62 @@ a {
   right: 0;
 }
 .header .header-inner ul.login-menu li {
-  margin-right: 1.3vw;
+  margin-left: 27px;
 }
 .header .header-inner ul.login-menu li a {
   font-size: 14px;
   font-family: 'Suisse Medium', sans-serif;
   color: #fffef2;
+}
+
+/* SECTION1 */
+.sec1 {
+  background-image: url(../img/Aesop_Eidesis_2022_Web_Homepage_Primary_Full_Bleed_Desktop_L_2880x1044px.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+}
+.sec1 .inner {  
+  display: flex;
+  position: relative;
+  padding-top: 20px;
+}
+.sec1 .inner a.logo {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+.sec1 .inner a.logo>svg {
+  fill: #fffef0;
+}
+.sec1 .inner .center-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  color: #fffef2;
+}
+.sec1 .inner .center-txt h2 {
+  font-size: 14px;
+  color: #fffef2;
+}
+.sec1 .inner .center-txt>h1 {
+  font-size: 26px;
+  color: #fffef2;
+}
+.sec1 .inner p {
+  
+  color: #fffef0;
+}
+.sec1 .inner .btn--white {
+  
+  color: #fffef0;
+}
+.sec1 .inner .btn--white>p {
+  
+  color: #fffef0;
+}
+.sec1 .inner .btn--white>span {
+
 }
