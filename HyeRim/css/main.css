@@ -12,6 +12,71 @@ a {
 span {
   display: inline-block;
 }
+section {
+  margin-bottom: 200px;
+  font-size: 15px;
+}
+
+section > div h3 {
+  display: block;
+  font-size: 30px;
+  margin: 20px 0 30px;
+  line-height: 1.3;
+}
+
+section > div p {
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+.text-area {
+  width: 35%;
+  flex: none;
+  font-size: 16px;
+}
+
+.text-area a {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.material-symbols-outlined {
+  font-size: 15px;
+  font-weight: bold;
+}
+.strongHover a strong {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.strongHover a:hover strong::before {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  content: "";
+  bottom: 0;
+}
+.btnHover {
+  width: 300px;
+  transition: 0.3s;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  border: 1px solid rgba(51,51,51,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btnHover:hover {
+  background-color: #333;
+  color: #fffef2;
+  border-color: #333;
+}
+.btnHover:hover .material-symbols-outlined {
+  font-weight: normal;
+}
 
 /* TOP BANNER */
 .shippingBanner-body {
@@ -132,10 +197,6 @@ header .sub-menu {
   background-color: #fff;
 }
 
-.visual .visual__txt-area .eidesisBtn .material-symbols-outlined {
-  font-size: 15px;
-}
-
 
 /* CONTENTS */
 .contents {
@@ -144,36 +205,15 @@ header .sub-menu {
 
 /* perfume */
 .perfume {
-  margin: 200px 0;
   padding: 0 100px;
   display: flex;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-
-.perfume .perfume__text-area {
-  width: 423px;
-  flex: none;
+.perfume .text-area {
+  width: 25%;
 }
-
-.perfume .perfume__text-area strong {
-  display: block;
-  font-size: 30px;
-  margin: 20px 0 30px;
-}
-
-.perfume .perfume__text-area p {
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
-
-.perfume .perfume__text-area a {
-  display: flex;
-  align-items: center;
-}
-.perfume .perfume__text-area a span {
-  font-size: 15px;
-  font-weight: bold;
+.perfume .text-area a span {
   margin-left: 5px;
 }
 
@@ -196,18 +236,108 @@ header .sub-menu {
   width: 100%;
 }
 
-.perfume .perfume__list li a strong {
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  position: relative;
+/* aroma */
+.aroma {
+  display: flex;
+  padding-left: 100px;
+  margin-bottom: 150px;
 }
 
-.perfume .perfume__list li a:hover strong::before {
-  position: absolute;
+.aroma .aroma__text-area {
+  width: 370px;
+  flex: none;
+  padding-left: 80px;
+  box-sizing: border-box;
+}
+
+.aroma video {
+  width: 65%;
+  padding-left: 100px;
+  box-sizing: border-box;
+}
+
+/* change */
+.change {
+  display: flex;
+}
+
+.change img {
+  width: 65%;
+  padding-right: 150px;
+  box-sizing: border-box;
+}
+
+.change .text-area {
+  padding-right: 100px;
+  box-sizing: border-box;
+}
+
+.change .text-area strong {
+  margin-top: 0;
+}
+
+/* selection */
+.selection {
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+
+.selection h2 {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 120px;
+}
+
+.selection .selection__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selection .selection__list li {
+  width: 25%;
+}
+.selection .selection__list li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.selection .selection__list li a img {
+  height: 400px;
+}
+
+/* locater */
+.locater {
+  display: flex;
+}
+.locater .text-area {
+  padding-left: 80px;
+  box-sizing: border-box;
+}
+.locater h2 {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.locater .store {
+  width: 65%;
+  padding-left: 100px;
+  box-sizing: border-box;
+}
+
+.locater .store ul {
+  display: flex;
+  overflow: hidden;
+}
+
+.locater .store ul li {
+  display: flex;
   width: 100%;
-  height: 1px;
-  background-color: #333;
-  content: "";
-  bottom: 0;
+  flex: none;
+  
+}
+
+.locater .store ul li img {
+  width: 100%;
 }
