@@ -1,10 +1,28 @@
 /* COMMON */
 a {
   text-decoration: none;
+  color: #fffef2;
 }
 .inner {
   display: relative;
 }
+.material-symbols-outlined {
+
+}
+body {
+
+}
+body .msg {
+  size: 37px;
+  position: fixed;
+  right: 3px;
+  bottom: 45px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 50px;
+}
+
 
 /* SHIPPING-BANNER */
 .shipping-banner {
@@ -98,54 +116,142 @@ a {
   color: #fffef2;
 }
 
+
+
 /* SECTION1 */
 .sec1 {
   background-image: url(../img/Aesop_Eidesis_2022_Web_Homepage_Primary_Full_Bleed_Desktop_L_2880x1044px.jpg);
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+  height: 548px;
   width: 100%;
+  color: #fffef2;
 }
 .sec1 .inner {  
   display: flex;
   position: relative;
-  padding-top: 20px;
+  height: 548px;
 }
 .sec1 .inner a.logo {
   position: absolute;
-  top: 20%;
-  left: 5%;
+  top: 100px;
+  left: 40px;
 }
-.sec1 .inner a.logo>svg {
-  fill: #fffef0;
+.sec1 .inner a.logo {
+  
 }
-.sec1 .inner .center-text {
+.sec1 .inner .center-box {
+  width: 426px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 50px;
-  left: 100px;
-  color: #fffef2;
+  padding-top: 110px;
+  left: 18%;
 }
-.sec1 .inner .center-txt h2 {
+.sec1 .inner .center-box .center-text1 {
   font-size: 14px;
   color: #fffef2;
+  margin-bottom: 20px;
+  /* position: absolute;
+  top: 110px; */
 }
-.sec1 .inner .center-txt>h1 {
+.sec1 .inner .center-box .center-text2 {
   font-size: 26px;
   color: #fffef2;
+  margin-bottom: 20px;
 }
-.sec1 .inner p {
-  
-  color: #fffef0;
+.sec1 .inner .center-box .center-text3 {  
+  font-size: 16px;
+  line-height: 1.7;
+  width: 100%;
+  margin-bottom: 30px;
 }
-.sec1 .inner .btn--white {
-  
-  color: #fffef0;
+.sec1 .inner .center-box a.btn--white {
+  width: 60%;
+  border: 1px solid #fffef2;
+  padding: 19px 55px 19px 23px;
+  text-decoration: none;
+  color: #fffef2;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-.sec1 .inner .btn--white>p {
-  
-  color: #fffef0;
+.sec1 .inner .center-box .btn--white .btn--white--text {
+  font-size: 14px;
 }
-.sec1 .inner .btn--white>span {
+.sec1 .inner .center-box .btn--white .material-symbols-outlined {
+  position: absolute;
+  right: 10px;
+  size: 12px;
 
+}
+
+
+
+/* SECTION2 */
+.sec2 {
+  height: 700px;
+  background-color: #fffef2;
+  color: #333;
+}
+.sec2 .inner {
+  padding-top: 150px;
+  display: flex;
+}
+.sec2 .inner .personal {
+  width: 453px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+}
+.sec2 .inner .personal h2 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.sec2 .inner .personal h1 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.sec2 .inner .personal p {
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.sec2 .inner .personal .btn--black {
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.sec2 .inner .personal .btn--black p {
+  /* line-height: ; */
+}
+
+.sec2 .inner .personal .arrow {
+  color: #333;
+}
+.sec2 .inner .perfume-items {
+  display: flex;
+  overflow: hidden;
+}
+.sec2 .inner .perfume-items .perfume-item {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+  gap: 15px;
+}
+.sec2 .inner .perfume-items .perfume-item .perfume-img {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+.sec2 .inner .perfume-items .perfume-item .perfume-img p {
+  
 }
