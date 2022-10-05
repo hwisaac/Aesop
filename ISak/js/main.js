@@ -2,7 +2,7 @@ console.log("hello");
 
 // HEADER
 window.__scrollPosition = document.documentElement.scrollTop || 0;
-const headerEl = document.querySelector(".header");
+const headerEl = document.querySelector("#header");
 
 //윈도우 스크롤 감지해서 헤더 작동시키기
 window.addEventListener(

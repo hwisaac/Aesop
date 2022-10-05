@@ -10,6 +10,7 @@
   /* Font Size */
   --font-regular: 14px;
   --font-medium: 22px;
+  --font-large: 30px;
 
   /* Font Weight */
   --weight-blod: 700;
@@ -24,15 +25,35 @@
   box-sizing: border-box;
   font-family: 'Nanum Gothic', sans-serif;
   line-height: 1.5;
-  color: var(--color-light-white);
   font-size: var(--font-regular);
 }
 
+body {
+  color: var(--color-semi-dark-gray);
+  background-color: var(--color-light-white);
+}
+
 /* Typograhy */
+a {
+  text-decoration: none;
+  color: var(--color-semi-dark-gray);
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-light-white);
+}
+
+h1 {
+  font-size: var(--font-large);
+  margin-bottom: 20px;
 }
 
 /* header */
@@ -42,16 +63,13 @@ p {
   align-items: center;
   gap: 12px;
   background-color: var(--color-dark-gray);
+  color: var(--color-light-white);
   padding: 12px 20px 13px;
   box-sizing: border-box;
 }
 
 .header-btn {
-  border: 0;
-  outline: 0;
-  background-color: transparent;
-  color: inherit;
-  cursor: pointer;
+  color: var(--color-light-white);
   transition: all 0.3s linear;
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   box-sizing: border-box;
@@ -63,11 +81,13 @@ p {
 
 .header-icon {
   font-size: 16px;
+  color: var(--color-light-white);
 }
 
 /* GNB */
 .gnb {
   background-color: var(--color-semi-dark-gray);
+  color: var(--color-light-white);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,6 +100,7 @@ p {
   align-items: center;
   gap: 20px;
   cursor: pointer;
+  color: var(--color-light-white);
 }
 
 .gnb-container span {
@@ -102,4 +123,117 @@ p {
   outline: 0;
   background-color: transparent;
   color: inherit;
+}
+
+/* KV */
+#kv {
+  background-image: url('../images/Aesop_Eidesis_2022_Web_Homepage_Primary_Full_Bleed_Desktop_L_2880x1044px.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--color-light-white);
+  height: 548px;
+  display: flex;
+  padding: 110px 50px;
+  gap: 92px;
+}
+
+#kv svg.Icon-module_base__jrPbu {
+  fill: var(--color-light-white);
+}
+
+.kv__container .kv__subtitle {
+  margin-bottom: 20px;
+}
+
+.kv__container .kv__text {
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.kv__container .kv_btn {
+  display: flex;
+  align-items: center;
+  gap: 140px;
+  max-width: 300px;
+  color: var(--color-light-white);
+  border: 1px solid;
+  padding: 19px 23px;
+  transition: all 0.2s;
+}
+
+.kv__container .kv_btn:hover {
+  color: var(--color-semi-dark-gray);
+  background-color: var(--color-light-white);
+}
+
+.kv__container .kv_btn:hover span {
+  color: var(--color-semi-dark-gray);
+}
+
+/* perfume section */
+#perfume-section {
+  background-color: var(--color-light-white);
+  color: var(--color-semi-dark-gray);
+  padding-top: 150px;
+  margin: 0 80px 48px;
+  display: flex;
+  overflow: hidden;
+}
+
+.perfume__info {
+  width: 451px;
+}
+
+.perfume__info--subtitle {
+  margin-bottom: 15px;
+}
+
+.perfume__info--text {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.perfume__info--link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.perfume__info--link span {
+  font-size: 18px;
+}
+
+.perfume__itmes {
+  display: flex;
+  gap: 30px;
+  width: calc((100% - 451px) / 2);
+}
+
+.perfume__itmes .perfume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfume__itmes .perfume:hover .perfume__description--title {
+  border-bottom: 1px solid;
+}
+
+.perfume__img {
+  margin-left: 20px;
+  max-width: 410px;
+  max-height: 410px;
+}
+
+.perfume__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: var(--font-regular);
 }
