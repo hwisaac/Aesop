@@ -14,3 +14,12 @@
   color: black;
   cursor: pointer;
 }
+.btn.btn--reverse {
+  background-color: #fffef2;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.btn.btn--reverse:hover {
+  background-color: #333333;
+  border: none;
+  color: white;
+}
