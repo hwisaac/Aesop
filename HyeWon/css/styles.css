@@ -174,8 +174,6 @@ h1 {
 
 /* perfume section */
 #perfume-section {
-  background-color: var(--color-light-white);
-  color: var(--color-semi-dark-gray);
   padding-top: 150px;
   margin: 0 80px 48px;
   display: flex;
@@ -198,8 +196,10 @@ h1 {
 
 .perfume__info--link {
   display: flex;
+  justify-content: start;
   align-items: center;
   gap: 5px;
+  padding: 0;
 }
 
 .perfume__info--link span {
@@ -219,10 +219,6 @@ h1 {
   align-items: center;
 }
 
-.perfume__itmes .perfume:hover .perfume__description--title {
-  border-bottom: 1px solid;
-}
-
 .perfume__img {
   margin-left: 20px;
   max-width: 410px;
@@ -236,4 +232,208 @@ h1 {
   gap: 15px;
   margin-top: 10px;
   font-size: var(--font-regular);
+}
+
+/* Aroma section */
+#aroma-section {
+  padding-top: 150px;
+  margin-left: 80px;
+  display: flex;
+  overflow: hidden;
+}
+
+.aroma__info {
+  width: 451px;
+}
+
+.aroma__info--subtitle {
+  margin-bottom: 15px;
+}
+
+.aroma__info--text {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.aroma__info--btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 200px;
+  border: 1px solid #cccbc1;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.aroma__info--btn span {
+  font-size: 18px;
+}
+
+.aroma__info--btn:hover {
+  background-color: var(--color-dark-gray);
+  color: var(--color-light-white);
+  border: 1px solid var(--color-dark-gray);
+}
+
+.aroma__video {
+  margin-left: calc(100% - 451px - 900px);
+  width: 900px;
+  height: 527px;
+}
+
+.aroma__video video {
+  width: 100%;
+  height: 100%;
+}
+
+.aroma__video video source {
+  width: 100%;
+  height: 100%;
+}
+
+/* Candle section */
+#candle-section {
+  padding-top: 150px;
+  margin-right: 80px;
+  display: flex;
+  overflow: hidden;
+}
+
+.candle__img {
+  width: 882px;
+  height: 500px;
+  margin-right: calc(100% - 451px - 882px);
+}
+
+.candle__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.candle__info {
+  width: 451px;
+}
+
+.candle__info--subtitle {
+  margin-bottom: 15px;
+}
+
+.candle__info--text {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.candle__info--btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 200px;
+  border: 1px solid #cccbc1;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.candle__info--btn span {
+  font-size: 18px;
+}
+
+.candle__info--btn:hover {
+  background-color: var(--color-dark-gray);
+  color: var(--color-light-white);
+  border: 1px solid var(--color-dark-gray);
+}
+
+/* Selection section */
+#selection-section {
+  padding-top: 150px;
+  margin-bottom: 48px;
+  margin-left: 80px;
+  overflow: hidden;
+}
+
+.selection__list {
+  padding-top: 50px;
+  display: flex;
+}
+
+.selection__list--item {
+  width: 323px;
+  height: 500px;
+  margin: 0 64px;
+  flex-basis: 323px;
+  flex-shrink: 0;
+}
+
+.selection__list--item:first-child:hover .selection__list--text p:first-child,
+.selection__list--item:nth-child(2):hover .selection__list--text p:first-child,
+.selection__list--item:nth-child(3):hover .selection__list--text p:first-child,
+.selection__list--item:last-child:hover .selection__list--text p:first-child {
+  border-bottom: 1px solid;
+}
+
+.selection__list--item img {
+  width: 100%;
+  height: 400px;
+}
+
+.selection__list--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.selection__list--text p:first-child {
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+/* Store section */
+#store-section {
+  padding-top: 150px;
+  margin-left: 80px;
+  margin-bottom: 48px;
+  display: flex;
+  overflow: hidden;
+}
+
+.store__info {
+  width: 451px;
+}
+
+.store__info--text {
+  line-height: 1.6;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.store__info--btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 115px;
+  border: 1px solid #cccbc1;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.store__info--btn span {
+  font-size: 18px;
+}
+
+.store__info--btn:hover {
+  background-color: var(--color-dark-gray);
+  color: var(--color-light-white);
+  border: 1px solid var(--color-dark-gray);
+}
+
+.store__img {
+  margin-left: calc(100% - 451px - 900px);
+  width: 900px;
+  height: 527px;
+}
+
+.store__img img {
+  width: 100%;
+  height: 100%;
 }
