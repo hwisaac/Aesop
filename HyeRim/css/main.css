@@ -341,3 +341,182 @@ header .sub-menu {
 .locater .store ul li img {
   width: 100%;
 }
+
+
+/* FOOTER */
+footer {
+  background-color: #252525;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  color: #fffef2;
+}
+
+footer input[type="checkbox"] {
+  -webkit-appearance: none;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border: 1px solid #bcbbb4;
+  display: flex;
+  flex: none;
+  align-items: center;
+  margin-right: 10px;
+}
+
+footer input[type="checkbox"]:checked::before {
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(1) translate(-50%, -50%);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: auto;
+}
+
+footer input[type="checkbox"]:checked {
+  color: #fff;
+  font-weight: bold;
+}
+
+footer input[type="text"] {
+  background-color: inherit;
+  border: none;
+}
+
+footer > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer > ul > li {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding-right: 30px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+footer > ul > li:nth-child(1),
+footer > ul > li:nth-child(5) {
+  width: 40%;
+}
+
+footer > ul > li:nth-child(4),
+footer > ul > li:nth-child(8) {
+  padding-right: 0;
+}
+
+footer > ul > li h3 {
+  font-size: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fffef2;
+  margin-bottom: 20px;
+}
+
+footer > ul > li > p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+footer > ul > li > ul > li {
+  margin-bottom: 20px;
+}
+
+footer > ul > li > ul > li > a {
+  display: inline-block;
+}
+
+footer .material-symbols-outlined {
+  font-weight: normal;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+footer .chbox-area {
+  display: flex;
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+footer .chbox-area label {
+  display: flex;
+  align-items: center;
+}
+
+footer .text-box {
+  width: 100%;
+  border: 1px solid #fffef2;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  line-height: 1.7;
+  margin-top: -15px;
+}
+
+footer .text-box.private__con {
+  height: 100px;
+  overflow-y: auto;
+}
+
+footer .email-addr {
+  border: 1px solid #fffef2;
+  border-radius: 3px;
+  display: flex;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+footer .email-addr input {
+  border-right: 1px solid #fffef2;
+  height: 100%;
+  padding: 10px;
+  width: calc(100% - 40px);
+  color: #fffef2;
+}
+
+footer .email-addr label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+
+footer .email-addr button {
+  background-color: inherit;
+  color: #fff;
+  width: 40px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer__locate p {
+  margin-bottom: 15px;
+}
+
+footer .footer__locate a {
+  text-decoration:underline;
+}
+
+footer .footer__possibility P a {
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.footer__rights {
+  border-top: 3px solid #d6d5cb;
+  background-color: #252525;
+  color: #fffef2;
+  padding: 30px;
+  font-size: 16px;
+}
