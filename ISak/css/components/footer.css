@@ -151,7 +151,7 @@ footer input[type="checkbox"] + label::before {
 }
 footer input[type="checkbox"]:active + label::before,
 footer input[type="checkbox"]:active + label:active:before {
-  border: 3px solid white;
+  border: 1.5px solid white;
 }
 footer input[type="checkbox"]:checked + label:before {
   /* 체크박스를 체크했을때 */
