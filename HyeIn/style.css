@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+body {
+  background-color: #fffef2;
+}
 header {
   width: 100%;
 }
@@ -30,7 +33,9 @@ header {
   display: inline-block;
   color: #fff;
 }
-
+.hdBottom {
+  width: 100%;
+}
 .hdGnb {
   display: flex;
   justify-content: space-between;
@@ -61,4 +66,255 @@ header {
   line-height: 80px;
   font-size: 14px;
   cursor: pointer;
+}
+
+/* main */
+.mainBackImg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -200px;
+  z-index: -10;
+}
+.mainBannerWrap {
+  position: absolute;
+  top: 225px;
+  left: 40px;
+  display: flex;
+}
+.mainBannerWrap > svg {
+  fill: white;
+}
+.mainBannerTxt {
+  color: #fff;
+  margin-left: 150px;
+}
+.mainBannerTxt .top {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 28px;
+}
+.mainBannerTxt .middle {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+.mainBannerTxt .bottom {
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+.mainBannerTxt button {
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 20px;
+  cursor: pointer;
+}
+.mainBannerTxt button:hover {
+  background-color: #fffef2;
+  color: black;
+  transition: 0.5s;
+}
+.mainBannerTxt button:hover > svg {
+  fill: black;
+}
+.mainBannerTxt button svg {
+  fill: #fff;
+  margin-left: 150px;
+}
+
+/* section1 */
+.section1 {
+  display: flex;
+  overflow: hidden;
+  margin-left: 100px;
+}
+.section1TxtWrap {
+  width: 409px;
+  height: 400px;
+}
+.section1TxtWrap .top {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.section1TxtWrap .big {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.section1TxtWrap .long {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+.section1TxtWrap .bottom {
+  font-size: 15px;
+}
+.section1 .slider img {
+  width: 409px;
+  height: 400px;
+}
+
+/* section2 */
+.section2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 190px;
+}
+.section2 .sec2Txt {
+  width: 40%;
+  padding-left: 80px;
+}
+.sec2Txt p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.sec2Txt h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.sec2Txt > div {
+  margin-bottom: 30px;
+}
+.section2 video {
+  width: 60%;
+}
+.sec2Txt > button {
+  cursor: pointer;
+  outline: none;
+  padding: 20px;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  background-color: transparent;
+}
+.sec2Txt button:hover {
+  background-color: #333333;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.sec2Txt > button > svg {
+  margin-left: 200px;
+}
+.sec2Txt button:hover > svg {
+  fill: #fff;
+}
+
+/* section3 */
+.section3 {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.section3 img {
+  width: 60%;
+}
+.section3 .sec3Txt {
+  width: 30%;
+  margin-right: 70px;
+}
+.sec3Txt h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.sec3Txt p {
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+.sec3Txt button {
+  cursor: pointer;
+  outline: none;
+  padding: 20px;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  background-color: transparent;
+}
+.sec3Txt button:hover {
+  background-color: #333333;
+  color: #fff;
+  transition: 0.5s;
+}
+.sec3Txt button svg {
+  margin-left: 200px;
+}
+.sec3Txt button:hover > svg {
+  fill: #fff;
+}
+
+/* section4 */
+.section4 {
+  margin-top: 155px;
+  margin-left: 80px;
+}
+.section4 h2 {
+  font-size: 30px;
+  margin-bottom: 110px;
+}
+.sec4Slider {
+  display: flex;
+  padding-left: 57px;
+}
+.sec4Slider .slider {
+  margin-right: 113px;
+}
+.sec4Slider .slider img {
+  width: 323px;
+  height: 400px;
+}
+.sec4SliderTxt {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+/* section5 */
+.section5 {
+  margin-top: 198px;
+  display: flex;
+  justify-content: space-between;
+}
+.section5 .sec5Txt {
+  width: 30%;
+  margin-left: 80px;
+}
+.sec5Txt h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.sec5Txt p {
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.sec5Txt button {
+  cursor: pointer;
+  outline: none;
+  padding: 20px;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  background-color: transparent;
+}
+.sec5Txt button:hover {
+  background-color: #333333;
+  color: #fff;
+  transition: 0.5s;
+}
+.sec5Txt button svg {
+  margin-left: 130px;
+}
+.sec5Txt button:hover > svg {
+  fill: #fff;
+}
+.sec5Slider {
+  width: 1110px;
+  display: flex;
+  overflow: hidden;
+}
+.sec5Slider .slider img {
+  width: 1110px;
+}
+.sec5Slider .slider p {
+  color: #666;
+  font-size: 14px;
+  margin-top: 95px;
+}
+/* footer */
+footer {
+  margin-top: 150px;
 }
