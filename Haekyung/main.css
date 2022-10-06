@@ -462,3 +462,154 @@ body .msg {
 .sec6 .inner .sec6Img img {
   width: 886px;  
 }
+
+
+/* FOOTER */
+.footer {
+  background-color: #252525;
+  /* height: 900px; */
+  color: #fffef2;
+  font-size: 14px;
+}
+.footer .inner {
+  padding: 0 40px;
+  border-bottom: 2px solid #fffef2;
+}
+.footer .inner .inner-1 {
+  padding-top: 50px;
+  height: 464px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .inner .inner-1 .communication,
+.footer .inner .inner-2 .sustainability {
+  width: 552px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .inner .inner-1 .order,
+.footer .inner .inner-1 .service,
+.footer .inner .inner-1 .location,
+.footer .inner .inner-2 .introduction,
+.footer .inner .inner-2 .social,
+.footer .inner .inner-2 .notice{
+  width: 256px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .inner .inner-1 .communication label {
+  display: flex;
+  align-items: center;
+}
+.footer .inner .inner-1 .communication input[type="checkbox"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fffef2;
+  background-color: inherit;
+  position: relative;
+}
+.footer .inner .inner-1 .communication input[type="checkbox"]:checked::before {
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fffef2;
+}
+.footer .inner .inner-1 .communication div.personal-info {
+  height: 80px;
+  overflow-y: scroll;
+  border: 1px solid #fffef2;
+  border-radius: 3px;
+  padding: 10px 10px;
+  line-height: 1.8;
+}
+.footer .inner .inner-1 .communication div.marketing-info {
+  border: 1px solid #fffef2;
+  border-radius: 3px;
+  padding: 15px;
+}
+.footer .inner h3 {
+  font-size: 15px;
+  color: #fffef2;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #fffef2;
+  margin-bottom: 23px;
+}
+.footer .inner p {
+  color: #fffef2;
+  line-height: 1.6;
+  vertical-align: middle
+}
+.footer .inner ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer .inner .inner-1 .email-address {
+  height: 37px;
+  border: 1px solid #fffef2;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.footer .inner .inner-1 input#email-address {
+  height: 37px;
+  font-size: 20px;
+  color: #fffef2;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+.footer .inner .inner-1 .email-address span {
+  font-size: 20px;
+  position: absolute;
+  left: 10px;
+}
+.footer .inner .inner-1 .email-address button {
+  height: 37px;
+  color: #fffef2;
+  font-weight: 700;
+  border: none;
+  border-left: 1px solid #fffef2;
+  box-sizing: border-box;
+  background-color: transparent;
+  position: absolute;
+  top: -1px;
+  right: 5px;
+  padding-left: 10px;
+  cursor: pointer;
+} 
+.footer .inner .inner-1 .location button {
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  color: #fffef2;
+  padding: 0;
+  text-decoration: underline;
+}
+.footer .inner .inner-2 {
+  padding-top: 40px;
+  height: 269px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 53px;
+}
+.footer .inner .inner-2 a.more {
+  text-decoration: underline;
+}
+.Aesop {
+  font-size: 16px;
+  padding: 26px 0 26px 40px;
+}
+span.material-symbols-outlined {
+  font-size: 15px;
+  vertical-align: middle;
+  margin-left: 3px;
+}
