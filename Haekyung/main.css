@@ -184,9 +184,17 @@ body .msg {
 .sec2 .inner {
   padding-top: 150px;
   display: flex;
+  position: relative;
 }
-.sec2 .inner .personal {
-  width: 453px;
+.sec2 .inner .swiper {
+  /* height: 550px;
+  width: 1500px;
+  position: absolute;
+  top: 150px;
+  left: 0; */
+}
+.sec2 .inner .swiper .swiper-wrapper .swiper-slide.personal {
+  max-width: 453px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -216,25 +224,27 @@ body .msg {
 .sec2 .inner .personal .arrow {
   color: #333;
 }
-.sec2 .inner .perfume-items {
-  display: flex;
-  overflow: hidden;
-}
-.sec2 .inner .perfume-items .perfume-item {
-  margin-left: 30px;
+.sec2 .inner .perfume-item {
+  width: 410px;
+  /* margin-left: 30px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
-.sec2 .inner .perfume-items .perfume-item .perfume-img {
-  width: 400px;
+.sec2 .inner .perfume-item .perfume-img {
+  width: 410px;
   height: 400px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-.sec2 .inner .perfume-items .perfume-item .perfume-img p {
+.sec2 .swiper-button-prev {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: calc(50% - 40px);
+  background-color: #333;
+  color: #fffef2;
 }
-
 /* SECTION3 */
 .sec3 {
   height: 700px;
@@ -277,7 +287,7 @@ body .msg {
   padding: 19px 55px 19px 23px;
   display: flex;
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
 .sec3 .inner .aroma .btn--black span {
   display: block;
@@ -303,7 +313,6 @@ body .msg {
   width: 100%;
 }
 
-
 /* SECTION4 */
 .sec4 {
   height: 700px;
@@ -314,7 +323,7 @@ body .msg {
   padding-top: 150px;
   display: flex;
 }
-.sec4 .inner .sec4Img{
+.sec4 .inner .sec4Img {
   width: 886px;
   height: 498px;
   margin-right: 126px;
@@ -327,7 +336,6 @@ body .msg {
   width: 426px;
   display: flex;
   flex-direction: column;
-
 }
 .sec4 .inner .scentedHome h1 {
   font-size: 30px;
@@ -348,7 +356,7 @@ body .msg {
   align-items: center;
   padding: 19px 55px 19px 23px;
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
 .sec4 .inner .scentedHome .btn--black span {
   display: block;
@@ -363,14 +371,13 @@ body .msg {
   color: #fffef2;
 }
 
-
 /* SECTION5 */
 .sec5 {
   height: 700px;
   background-color: #fffef2;
   color: #333;
 }
-.sec5 .inner{
+.sec5 .inner {
   padding-top: 150px;
   padding-left: 80px;
   display: flex;
@@ -395,13 +402,10 @@ body .msg {
   height: 400px;
   width: auto;
   margin: 0 65px 0;
-  
 }
 .sec5 .selectionItem span {
   font-size: 14px;
-  
 }
-
 
 /* SECTION6 */
 .sec6 {
@@ -440,7 +444,7 @@ body .msg {
   align-items: center;
   padding: 19px 55px 19px 23px;
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
 .sec6 .inner .store .btn--black span {
   display: block;
@@ -460,9 +464,8 @@ body .msg {
   overflow: hidden;
 }
 .sec6 .inner .sec6Img img {
-  width: 886px;  
+  width: 886px;
 }
-
 
 /* FOOTER */
 .footer {
@@ -492,7 +495,7 @@ body .msg {
 .footer .inner .inner-1 .location,
 .footer .inner .inner-2 .introduction,
 .footer .inner .inner-2 .social,
-.footer .inner .inner-2 .notice{
+.footer .inner .inner-2 .notice {
   width: 256px;
   display: flex;
   flex-direction: column;
@@ -501,7 +504,7 @@ body .msg {
   display: flex;
   align-items: center;
 }
-.footer .inner .inner-1 .communication input[type="checkbox"] {
+.footer .inner .inner-1 .communication input[type='checkbox'] {
   cursor: pointer;
   -webkit-appearance: none;
   width: 12px;
@@ -510,8 +513,8 @@ body .msg {
   background-color: inherit;
   position: relative;
 }
-.footer .inner .inner-1 .communication input[type="checkbox"]:checked::before {
-  content: "\2713";
+.footer .inner .inner-1 .communication input[type='checkbox']:checked::before {
+  content: '\2713';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -541,7 +544,7 @@ body .msg {
 .footer .inner p {
   color: #fffef2;
   line-height: 1.6;
-  vertical-align: middle
+  vertical-align: middle;
 }
 .footer .inner ul {
   display: flex;
@@ -585,7 +588,7 @@ body .msg {
   right: 5px;
   padding-left: 10px;
   cursor: pointer;
-} 
+}
 .footer .inner .inner-1 .location button {
   font-size: 14px;
   border: none;
