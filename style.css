@@ -1,0 +1,12 @@
+section.py-5.text-center.container {
+  background-image: url(./img/Aesop_Eidesis_2022_Web_Homepage_Primary_Full_Bleed_Desktop_L_2880x1044px.jpg);
+  background-size: cover;
+  background-position: 0;
+  /* opacity: 0.7; */
+}
+
+.album .container .row .col img {
+  object-fit: cover;
+  width: 100%;
+  height: 225px;
+}

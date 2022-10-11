@@ -129,3 +129,13 @@ table {
 input:focus {
   outline: none;
 }
+
+/* input {
+  box-shadow: none;
+  font-size: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+} */

@@ -4,44 +4,58 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .section2 .row {
   display: flex;
+  flex-direction: row;
+
+  width: 100%;
 }
-.section2 .row .texts-container {
-  width: 555px;
+.section2 .row .swiper .swiper-wrapper .swiper-slide.texts-container {
+  width: 655px;
   padding: 0 50px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
 }
-.section2 .row .texts-container .small {
+.section2 .row .swiper .swiper-wrapper .swiper-slide.texts-container .small {
 }
-.section2 .row .texts-container .title {
+.section2 .row .swiper .swiper-wrapper .swiper-slide.texts-container .title {
   font-size: 30px;
   margin: 10px 0;
 }
-.section2 .row .texts-container .description {
+.section2
+  .row
+  .swiper
+  .swiper-wrapper
+  .swiper-slide.texts-container
+  .description {
 }
-.section2 .row .texts-container a {
+.section2 .row .swiper .swiper-wrapper .swiper-slide.texts-container a {
   font-weight: 700;
   display: flex;
   align-items: center;
   margin-top: 50px;
 }
-.section2 .row .slide {
+.section2 .row .swiper .swiper-wrapper .swiper-slide.slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 30px;
+
+  width: 350px;
 }
-.section2 .row .slide img {
+.section2 .row .swiper .swiper-wrapper .swiper-slide.slide img {
   width: 355px;
   height: 375px;
   object-fit: cover;
 }
-.section2 .row .slide .title {
+.section2 .row .swiper .swiper-wrapper .swiper-slide.slide .title {
 }
-.section2 .row .slide .description {
+.section2 .row .swiper .swiper-wrapper .swiper-slide.slide .description {
 }
 
 .section2 .pagination-bar {
@@ -51,6 +65,13 @@
   display: flex;
   /* flex-direction: ; */
 }
+.section2 .pagination-bar {
+  bottom: 0;
+  position: relative;
+}
+.section2 .pagination-bar .swiper-pagination-progressbar-fill {
+  background-color: #333;
+}
 .section2 .pagination-bar .bar {
   width: 10vw;
   height: 3px;
@@ -58,4 +79,37 @@
 }
 .section2 .pagination-bar .bar.active {
   background-color: #51514d;
+}
+
+.section2 .prev-btn,
+.section2 .next-btn {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  top: 38%;
+  z-index: 8;
+}
+.section2 .prev-btn {
+  left: -80px;
+}
+.section2 .prev-btn.show {
+  left: 0;
+  transition: 0.5s;
+}
+.section2 .next-btn {
+  right: -80px;
+  transition: 0.5s;
+}
+.section2 .next-btn.show {
+  right: 0;
+}
+.section2 .swiper-button-disabled {
+  opacity: 0;
+  transition: 0.5s;
 }

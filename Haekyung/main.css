@@ -184,9 +184,17 @@ body .msg {
 .sec2 .inner {
   padding-top: 150px;
   display: flex;
+  position: relative;
 }
-.sec2 .inner .personal {
-  width: 453px;
+.sec2 .inner .swiper {
+  /* height: 550px;
+  width: 1500px;
+  position: absolute;
+  top: 150px;
+  left: 0; */
+}
+.sec2 .inner .swiper .swiper-wrapper .swiper-slide.personal {
+  max-width: 453px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -216,25 +224,27 @@ body .msg {
 .sec2 .inner .personal .arrow {
   color: #333;
 }
-.sec2 .inner .perfume-items {
-  display: flex;
-  overflow: hidden;
-}
-.sec2 .inner .perfume-items .perfume-item {
-  margin-left: 30px;
+.sec2 .inner .perfume-item {
+  width: 410px;
+  /* margin-left: 30px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
-.sec2 .inner .perfume-items .perfume-item .perfume-img {
-  width: 400px;
+.sec2 .inner .perfume-item .perfume-img {
+  width: 410px;
   height: 400px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-.sec2 .inner .perfume-items .perfume-item .perfume-img p {
+.sec2 .swiper-button-prev {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: calc(50% - 40px);
+  background-color: #333;
+  color: #fffef2;
 }
-
 /* SECTION3 */
 .sec3 {
   height: 700px;
@@ -277,7 +287,7 @@ body .msg {
   padding: 19px 55px 19px 23px;
   display: flex;
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
 .sec3 .inner .aroma .btn--black span {
   display: block;
@@ -303,7 +313,6 @@ body .msg {
   width: 100%;
 }
 
-
 /* SECTION4 */
 .sec4 {
   height: 700px;
@@ -314,7 +323,7 @@ body .msg {
   padding-top: 150px;
   display: flex;
 }
-.sec4 .inner .sec4Img{
+.sec4 .inner .sec4Img {
   width: 886px;
   height: 498px;
   margin-right: 126px;
@@ -327,7 +336,6 @@ body .msg {
   width: 426px;
   display: flex;
   flex-direction: column;
-
 }
 .sec4 .inner .scentedHome h1 {
   font-size: 30px;
@@ -348,7 +356,7 @@ body .msg {
   align-items: center;
   padding: 19px 55px 19px 23px;
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
 .sec4 .inner .scentedHome .btn--black span {
   display: block;
@@ -363,14 +371,13 @@ body .msg {
   color: #fffef2;
 }
 
-
 /* SECTION5 */
 .sec5 {
   height: 700px;
   background-color: #fffef2;
   color: #333;
 }
-.sec5 .inner{
+.sec5 .inner {
   padding-top: 150px;
   padding-left: 80px;
   display: flex;
@@ -395,13 +402,10 @@ body .msg {
   height: 400px;
   width: auto;
   margin: 0 65px 0;
-  
 }
 .sec5 .selectionItem span {
   font-size: 14px;
-  
 }
-
 
 /* SECTION6 */
 .sec6 {
@@ -440,7 +444,7 @@ body .msg {
   align-items: center;
   padding: 19px 55px 19px 23px;
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
 .sec6 .inner .store .btn--black span {
   display: block;
@@ -460,5 +464,155 @@ body .msg {
   overflow: hidden;
 }
 .sec6 .inner .sec6Img img {
-  width: 886px;  
+  width: 886px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #252525;
+  /* height: 900px; */
+  color: #fffef2;
+  font-size: 14px;
+}
+.footer .inner {
+  padding: 0 40px;
+  border-bottom: 2px solid #fffef2;
+}
+.footer .inner .inner-1 {
+  padding-top: 50px;
+  height: 464px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .inner .inner-1 .communication,
+.footer .inner .inner-2 .sustainability {
+  width: 552px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .inner .inner-1 .order,
+.footer .inner .inner-1 .service,
+.footer .inner .inner-1 .location,
+.footer .inner .inner-2 .introduction,
+.footer .inner .inner-2 .social,
+.footer .inner .inner-2 .notice {
+  width: 256px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .inner .inner-1 .communication label {
+  display: flex;
+  align-items: center;
+}
+.footer .inner .inner-1 .communication input[type='checkbox'] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fffef2;
+  background-color: inherit;
+  position: relative;
+}
+.footer .inner .inner-1 .communication input[type='checkbox']:checked::before {
+  content: '\2713';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fffef2;
+}
+.footer .inner .inner-1 .communication div.personal-info {
+  height: 80px;
+  overflow-y: scroll;
+  border: 1px solid #fffef2;
+  border-radius: 3px;
+  padding: 10px 10px;
+  line-height: 1.8;
+}
+.footer .inner .inner-1 .communication div.marketing-info {
+  border: 1px solid #fffef2;
+  border-radius: 3px;
+  padding: 15px;
+}
+.footer .inner h3 {
+  font-size: 15px;
+  color: #fffef2;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #fffef2;
+  margin-bottom: 23px;
+}
+.footer .inner p {
+  color: #fffef2;
+  line-height: 1.6;
+  vertical-align: middle;
+}
+.footer .inner ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer .inner .inner-1 .email-address {
+  height: 37px;
+  border: 1px solid #fffef2;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.footer .inner .inner-1 input#email-address {
+  height: 37px;
+  font-size: 20px;
+  color: #fffef2;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+.footer .inner .inner-1 .email-address span {
+  font-size: 20px;
+  position: absolute;
+  left: 10px;
+}
+.footer .inner .inner-1 .email-address button {
+  height: 37px;
+  color: #fffef2;
+  font-weight: 700;
+  border: none;
+  border-left: 1px solid #fffef2;
+  box-sizing: border-box;
+  background-color: transparent;
+  position: absolute;
+  top: -1px;
+  right: 5px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.footer .inner .inner-1 .location button {
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  color: #fffef2;
+  padding: 0;
+  text-decoration: underline;
+}
+.footer .inner .inner-2 {
+  padding-top: 40px;
+  height: 269px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 53px;
+}
+.footer .inner .inner-2 a.more {
+  text-decoration: underline;
+}
+.Aesop {
+  font-size: 16px;
+  padding: 26px 0 26px 40px;
+}
+span.material-symbols-outlined {
+  font-size: 15px;
+  vertical-align: middle;
+  margin-left: 3px;
 }
