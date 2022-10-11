@@ -135,13 +135,14 @@ header {
 
 /* section1 */
 .section1 {
-  display: flex;
-  overflow: hidden;
+  /* width: 100%; */
+}
+.swiper-wrapper .slide-txt {
+  width: 434px;
   margin-left: 80px;
 }
-.section1-txt-wrap {
-  width: 409px;
-  height: 400px;
+.swiper-wrapper {
+  margin-bottom: 50px;
 }
 .section1-txt-wrap .top {
   font-size: 14px;
@@ -160,11 +161,18 @@ header {
   font-size: 15px;
   cursor: pointer;
 }
-.section1 .slider img {
-  width: 409px;
-  height: 400px;
+.swiper-slide {
+  /* width: 300px; */
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-right: 50px;
 }
-.sec1-slider-txt {
+.section1 .swiper-slide img {
+  width: 436px;
+  display: block;
+  box-sizing: border-box;
+}
+.swiper-slide .sec1-slider-txt {
   margin-top: 10px;
   text-align: center;
   font-size: 14px;

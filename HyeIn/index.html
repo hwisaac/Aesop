@@ -15,6 +15,15 @@
       crossorigin="anonymous"
     ></script>
     <link rel="icon" href="favicon.ico" />
+
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- link to main.js -->
+    <script defer src="main.js"></script>
   </head>
   <body>
     <header>
@@ -131,118 +140,130 @@
 
       <!-- s: section1 -->
       <section class="section1">
-        <div class="section1-txt">
-          <div class="section1-txt-wrap">
-            <p class="top">향수</p>
-            <p class="big">이솝의 퍼스널 향</p>
-            <p class="long">
-              전통에서 벗어난 매혹적이고 세련된 이솝 향수는 추억과 우리를
-              이어주는 감각적인 다리이자 주변 사람들과의 연결점입니다.
-            </p>
-            <p class="bottom">
-              향수 모두 보기
-              <svg
-                aria-labelledby="rightArrow-8"
-                class="Icon-module_base__jrPbu Icon-module_dark__3bVJI"
-                data-testid="data-testid-Icon"
-                focusable="false"
-                height="12"
-                role="img"
-                tabindex="-1"
-                viewBox="0 0 50 50"
-                width="12"
-                style="height: 12px; width: 12px"
-              >
-                <title id="rightArrow-8">rightArrow</title>
-                <g>
-                  <path
-                    d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
-                    class=""
-                  ></path>
-                </g>
-              </svg>
-            </p>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide-txt">
+              <div class="section1-txt">
+                <div class="section1-txt-wrap">
+                  <p class="top">향수</p>
+                  <p class="big">이솝의 퍼스널 향</p>
+                  <p class="long">
+                    전통에서 벗어난 매혹적이고 세련된 이솝 향수는 추억과 우리를
+                    이어주는 감각적인 다리이자 주변 사람들과의 연결점입니다.
+                  </p>
+                  <p class="bottom">
+                    향수 모두 보기
+                    <svg
+                      aria-labelledby="rightArrow-8"
+                      class="Icon-module_base__jrPbu Icon-module_dark__3bVJI"
+                      data-testid="data-testid-Icon"
+                      focusable="false"
+                      height="12"
+                      role="img"
+                      tabindex="-1"
+                      viewBox="0 0 50 50"
+                      width="12"
+                      style="height: 12px; width: 12px"
+                    >
+                      <title id="rightArrow-8">rightArrow</title>
+                      <g>
+                        <path
+                          d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
+                          class=""
+                        ></path>
+                      </g>
+                    </svg>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/img/Aesop_Fragrance_Eidesis_Eau_de_Parfum_50mL_Web_Large_684x668px.png"
+                alt=""
+              />
+              <div class="sec1-slider-txt">
+                <h4>이더시스 오 드 퍼퓸</h4>
+                <p>우디, 스파이시, 앰버리</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/img/Aesop_Fragrance_Miraceti_Eau_de_Parfum_50mL_Web_Large_684x668px.png"
+                alt=""
+              />
+              <div class="sec1-slider-txt">
+                <h4>미라세티 오 드 퍼퓸</h4>
+                <p>유향, 우디, 스파이시한 향</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="/img/Aesop_Fragrance_Karst_Eau_de_Parfum_50mL_Web_Large_684x668px.png"
+                alt=""
+              />
+              <div class="sec1-slider-txt">
+                <h4>카르스트 오 드 퍼퓸</h4>
+                <p>상쾌한, 허브, 마린 향</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/img/Aesop_Fragrance_Eremia_Eau_de_Parfum_50mL_Web_Large_684x668px.png"
+                alt=""
+              />
+              <div class="sec1-slider-txt">
+                <h4>에레미아 오 드 퍼퓸</h4>
+                <p>그린, 플로럴, 시트러스 향</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/img/Aesop_Fragrance_Rozu_Eau_de_Parfum_50mL_Web_Large_1000x977px.png"
+                alt=""
+              />
+              <div class="sec1-slider-txt">
+                <h4>로즈 오 드 퍼퓸</h4>
+                <p>플로럴, 그린, 우디</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/img/Aesop_Fragrance_Hwyl_Eau_de_Parfum_50mL_Web_Large_1000x977px.png"
+                alt=""
+              />
+              <div class="sec1-slider-txt">
+                <h4>휠 오 드 퍼퓸</h4>
+                <p>흥미를 불러일으키는 향기, 특이한 분위기</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/img/Aesop_Fragrance_Marrakech_Eau_de_Parfum_50mL_Web_Large_1000x977px.png"
+                alt=""
+              />
+              <div class="sec1-slider-txt">
+                <h4>마라케시 오드 퍼퓸</h4>
+                <p>원초적이고 독특한 향</p>
+              </div>
+            </div>
+            <div class="swiper-slide last-slide">
+              <img
+                src="/img/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Large_1000x977px.png"
+                alt=""
+              />
+              <div class="sec1-slider-txt">
+                <h4>테싯 오 드 퍼퓸</h4>
+                <p>상쾌한, 그린, 시트러스향</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="slider slider1">
-          <img
-            src="/img/Aesop_Fragrance_Eidesis_Eau_de_Parfum_50mL_Web_Large_684x668px.png"
-            alt=""
-          />
-          <div class="sec1-slider-txt">
-            <h4>이더시스 오 드 퍼퓸</h4>
-            <p>우디, 스파이시, 앰버리</p>
-          </div>
-        </div>
-        <div class="slider slider2">
-          <img
-            src="/img/Aesop_Fragrance_Miraceti_Eau_de_Parfum_50mL_Web_Large_684x668px.png"
-            alt=""
-          />
-          <div class="sec1-slider-txt">
-            <h4>미라세티 오 드 퍼퓸</h4>
-            <p>유향, 우디, 스파이시한 향</p>
-          </div>
-        </div>
-        <div class="slider slider3">
-          <img
-            src="/img/Aesop_Fragrance_Karst_Eau_de_Parfum_50mL_Web_Large_684x668px.png"
-            alt=""
-          />
-          <div class="sec1-slider-txt">
-            <h4>카르스트 오 드 퍼퓸</h4>
-            <p>상쾌한, 허브, 마린 향</p>
-          </div>
-        </div>
-        <div class="slider slider4">
-          <img
-            src="/img/Aesop_Fragrance_Eremia_Eau_de_Parfum_50mL_Web_Large_684x668px.png"
-            alt=""
-          />
-          <div class="sec1-slider-txt">
-            <h4>에레미아 오 드 퍼퓸</h4>
-            <p>그린, 플로럴, 시트러스 향</p>
-          </div>
-        </div>
-        <div class="slider slider5">
-          <img
-            src="/img/Aesop_Fragrance_Rozu_Eau_de_Parfum_50mL_Web_Large_1000x977px.png"
-            alt=""
-          />
-          <div class="sec1-slider-txt">
-            <h4>로즈 오 드 퍼퓸</h4>
-            <p>플로럴, 그린, 우디</p>
-          </div>
-        </div>
-        <div class="slider slider6">
-          <img
-            src="/img/Aesop_Fragrance_Hwyl_Eau_de_Parfum_50mL_Web_Large_1000x977px.png"
-            alt=""
-          />
-          <div class="sec1-slider-txt">
-            <h4>휠 오 드 퍼퓸</h4>
-            <p>흥미를 불러일으키는 향기, 특이한 분위기</p>
-          </div>
-        </div>
-        <div class="slider slider7">
-          <img
-            src="/img/Aesop_Fragrance_Marrakech_Eau_de_Parfum_50mL_Web_Large_1000x977px.png"
-            alt=""
-          />
-          <div class="sec1-slider-txt">
-            <h4>마라케시 오드 퍼퓸</h4>
-            <p>원초적이고 독특한 향</p>
-          </div>
-        </div>
-        <div class="slider slider8">
-          <img
-            src="/img/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Large_1000x977px.png"
-            alt=""
-          />
-          <div class="sec1-slider-txt">
-            <h4>테싯 오 드 퍼퓸</h4>
-            <p>상쾌한, 그린, 시트러스향</p>
-          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <div class="swiper-scrollbar"></div>
         </div>
       </section>
 
@@ -792,8 +813,5 @@
     <div class="consulting-btn-wrap">
       <div class="consulting-btn"></div>
     </div>
-
-    <!-- link to main.js -->
-    <script src="main.js"></script>
   </body>
 </html>
