@@ -1,6 +1,6 @@
 new Swiper(".section1 .swiper", {
   // Optional parameters
-  slidesPerView: 4,
+  slidesPerView: 4.2,
   /* spaceBetween: 50, */ // 슬라이드 사이 여백
 
   // If we need pagination
@@ -18,5 +18,7 @@ new Swiper(".section1 .swiper", {
   scrollbar: {
     el: ".swiper-scrollbar",
     draggable: false,
+    dragSize: 200,
+    snapOnRelease: true,
   },
 });
