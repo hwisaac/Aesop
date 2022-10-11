@@ -1,0 +1,51 @@
+.section6 {
+  margin-top: 150px;
+}
+.section6 .inner-left {
+}
+.section6 .inner-left .col-left {
+  width: 405px;
+  box-sizing: border-box;
+}
+.section6 .inner-left .col-left .title {
+}
+.section6 .inner-left .col-left .description {
+  margin-top: 30px;
+  font-size: 16px;
+}
+.section6 .inner-left .col-left .btn {
+  margin-top: 30px;
+}
+.section6 .inner-left .col-right {
+}
+.section6 .inner-left .col-right .swiper {
+}
+.section6 .inner-left .col-right .swiper .swier-wrapper {
+}
+.section6 .inner-left .col-right .swiper .swier-wrapper .swiper-slide {
+}
+.section6 .inner-left .col-right .swiper .swier-wrapper .swiper-slide img {
+  width: 863px;
+  height: 490px;
+}
+
+.section6 .inner-left .col-right .pagination-bars {
+  height: 3px;
+  width: 863px;
+  margin-top: 30px;
+  display: flex;
+  margin-top: 70px;
+}
+.section6 .inner-left .col-right .pagination-bars .bar {
+  width: calc(100% / 3);
+  height: 3px;
+  background-color: #dee1e6;
+}
+.section6 .inner-left .col-right .pagination-bars .bar.active {
+  background-color: #51514d;
+}
+
+.section6 .pagination-name {
+  top: 50px;
+  position: relative;
+}

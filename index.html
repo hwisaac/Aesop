@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">Assignment</h4>
+              <p class="text-muted">이솝 메인 페이지 클론해보기</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Team 4</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    href="https://www.notion.so/hnhyerim/c417f9be7cf7439d8c490aae78e87db1"
+                    class="text-white"
+                    >노션</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.aesop.com/kr/" class="text-white"
+                    >원본 이솝 사이트</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/fastcampus-team4/Aesop"
+                    class="text-white"
+                    >깃허브 리포지토리 주소</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              aria-hidden="true"
+              class="me-2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+              ></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+            <strong>Aesop clone</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <p>
+            <a
+              href="https://www.aesop.com/"
+              class="btn btn-dark my-2"
+              target="_blank"
+              >원본 이솝 사이트 링크
+            </a>
+            <a
+              href="https://github.com/fastcampus-team4/Aesop/tree/develop"
+              target="_blank"
+              class="btn btn-secondary my-2"
+              >클론 깃허브</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="./img/Aesop_A_Guide_to_Fragrance_Web_Athenaeum_Thumbnail_Horizontal_Desktop_1920x1080px.jpg"
+                alt=""
+              />
+              <div class="card-body">
+                <p class="card-text">HeaGyeong</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.open('./Haekyung/index.html')"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.open('https://github.com/fastcampus-team4/Aesop/tree/develop/Haekyung')"
+                    >
+                      Code
+                    </button>
+                  </div>
+                  <small class="text-muted"></small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="./img/Aesop_Eidesis_2022_Web_Homepage_Secondary_Athenaeum_1920x1080px.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="card-text">HyeIn</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.open('./HyeIn/index.html')"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.open('https://github.com/fastcampus-team4/Aesop/tree/develop/HyeIn')"
+                    >
+                      Code
+                    </button>
+                  </div>
+                  <small class="text-muted"></small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="./img/Aesop_Homepage_Navigation_Category_Home_Desktop_1700x2400px.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="card-text">HyeRim</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.open('./HyeRim/index.html')"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.open('https://github.com/fastcampus-team4/Aesop/tree/develop/HyeRim')"
+                    >
+                      Code
+                    </button>
+                  </div>
+                  <small class="text-muted"></small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="./img/Aesop_Homepage_Navigation_Category_Read_Desktop_1700x2400px.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="card-text">HyeWon</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.open('./HyeWon/index.html')"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.open('https://github.com/fastcampus-team4/Aesop/tree/develop/HyeWon')"
+                    >
+                      Code
+                    </button>
+                  </div>
+                  <small class="text-muted"></small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="./img/Aesop_KR_Store_Hannam_III_Hero_Bleed_Desktop_2880x1620px.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="card-text">Isaac</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.open('./ISak/index.html')"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.open('https://github.com/fastcampus-team4/Aesop/tree/develop/ISak')"
+                    >
+                      Code
+                    </button>
+                  </div>
+                  <small class="text-muted"></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
