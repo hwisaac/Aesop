@@ -183,10 +183,70 @@ h3 {
 
 /* perfume section */
 #perfume-section {
+  position: relative;
+}
+#perfume-section .inner {
   padding-top: 150px;
+  padding-bottom: 50px;
   margin: 0 80px 48px;
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+#perfume-section .swiper {
+  width: 100%;
+}
+
+#perfume-section .swiper-scrollbar {
+  margin: auto;
+  width: 90%;
+  height: 2px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#perfume-section .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+#perfume-section .swiper-button-prev.swiper-button-disabled,
+#perfume-section .swiper-button-next.swiper-button-disabled {
+  display: none;
+}
+
+#perfume-section .swiper-button-prev,
+#perfume-section .swiper-button-next {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-semi-dark-gray);
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+#perfume-section .swiper-button-prev:after,
+#perfume-section .swiper-button-next:after {
+  font-size: 15px;
+}
+
+#perfume-section .inner:hover .swiper-button-prev,
+#perfume-section .inner:hover .swiper-button-next {
+  opacity: 1;
+  /* transform: translateX(50px); */
 }
 
 .perfume__info {
@@ -215,7 +275,7 @@ h3 {
   font-size: 18px;
 }
 
-.perfume__itmes {
+/* .perfume__itmes {
   display: flex;
   gap: 30px;
   width: calc((100% - 451px) / 2);
@@ -226,7 +286,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .perfume__img {
   margin-left: 20px;
@@ -521,11 +581,7 @@ h3 {
   line-height: 1.6;
 }
 
-#footer
-  .container.first
-  .first__info
-  .first__info--toggle
-  .marketing-container {
+#footer .container.first .first__info .first__info--toggle .marketing-container {
   position: relative;
 }
 
@@ -542,12 +598,7 @@ h3 {
   padding: 1px 2px;
 }
 
-#footer
-  .container.first
-  .first__info
-  .first__info--toggle
-  .last-input-box
-  input {
+#footer .container.first .first__info .first__info--toggle .last-input-box input {
   outline: none;
   border: none;
   width: calc(100% - 37px);
@@ -559,12 +610,7 @@ h3 {
   border-right: 1px solid var(--color-light-white);
 }
 
-#footer
-  .container.first
-  .first__info
-  .first__info--toggle
-  .input-email
-  input::placeholder {
+#footer .container.first .first__info .first__info--toggle .input-email input::placeholder {
   color: var(--color-light-white);
 }
 
@@ -576,12 +622,7 @@ h3 {
   /* flex: 0 0 auto; */
 }
 
-#footer
-  .container.first
-  .first__info
-  .first__info--toggle
-  button
-  .material-symbols-outlined {
+#footer .container.first .first__info .first__info--toggle button .material-symbols-outlined {
   font-size: 16px;
 }
 
