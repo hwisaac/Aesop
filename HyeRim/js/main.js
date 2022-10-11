@@ -4,18 +4,15 @@ const swiper = new Swiper('.perfume.swiper', {
   spaceBetween: 50,
   speed: 700,
   breakpoints: {
-    320: {
-      slidesPerView: 1
-    },
     640: {
       slidesPerView: 2
     },
     1080: {
       slidesPerView: 3
     },
-    2000: {
+    1500: {
       slidesPerView: 4
-    }
+    },
   },
   scrollbar: {
     el: '.perfume .swiper-scrollbar',

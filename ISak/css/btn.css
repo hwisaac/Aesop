@@ -1,0 +1,25 @@
+.btn {
+  display: flex;
+  border: 1px solid white;
+  height: 60px;
+  width: 300px;
+  align-items: center;
+  padding: 0 22px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.btn.btn--reverse {
+  background-color: #fffef2;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.btn.btn--reverse:hover {
+  background-color: #333333;
+  border: none;
+  color: white;
+}
