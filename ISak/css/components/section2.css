@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 .section2 .row {
   display: flex;
@@ -85,36 +86,5 @@
 
 .section2 .prev-btn,
 .section2 .next-btn {
-  background-color: #333;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  cursor: pointer;
-  width: 80px;
-  height: 80px;
   top: 38%;
-  z-index: 8;
-}
-.section2 .prev-btn {
-  left: 0px;
-  width: 0;
-}
-.section2 .prev-btn.show {
-  width: 80px;
-  transition: 0.5s;
-}
-.section2 .next-btn {
-  right: 0;
-  width: 0;
-  transition: 0.5s;
-}
-.section2 .next-btn.show {
-  /* right: 0; */
-  width: 80px;
-}
-.section2 .swiper-button-disabled {
-  opacity: 0;
-  transition: 0.5s;
 }

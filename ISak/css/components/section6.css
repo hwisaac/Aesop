@@ -23,6 +23,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
 }
 .section6 .inner-left .col-right .swiper {
   width: 800px;
@@ -61,4 +63,25 @@
 */ .section6 .pagination-name {
   top: 50px;
   position: relative;
+}
+
+.section6 .prev-btn,
+.section6 .next-btn {
+  width: 80px;
+  height: 80px;
+  top: 40%;
+}
+.section6 .pagination-name {
+  font-size: 12px;
+  color: #666;
+  transition: 0.2s;
+  opacity: 1;
+}
+.section6 .pagination-name.hidden {
+  opacity: 0;
+}
+.section6 .prev-btn.swiper-button-disabled,
+.section6 .next-btn.swiper-button-disabled {
+  opacity: 1;
+  transition: none;
 }

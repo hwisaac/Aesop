@@ -9,7 +9,7 @@
 }
 .section1 .inner {
   height: 100%;
-  padding: 100px 0;
+  padding: 100px 50px;
   box-sizing: border-box;
 }
 .section1 .inner svg {

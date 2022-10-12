@@ -38,23 +38,25 @@
   z-index: 8;
 }
 .prev-btn {
-  width: 0;
-  left: 0;
+  left: -80px;
+  transition: 0.5s;
 }
 .prev-btn.show {
-  width: 80px;
+  left: 0;
   transition: 0.5s;
 }
 .next-btn {
-  width: 0;
-  right: 0;
+  right: -80px;
   transition: 0.5s;
 }
 .next-btn.show {
-  width: 80px;
+  right: 0;
 }
-.next-btn.swiper-button-disabled,
+.next-btn.swiper-button-disabled {
+  right: -80px;
+  transition: 0.5s;
+}
 .prev-btn.swiper-button-disabled {
-  opacity: 0;
+  left: -80px;
   transition: 0.5s;
 }
