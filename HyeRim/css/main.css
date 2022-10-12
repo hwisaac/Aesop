@@ -377,24 +377,83 @@ header .sub-menu {
 
 .locater .store {
   width: 65%;
-  padding-left: 100px;
+  margin-left: 50px;
+  position: relative;
+  padding-bottom: 50px;
   box-sizing: border-box;
 }
 
 .locater .store ul {
   display: flex;
-  overflow: hidden;
-}
-
-.locater .store ul li {
-  display: flex;
-  width: 100%;
-  flex: none;
-  
 }
 
 .locater .store ul li img {
   width: 100%;
+}
+
+
+/* .locater .store .swiper-scrollbar {
+  position: absolute;
+  width: 100%;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+} */
+
+.locater .swiper-pagination {
+  background-color: rgba(0,0,0,0.3);
+  height: 3px;
+  width: 100%;
+  border-radius: 50px;
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+}
+
+.locater .swiper-pagination .swiper-pagination-progressbar-fill {
+  background-color: #333;
+}
+
+/* .locater .swiper-pagination-bullet {
+  width: calc(100% / 3);
+  border-radius: inherit;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.locater .swiper-pagination-bullet-active {
+  background-color: #333;
+  opacity: 1;
+} */
+
+.locater .store:hover button.swiper-button-next,
+.locater .store:hover button.swiper-button-prev {
+  opacity: 1;
+}
+
+.locater .store:hover .swiper-button-prev {
+  left: 0;
+  top: calc(50% - 50px);
+}
+
+.locater .store:hover .swiper-button-next {
+  right: 0;
+  top: calc(50% - 50px);
+}
+
+.locater .store-locate {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 15px;
+  opacity: 0;
+}
+
+.locater .store-locate li {
+  position: absolute;
+  left: 0;
 }
 
 

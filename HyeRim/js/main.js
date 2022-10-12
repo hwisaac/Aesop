@@ -1,4 +1,6 @@
-const swiper = new Swiper('.perfume.swiper', {
+// SWIPER
+// perfume
+new Swiper('.perfume.swiper', {
   loop: false,
   slidesPerView: 4,
   spaceBetween: 50,
@@ -23,3 +25,27 @@ const swiper = new Swiper('.perfume.swiper', {
     prevEl: '.perfume .swiper-button-prev',
   },
 });
+
+// SWIPER
+// locater
+new Swiper('.locater .swiper', {
+  loop: true,
+  autoplay: true,
+  slidesPerView: 1,
+  speed: 700,
+  pagination: {
+    el: '.locater .swiper-pagination',
+    type: "progressbar",
+  },
+  navigation: {
+    nextEl: '.locater .swiper-button-next',
+    prevEl: '.locater .swiper-button-prev',
+  },
+  on: {
+    init: function() {
+      console.log('dd')
+    }
+  }
+});
+
+const storeLocate = document.querySelectorAll('.store-locate li');
