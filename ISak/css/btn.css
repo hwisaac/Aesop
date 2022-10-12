@@ -23,3 +23,38 @@
   border: none;
   color: white;
 }
+
+.prev-btn,
+.next-btn {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  z-index: 8;
+}
+.prev-btn {
+  width: 0;
+  left: 0;
+}
+.prev-btn.show {
+  width: 80px;
+  transition: 0.5s;
+}
+.next-btn {
+  width: 0;
+  right: 0;
+  transition: 0.5s;
+}
+.next-btn.show {
+  width: 80px;
+}
+.next-btn.swiper-button-disabled,
+.prev-btn.swiper-button-disabled {
+  opacity: 0;
+  transition: 0.5s;
+}

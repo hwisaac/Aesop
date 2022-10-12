@@ -89,12 +89,18 @@ const s5_swiper = new Swiper(".section5 .swiper", {
   },
 });
 
+const nextBtn = 3;
+
+nextBtn.addEventListener("click", () => {
+  s5_swiper.slideNext(500);
+});
+
 //section 6 스와이퍼
 const s6_swiper = new Swiper(".section6 .col-right .swiper", {
   // observer: true,
   // observeParents: true,
   autoplay: true,
-  loop: true,
+  // loop: true,
   slidesPerView: 1,
   // navigation: {
   //   nextEl: ".section6 .next-btn",
