@@ -62,9 +62,8 @@ const s2_swiper = new Swiper(".section2 .swiper", {
     nextEl: ".section2 .next-btn",
     prevEl: ".section2 .prev-btn",
   },
-  pagination: {
+  scrollbar: {
     el: ".section2 .pagination-bar",
-    type: "progressbar",
   },
 });
 
@@ -74,6 +73,40 @@ const s2_rowEl = document.querySelector(".section2 .row");
 s2_rowEl.addEventListener("mouseover", () => {
   s2_nextBtn.classList.add("show");
   s2_prevBtn.classList.add("show");
+});
+
+//sectino 5 스와이퍼
+const s5_swiper = new Swiper(".section5 .swiper", {
+  autoplay: true,
+  loop: false,
+  slidesPerView: 3,
+  navigation: {
+    nextEl: ".section5 .next-btn",
+    prevEl: ".section5 .prev-btn",
+  },
+  scrollbar: {
+    el: ".section5 .pagination-bars",
+  },
+});
+
+//section 6 스와이퍼
+const s6_swiper = new Swiper(".section6 .col-right .swiper", {
+  // observer: true,
+  // observeParents: true,
+  autoplay: true,
+  loop: true,
+  slidesPerView: 1,
+  // navigation: {
+  //   nextEl: ".section6 .next-btn",
+  //   prevEl: ".section6 .prev-btn",
+  // },
+  scrollbar: {
+    el: ".section6 .pagination-bars",
+  },
+  pagination: {
+    el: ".section6 .pagination-name",
+    type: "custom",
+  },
 });
 
 //body test

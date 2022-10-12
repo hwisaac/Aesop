@@ -9,6 +9,7 @@
   width: 405px;
   box-sizing: border-box;
   /* border: 1px solid red; */
+  padding-right: 50px;
 }
 .section3 .inner-left .col-left .small {
 }
