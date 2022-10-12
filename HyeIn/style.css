@@ -174,7 +174,7 @@ header {
   display: block;
   box-sizing: border-box;
 }
-.swiper-slide .sec1-slider-txt {
+.section1 .swiper-slide .sec1-slider-txt {
   margin-top: 10px;
   text-align: center;
   font-size: 14px;
@@ -326,28 +326,101 @@ header {
 /* section4 */
 .section4 {
   margin-top: 155px;
-  margin-left: 80px;
 }
 .section4 h2 {
   font-size: 30px;
+  margin-left: 80px;
   margin-bottom: 110px;
-}
-.sec4-slider {
-  display: flex;
-  padding-left: 57px;
-  overflow: hidden;
-}
-.sec4-slider .slider {
-  margin-right: 113px;
-}
-.sec4-slider .slider img {
-  height: 370px;
 }
 .sec4-slider-txt {
   margin-top: 10px;
   text-align: center;
   font-size: 14px;
   line-height: 40px;
+}
+.section4 .swiper {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.section4 .swiper .swiper-wrapper {
+  align-items: flex-end;
+}
+.section4 .swiper-slide {
+  width: 436px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.section4 .swiper-slide:hover .sec4-slider-txt > h4 {
+  text-decoration: underline;
+}
+.section4 .swiper-slide img {
+  width: 80%;
+}
+.section4 .swiper-slide .sec4-slider-txt {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.section4 .swiper .swiper-button-prev {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  left: -80px;
+  transition: 0.5s;
+}
+.section4 .swiper .swiper-button-next {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  right: -80px;
+  transition: 0.5s;
+}
+.section4 .swiper:hover .swiper-button-prev {
+  left: 0;
+}
+.section4 .swiper:hover .swiper-button-next {
+  right: 0;
+}
+
+.section4 .swiper .swiper-button-prev i,
+.section4 .swiper .swiper-button-next i {
+  color: #fffef2;
+}
+
+.section4 .swiper .swiper-button-prev.swiper-button-disabled {
+  left: -80px;
+}
+.section4 .swiper .swiper-button-next.swiper-button-disabled {
+  right: -80px;
+}
+.section4 .swiper .swiper-button-next:after,
+.section4 .swiper .swiper-button-prev:after {
+  display: none;
+}
+
+.section4 .swiper .swiper-scrollbar {
+  margin: auto;
+  width: 90%;
+  height: 2px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.section4 .swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* transition-duration: 5s; 
+  scrollbar-drag 가 움직일 때의 duration 에 줘야 해서 안 먹는 듯
+  */
 }
 
 /* section5 */
@@ -386,18 +459,74 @@ header {
 .sec5-txt button:hover > svg {
   fill: #fff;
 }
-.sec5-slider {
-  width: 1110px;
-  display: flex;
-  overflow: hidden;
+.section5 .swiper {
+  width: 1100px;
+  margin: 0;
 }
-.sec5-slider .slider img {
-  width: 1110px;
+.section5 .swiper-slide img {
+  width: 100%;
 }
-.sec5-slider .slider p {
+.section5 .swiper-slide p {
   color: #666;
   font-size: 14px;
   margin-top: 95px;
+}
+.section5 .swiper .swiper-button-prev {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  left: -80px;
+  top: 38%;
+  transition: 0.5s;
+}
+.section5 .swiper .swiper-button-next {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  right: -80px;
+  top: 38%;
+  transition: 0.5s;
+}
+.section5 .swiper:hover .swiper-button-prev {
+  left: 0;
+}
+.section5 .swiper:hover .swiper-button-next {
+  right: 0;
+}
+
+.section5 .swiper .swiper-button-prev i,
+.section5 .swiper .swiper-button-next i {
+  color: #fffef2;
+}
+
+.section5 .swiper .swiper-button-prev.swiper-button-disabled {
+  left: -80px;
+}
+.section5 .swiper .swiper-button-next.swiper-button-disabled {
+  right: -80px;
+}
+.section5 .swiper .swiper-button-next:after,
+.section5 .swiper .swiper-button-prev:after {
+  display: none;
+}
+
+.section5 .swiper .swiper-scrollbar {
+  height: 2px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+}
+
+.section5 .swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* transition-duration: 5s; 
+  scrollbar-drag 가 움직일 때의 duration 에 줘야 해서 안 먹는 듯
+  */
 }
 
 /* footer */
@@ -633,6 +762,7 @@ label span {
   position: fixed;
   bottom: 100px;
   right: 50px;
+  z-index: 1000;
   border: 1px solid #fffef2;
   border-radius: 50%;
 }
