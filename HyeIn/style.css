@@ -134,12 +134,12 @@ header {
 }
 
 /* section1 */
-.section1 {
-  /* width: 100%; */
+.section1 .swiper {
+  padding-left: 80px;
+  padding-right: 80px;
 }
 .swiper-wrapper .slide-txt {
   width: 434px;
-  margin-left: 80px;
 }
 .swiper-wrapper {
   margin-bottom: 50px;
@@ -161,14 +161,16 @@ header {
   font-size: 15px;
   cursor: pointer;
 }
-.swiper-slide {
-  /* width: 300px; */
+.section1 .swiper-slide {
+  width: 436px;
   cursor: pointer;
   box-sizing: border-box;
-  margin-right: 50px;
+}
+.section1 .swiper-slide:hover .sec1-slider-txt > h4 {
+  text-decoration: underline;
 }
 .section1 .swiper-slide img {
-  width: 436px;
+  width: 100%;
   display: block;
   box-sizing: border-box;
 }
@@ -177,6 +179,64 @@ header {
   text-align: center;
   font-size: 14px;
   line-height: 40px;
+}
+
+.section1 .swiper .swiper-button-prev {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  left: -80px;
+  transition: 0.5s;
+}
+.section1 .swiper .swiper-button-next {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  right: -80px;
+  transition: 0.5s;
+}
+.section1 .swiper:hover .swiper-button-prev {
+  left: 0;
+}
+.section1 .swiper:hover .swiper-button-next {
+  right: 0;
+}
+
+.section1 .swiper .swiper-button-prev i,
+.section1 .swiper .swiper-button-next i {
+  color: #fffef2;
+}
+
+.section1 .swiper .swiper-button-prev.swiper-button-disabled {
+  left: -80px;
+}
+.section1 .swiper .swiper-button-next.swiper-button-disabled {
+  right: -80px;
+}
+.section1 .swiper .swiper-button-next:after,
+.section1 .swiper .swiper-button-prev:after {
+  display: none;
+}
+
+.section1 .swiper .swiper-scrollbar {
+  margin: auto;
+  width: 90%;
+  height: 2px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.section1 .swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* transition-duration: 5s; 
+  scrollbar-drag 가 움직일 때의 duration 에 줘야 해서 안 먹는 듯
+  */
 }
 
 /* section2 */
@@ -281,8 +341,7 @@ header {
   margin-right: 113px;
 }
 .sec4-slider .slider img {
-  width: 323px;
-  height: 400px;
+  height: 370px;
 }
 .sec4-slider-txt {
   margin-top: 10px;
@@ -390,7 +449,7 @@ input[type="checkbox"] + label span:active {
   outline: 2px solid #fff;
 }
 input[type="checkbox"]:checked + label span {
-  background: url(/img/check-mark.png) no-repeat center;
+  background: url(../img/check-mark.png) no-repeat center;
   background-size: 15px;
 }
 label span {
@@ -568,7 +627,7 @@ label span {
 
 /* consulting-btn */
 .consulting-btn {
-  background: url(/img/live-chat-icon.svg) no-repeat center;
+  background: url(../img/live-chat-icon.svg) no-repeat center;
   width: 37px;
   height: 37px;
   position: fixed;
