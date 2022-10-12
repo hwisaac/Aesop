@@ -1,11 +1,9 @@
-console.log('d');
 new Swiper('.sec2 .swiper', {
   observe: true,
   observeParents: true,
   loop: false,
-  slidesPerView: 4,
-  // autoplay: true,
-  spaceBetween: 20,
+  slidesPerView: 3.2,
+  spaceBetween: 15,
 
   navigation: {
     nextEl: '.swiper-button-next',
