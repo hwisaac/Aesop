@@ -241,7 +241,7 @@ body .msg {
 .sec2 .inner .perfume-item span {
   font-size: 14px;
 }
-.sec2 .swiper-button-prev {
+.sec2 .inner .swiper-button-prev {
   width: 80px;
   height: 80px;
   position: absolute;
@@ -251,7 +251,7 @@ body .msg {
   color: #fffef2;
   transition: 0.5s ease;
 }
-.sec2 .swiper-button-next {
+.sec2 .inner .swiper-button-next {
   width: 80px;
   height: 80px;
   position: absolute;
@@ -261,8 +261,8 @@ body .msg {
   color: #fffef2;
   transition: 0.5s ease;
 }
-.sec2 .swiper-button-prev.swiper-button-disabled,
-.sec2 .swiper-button-next.swiper-button-disabled {
+.sec2 .inner .swiper-button-prev.swiper-button-disabled,
+.sec2 .inner .swiper-button-next.swiper-button-disabled {
   display: none;
 }
 .sec2 .inner:hover .swiper-button-prev {
@@ -277,8 +277,8 @@ body .msg {
 .sec2 .swiper-button-next::after {
   font-size: 20px;
 }
-.sec2 .swiper-horizontal > .swiper-scrollbar,
-.sec2 .swiper-scrollbar.swiper-scrollbar-horizontal {
+.sec2 .inner .swiper-horizontal > .swiper-scrollbar,
+.sec2 .inner .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: absolute;
   left: 5%;
   height: 2.5px;
@@ -355,7 +355,7 @@ body .msg {
 
 /* SECTION4 */
 .sec4 {
-  height: 700px;
+  height: 100%;
   background-color: #fffef2;
   color: #333;
 }
@@ -413,7 +413,7 @@ body .msg {
 
 /* SECTION5 */
 .sec5 {
-  height: 700px;
+  height: 100%;
   background-color: #fffef2;
   color: #333;
 }
@@ -422,39 +422,98 @@ body .msg {
   padding-left: 80px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 .sec5 h1 {
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 60px;
 }
-.sec5 .selectionItems {
+.sec5 .swiper.selectionItems {
   display: flex;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
 }
-.sec5 .selectionItem {
+.sec5 .swiper-slide.selectionItem {
+  max-width: 400px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 15px;
+  align-items: center;
+  padding-left: 10px;
   overflow: hidden;
+}
+.sec5 .inner .swiper-slide.selectionItem:last-child {
+  margin-right: 80px;
 }
 .sec5 .selectionItem img {
   height: 400px;
-  width: auto;
-  margin: 0 65px 0;
+  /* margin: 0 65px 0; */
 }
 .sec5 .selectionItem span {
   font-size: 14px;
 }
-
+.sec5 .inner .swiper-button-prev {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: -80px;
+  top: 65%;
+  background-color: #333;
+  color: #fffef2;
+  transition: 0.5s ease;
+}
+.sec5 .inner .swiper-button-next {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 65%;
+  right: -80px;
+  background-color: #333;
+  color: #fffef2;
+  transition: 0.5s ease;
+}
+.sec5 .inner .swiper-button-prev.swiper-button-disabled,
+.sec5 .inner .swiper-button-next.swiper-button-disabled {
+  display: none;
+}
+.sec5 .inner:hover .swiper-button-prev {
+  transform: translateX(80px);
+  transition: 0.5s ease;
+}
+.sec5 .inner:hover .swiper-button-next {
+  transform: translateX(-80px);
+  transition: 0.5s ease;
+}
+.sec5 .swiper-button-prev::after,
+.sec5 .swiper-button-next::after {
+  font-size: 20px;
+}
+.sec5 .inner .swiper-horizontal > .swiper-scrollbar,
+.sec5 .inner .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  height: 2.5px;
+  width: 75%;
+  border-radius: 0px;
+}
+.sec5 .inner .selectionItems .swiper-scrollbar .swiper-scrollbar-drag {
+  width: 76% !important;
+}
 /* SECTION6 */
 .sec6 {
   height: 900px;
   background-color: #fffef2;
   color: #333;
+  font-size: 14px;
 }
 .sec6 .inner {
-  padding: 150px 0;
+  padding-top: 150px;
   display: flex;
 }
 .sec6 .inner .store {
@@ -498,19 +557,74 @@ body .msg {
   background-color: #333;
   color: #fffef2;
 }
+.sec6 .inner .swiper {
+  position: relative;
+}
 .sec6 .inner .sec6Img {
   /* width: 886px;   */
   display: flex;
+  flex-direction: column;
+  gap: 80px;
   overflow: hidden;
 }
 .sec6 .inner .sec6Img img {
   width: 886px;
 }
-
+.sec6 .inner .sec6Img span {
+  transition: 0.5s ease;
+}
+.sec6 .inner .swiper-button-prev {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: -80px;
+  top: 40%;
+  background-color: #333;
+  color: #fffef2;
+  transition: 0.5s ease;
+}
+.sec6 .inner .swiper .swiper-button-next {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 40%;
+  right: -80px;
+  background-color: #333;
+  color: #fffef2;
+  transition: 0.5s ease;
+}
+.sec6 .inner .swiper-button-prev.swiper-button-disabled,
+.sec6 .inner .swiper-button-next.swiper-button-disabled {
+  display: none;
+}
+.sec6 .inner .swiper:hover .swiper-button-prev {
+  transform: translateX(80px);
+  transition: 0.5s ease;
+}
+.sec6 .inner .swiper:hover .swiper-button-next {
+  transform: translateX(-80px);
+  transition: 0.5s ease;
+}
+.sec6 .swiper-button-prev::after,
+.sec6 .swiper-button-next::after {
+  font-size: 20px;
+}
+.sec6 .inner .swiper .swiper-horizontal > .swiper-scrollbar,
+.sec6 .inner .swiper .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  height: 2.5px;
+  width: 100%;
+  border-radius: 0px;
+}
+.sec6 .inner .swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  width: 33.3% !important;
+}
 /* FOOTER */
 .footer {
   background-color: #252525;
-  /* height: 900px; */
+  height: 100%;
   color: #fffef2;
   font-size: 14px;
 }
