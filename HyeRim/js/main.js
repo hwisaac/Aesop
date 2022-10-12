@@ -28,24 +28,45 @@ new Swiper('.perfume.swiper', {
 
 // SWIPER
 // locater
-new Swiper('.locater .swiper', {
+const timer = 700;
+
+const locaterSwiper = new Swiper('.store.swiper', {
   loop: true,
   autoplay: true,
   slidesPerView: 1,
-  speed: 700,
+  speed: timer,
+  slideToClickedSlide: true,
   pagination: {
-    el: '.locater .swiper-pagination',
+    el: '.store .swiper-pagination',
+    type: "progressbar",
+  },
+  scrollbar: {
+    el: '.store .swiper-scrollbar',
     type: "progressbar",
   },
   navigation: {
-    nextEl: '.locater .swiper-button-next',
-    prevEl: '.locater .swiper-button-prev',
+    nextEl: '.store .swiper-button-next',
+    prevEl: '.store .swiper-button-prev',
   },
-  on: {
-    init: function() {
-      console.log('dd')
-    }
-  }
 });
 
-const storeLocate = document.querySelectorAll('.store-locate li');
+document.querySelector('.store.swiper').addEventListener('mouseover', function() {
+  locaterSwiper.autoplay.stop();
+  locaterTxtSwiper.autoplay.stop();
+})
+
+document.querySelector('.store.swiper').addEventListener('mouseleave', function() {
+  locaterSwiper.autoplay.start();
+  locaterTxtSwiper.autoplay.start();
+})
+
+const locaterTxtSwiper = new Swiper('.store-locate.swiper', {
+  loop: true,
+  autoplay: true,
+  speed: timer,
+  effect: 'fade',
+  navigation: {
+    nextEl: '.store .swiper-button-next',
+    prevEl: '.store .swiper-button-prev',
+  },
+});
