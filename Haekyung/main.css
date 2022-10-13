@@ -19,6 +19,7 @@ body .msg {
   border: none;
   outline: none;
   padding: 50px;
+  z-index: 1;
 }
 
 /* SHIPPING-BANNER */
@@ -34,7 +35,7 @@ body .msg {
   align-items: center;
   justify-items: center;
 }
-.shipping-banner .banner-inner .banner-btn {
+.shipping-banner .banner-inner #banner-btn {
   margin: auto;
   color: #fffef2;
   background-color: #252525;
@@ -44,15 +45,15 @@ body .msg {
   justify-items: center;
   cursor: pointer;
 }
-.shipping-banner .banner-inner .banner-btn:hover {
+.shipping-banner .banner-inner #banner-btn:hover {
   border-bottom: 0.3px solid #fffef2;
   transition: 1s;
 }
-.shipping-banner .banner-inner .banner-btn p.banner-btn-content {
+.shipping-banner .banner-inner #banner-btn p.banner-btn-content {
   font-size: 14px;
   font-family: 'Suisse Medium', sans-serif;
 }
-.shipping-banner .banner-inner .banner-btn span.banner-btn-icon {
+.shipping-banner .banner-inner #banner-btn span.banner-btn-icon {
   fill: #fffef2;
   margin-left: 20px;
   font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 0;
@@ -503,7 +504,7 @@ body .msg {
   border-radius: 0px;
 }
 .sec5 .inner .selectionItems .swiper-scrollbar .swiper-scrollbar-drag {
-  width: 76% !important;
+  width: 100%;
 }
 /* SECTION6 */
 .sec6 {
@@ -619,7 +620,7 @@ body .msg {
   border-radius: 0px;
 }
 .sec6 .inner .swiper .swiper-scrollbar .swiper-scrollbar-drag {
-  width: 33.3% !important;
+  /* width: 33.3% !important; */
 }
 /* FOOTER */
 .footer {

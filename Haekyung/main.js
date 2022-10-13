@@ -12,6 +12,7 @@ new Swiper('.sec2 .swiper', {
 
   scrollbar: {
     el: '.sec2 .swiper-scrollbar',
+    dragSize: 200,
   },
 });
 
@@ -29,15 +30,17 @@ new Swiper('.sec5 .swiper', {
 
   scrollbar: {
     el: '.sec5 .inner .swiper .swiper-scrollbar',
+    dragSize: 800,
   },
 });
 
-new Swiper('.sec6 .inner .swiper', {
+const s6_swiper = new Swiper('.sec6 .inner .swiper', {
   observe: true,
   observeParents: true,
-  loop: true,
+  loopedSlides: 1,
   slidesPerView: 1,
   spaceBetween: 0,
+  rewind: true,
 
   navigation: {
     nextEl: '.sec6 .swiper-button-next',
@@ -46,5 +49,27 @@ new Swiper('.sec6 .inner .swiper', {
 
   scrollbar: {
     el: '.sec6 .inner .swiper .swiper-scrollbar',
+    dragSize: 300,
   },
 });
+
+const bModal = document.getElementById('banner-modal');
+const bBtn = document.getElementById('banner-btn');
+const bModalClose = document.getElementsByClassName('close')[0];
+
+// When the user clicks the button, open the modal
+bBtn.onclick = function () {
+  bModal.style.display = 'block';
+};
+
+// When the user clicks on <span> (x), close the modal
+bModalClose.onclick = function () {
+  bModal.style.display = 'none';
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == bModal) {
+    bModal.style.display = 'none';
+  }
+};
