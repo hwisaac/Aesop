@@ -570,6 +570,16 @@ h3 {
   position: relative;
 }
 
+/* 임시로 만든것 */
+#store-section .swiper-pagination {
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
 #store-section .store__img {
   width: 1120px;
   height: 630px;
