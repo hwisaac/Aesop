@@ -92,4 +92,5 @@ topBannerClose.addEventListener('click', () => {
 panelBackground.addEventListener('click', () => {
   panelBackground.classList.remove('on');
   topBannerPanel.classList.remove('on');
+  document.querySelector('body').style.overflow = "visible";
 })
