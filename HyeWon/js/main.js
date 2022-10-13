@@ -40,6 +40,7 @@ new Swiper('#store-section .swiper', {
     dragSize: 370,
     // snapOnRelease: true,
   },
+  pagination: {},
   navigation: {
     prevEl: '#store-section .swiper-button-prev',
     nextEl: '#store-section .swiper-button-next',
