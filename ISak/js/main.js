@@ -1,4 +1,37 @@
 console.log("hello");
+// SUPER-HEADER
+const superHeaderEl = document.querySelector(".super-header");
+const superHeaderModalEl = document.querySelector(".super-header-modal");
+const superHeaderModalCloseEl = document.querySelector(
+  ".super-header-modal .close-container .material-symbols-outlined"
+);
+
+let superHeaderModalBool = false;
+const bodyEl = document.querySelector("body");
+bodyEl.addEventListener("click", (e) => {
+  if (e.x > 600 && superHeaderModalBool && e.y > 40) {
+    superHeaderModalEl.classList.remove("show");
+    superHeaderModalBool = false;
+  }
+});
+superHeaderEl.addEventListener("click", () => {
+  if (superHeaderModalBool) {
+    // 열려있는 경우 닫아주기
+    console.log("열려있는 경우 닫아주기");
+    superHeaderModalEl.classList.remove("show");
+    superHeaderModalBool = false;
+  } else {
+    //닫혀 있는 경우 열어주기
+    console.log("열려있는 경우 닫아주기");
+    superHeaderModalEl.classList.add("show");
+    superHeaderModalBool = true;
+  }
+  console.log(superHeaderModalBool);
+});
+superHeaderModalCloseEl.addEventListener("click", () => {
+  superHeaderModalEl.classList.remove("show");
+  superHeaderModalBool = false;
+});
 
 // HEADER
 window.__scrollPosition = document.documentElement.scrollTop || 0;
@@ -15,9 +48,6 @@ window.addEventListener(
     if (window.scrollY === 0) {
       headerEl.classList.remove("header--white");
       headerEl.classList.remove("header--fixed");
-      // gsap.to(headerEl, {
-      //   y: 0,
-      // });
     } else if (_direction === "down" && window.scrollY > 100) {
       headerEl.classList.add("header--white");
       gsap.to(headerEl, 0.2, {
@@ -165,5 +195,3 @@ s6_colRight.addEventListener("mouseout", () => {
   s6_nextBtnEl.classList.remove("show");
   s6_prevBtnEl.classList.remove("show");
 });
-//body test
-const bodyEl = document.querySelector("body");
