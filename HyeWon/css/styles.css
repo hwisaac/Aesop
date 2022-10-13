@@ -83,6 +83,9 @@ h3 {
   transition: all 0.3s linear;
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .header-btn:hover {
@@ -770,4 +773,91 @@ h3 {
   background-color: var(--color-dark-gray);
   color: var(--color-light-white);
   font-size: 16px;
+}
+
+/* Aside */
+
+.modal {
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #666666;
+  z-index: 999;
+  visibility: hidden;
+}
+
+.modal.open {
+  /* display: block; */
+  visibility: visible;
+}
+
+.modal .modal__overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal .modal-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #f1f0e8;
+  padding: 200px 130px 60px;
+  overflow-y: scroll;
+  transform: translateX(-100%);
+}
+
+.modal.open .modal-body {
+  transform: translateX(0);
+  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.modal .modal-body .title {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: var(--color-semi-dark-gray);
+}
+
+.modal .modal-body h2 {
+  color: var(--color-semi-dark-gray);
+}
+
+.modal .modal-body p {
+  font-size: 16px;
+  margin-top: 25px;
+}
+
+.modal .modal-body .modal-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.modal .menu .item {
+  padding: 40px 0;
+  border-top: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.modal .menu .item .item__title {
+  margin-bottom: 25px;
+}
+
+.modal .item__title span {
+  font-weight: 700;
+}
+
+.modal .menu .item .item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.modal .menu .item .item__info .item__info--text {
+  display: flex;
+  justify-content: space-between;
 }
