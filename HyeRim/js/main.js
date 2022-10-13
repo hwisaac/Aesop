@@ -36,6 +36,7 @@ const locaterSwiper = new Swiper('.store.swiper', {
   slidesPerView: 1,
   speed: timer,
   slideToClickedSlide: true,
+  rewind: true,
   pagination: {
     el: '.store .swiper-pagination',
     type: "progressbar",
@@ -70,3 +71,25 @@ const locaterTxtSwiper = new Swiper('.store-locate.swiper', {
     prevEl: '.store .swiper-button-prev',
   },
 });
+
+const topBanner = document.querySelector('.shippingBanner-body a');
+const panelBackground = document.querySelector('.panelBackground');
+const topBannerPanel = document.querySelector('.shippingBanner-body__panel');
+const topBannerClose = document.querySelector('.shippingBanner-body__panel .closeBtn')
+
+topBanner.addEventListener('click', () => {
+  panelBackground.classList.add('on');
+  topBannerPanel.classList.add('on');
+  document.querySelector('body').style.overflow = "hidden";
+})
+
+topBannerClose.addEventListener('click', () => {
+  panelBackground.classList.remove('on');
+  topBannerPanel.classList.remove('on');
+  document.querySelector('body').style.overflow = "visible";
+})
+
+panelBackground.addEventListener('click', () => {
+  panelBackground.classList.remove('on');
+  topBannerPanel.classList.remove('on');
+})
