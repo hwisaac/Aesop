@@ -48,6 +48,7 @@
   top: 0;
 }
 .header .inner {
+  margin: 0 50px;
   justify-content: space-between;
 }
 .header .inner ul li {
