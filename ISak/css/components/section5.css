@@ -3,15 +3,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .section5 .row {
   display: flex;
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
 }
 .section5 .row h2 {
   margin-left: 70px;
+  position: relative;
 }
 .section5 .row .swiper {
   margin-top: 100px;
@@ -39,37 +42,9 @@
 .section5 .row .swiper-slide .description {
 }
 
-.section5 .prev-btn,
-.section5 .next-btn {
-  background-color: #333;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  cursor: pointer;
-  width: 80px;
-  height: 80px;
-  top: 38%;
-  z-index: 8;
-}
-.section5 .prev-btn {
-  left: -80px;
-}
-.section5 .prev-btn.show {
-  left: 0;
-  transition: 0.5s;
-}
-.section5 .next-btn {
-  right: -80px;
-  transition: 0.5s;
-}
-.section5 .next-btn.show {
-  right: 0;
-}
-.section5 .swiper-button-disabled {
-  opacity: 0;
-  transition: 0.5s;
+.section5 .row .prev-btn,
+.section5 .row .next-btn {
+  top: 50%;
 }
 
 .section5 .pagination-bars {

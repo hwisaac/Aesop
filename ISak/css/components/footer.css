@@ -18,9 +18,11 @@ footer .row {
   justify-content: space-between;
 }
 footer .row ul.list {
+  margin: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /* border: 1px solid red; */
 }
 footer .row ul:nth-child(1) {
   width: 537px;
