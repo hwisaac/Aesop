@@ -45,3 +45,28 @@ new Swiper('#store-section .swiper', {
     nextEl: '#store-section .swiper-button-next',
   },
 });
+
+// Press the Header button to open a modal window
+const body = document.querySelector('body');
+const headerBtn = document.querySelector('.header .header-btn');
+const modal = document.querySelector('.header .modal');
+
+const openModal = () => {
+  modal.classList.toggle('open');
+  if (modal.classList.contains('open')) {
+    body.style.overflow = 'hidden';
+  }
+};
+
+headerBtn.addEventListener('click', openModal);
+
+// Close the modal window by pressing the Modal button
+const overlay = document.querySelector('.modal .modal__overlay');
+const modalBtn = document.querySelector('.modal .modal-btn');
+
+const closeModal = () => {
+  modal.classList.remove('open');
+};
+
+overlay.addEventListener('click', closeModal);
+modalBtn.addEventListener('click', closeModal);
