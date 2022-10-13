@@ -1,3 +1,61 @@
+.super-header-modal {
+  display: flex;
+  width: 660px;
+  height: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  background-color: #fffef2;
+  z-index: 9001;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  padding: 0 30px;
+  left: -660px;
+  transition: left 0.5s;
+}
+.super-header-modal.show {
+  left: 0;
+}
+.super-header-modal .close-container .material-symbols-outlined {
+  cursor: pointer;
+}
+.super-header-modal .row {
+  width: 50%;
+  display: flex;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  gap: 20px;
+}
+.super-header-modal .row .title {
+  font-size: 13px;
+}
+.super-header-modal .row .text {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+  line-height: 25px;
+}
+.super-header-modal div:nth-child(1) {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  margin-top: 30px;
+}
+.super-header-modal .row:nth-child(3) div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.super-header-modal div:nth-child(3) div span {
+  color: rgba(0, 0, 0, 0.5);
+}
+.super-header-modal .row:nth-child(1) .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+.super-header-modal div:last-child {
+  border-bottom: none;
+}
+
 .super-header {
   background-color: #252525;
   color: #fff3f2;
@@ -26,6 +84,7 @@
 .super-header span:hover:after {
   opacity: 1;
 }
+
 .header {
   background-color: #666;
   height: 77px;
@@ -35,13 +94,13 @@
   color: #fffef2;
   /* position: relative; */
   /* margin: 0 auto; */
-  z-index: 9999;
+  z-index: 9000;
 }
 .header.header--white {
   background-color: #fffef2;
   color: #666666;
   border-bottom: 1px solid #666;
-  z-index: 9999;
+  z-index: 9000;
 }
 .header.header--fixed {
   position: fixed;
