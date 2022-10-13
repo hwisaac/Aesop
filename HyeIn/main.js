@@ -77,11 +77,13 @@ modalBtn.addEventListener("click", () => {
   modalArea.style.left = 0;
   modalArea.style.zIndex = 1001;
   modalArea.style.transition = 1 + "s";
+  body.style.overflow = "hidden";
 });
 modalCloseBtn.addEventListener("click", () => {
   modalBg.style.opacity = 0;
   modalBg.style.zIndex = -10;
   modalArea.style.left = -50 + "vw";
+  body.style.overflow = "visible";
 });
 body.addEventListener("click", (e) => {
   const selected = e.target;
@@ -90,5 +92,6 @@ body.addEventListener("click", (e) => {
     modalBg.style.opacity = 0;
     modalBg.style.zIndex = -10;
     modalArea.style.left = -50 + "vw";
+    body.style.overflow = "visible";
   }
 });
