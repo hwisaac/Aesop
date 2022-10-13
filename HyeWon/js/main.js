@@ -66,6 +66,9 @@ const modalBtn = document.querySelector('.modal .modal-btn');
 
 const closeModal = () => {
   modal.classList.remove('open');
+  if (!modal.classList.contains('open')) {
+    body.style.overflow = 'scroll';
+  }
 };
 
 overlay.addEventListener('click', closeModal);
