@@ -1,3 +1,4 @@
+/* COMMON */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,32 +15,34 @@ body {
 html {
   height: 100vh;
 }
+
+/* HEADER */
 header {
   width: 100%;
 }
 .head-top {
+  text-align: center;
   padding: 12px 20px 10px 15px;
   background-color: #252525;
-  text-align: center;
 }
-.head-top-Wrap {
+.head-top-wrap {
   display: inline-block;
   padding-bottom: 5px;
   border: 1px solid transparent;
   cursor: pointer;
 }
-.head-top-Wrap:hover {
+.head-top-wrap:hover {
   border-bottom: 1px solid #fff;
   box-sizing: border-box;
   transition: 0.5s;
 }
-.head-top p {
+.head-top .head-top-wrap p {
   display: inline-block;
   font-size: 14px;
   color: #fff;
   margin-right: 15px;
 }
-.head-top span {
+.head-top .head-top-wrap span {
   display: inline-block;
   color: #fff;
 }
@@ -78,7 +81,71 @@ header {
   cursor: pointer;
 }
 
-/* main */
+/* HEADER-MODAL */
+.head-top .modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -10;
+  opacity: 0;
+}
+.head-top .modal-wrap {
+  text-align: start;
+  width: 50vw;
+  height: 100vh;
+  background-color: #f1f0e8;
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+
+  left: -50vw;
+}
+.head-top .modal-wrap i {
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 20px;
+}
+.head-top .modal-area {
+  width: 30vw;
+  margin: auto;
+  padding-top: 200px;
+}
+.modal-contents > li {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+.modal-contents > li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.modal-contents .modal-cont-wrap h4 {
+  margin-bottom: 15px;
+}
+.modal-contents .modal-cont-wrap:first-child > h4 {
+  margin-bottom: 0;
+}
+.modal-contents .modal-cont-wrap p {
+  color: #666;
+}
+.modal-contents .modal-cont-wrap .modal-cont-down div {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-contents .modal-cont-wrap .modal-cont-down div:first-child {
+  margin-bottom: 40px;
+}
+
+/* MAIN */
 .main-back-img {
   width: 100%;
   height: 100%;
@@ -133,7 +200,7 @@ header {
   margin-left: 150px;
 }
 
-/* section1 */
+/* SECTION1 */
 .section1 .swiper {
   padding-left: 80px;
   padding-right: 80px;
@@ -239,7 +306,7 @@ header {
   */
 }
 
-/* section2 */
+/* SECTION2 */
 .section2 {
   display: flex;
   justify-content: space-between;
@@ -283,7 +350,7 @@ header {
   fill: #fff;
 }
 
-/* section3 */
+/* SECTION3 */
 .section3 {
   margin-top: 150px;
   display: flex;
@@ -323,7 +390,7 @@ header {
   fill: #fff;
 }
 
-/* section4 */
+/* SECTION4 */
 .section4 {
   margin-top: 155px;
 }
@@ -423,7 +490,7 @@ header {
   */
 }
 
-/* section5 */
+/* SECTION5 */
 .section5 {
   margin-top: 198px;
   display: flex;
@@ -529,7 +596,7 @@ header {
   */
 }
 
-/* footer */
+/* FOOTER */
 footer {
   width: 100%;
   margin-top: 150px;
