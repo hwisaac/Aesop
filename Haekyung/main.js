@@ -20,7 +20,7 @@ new Swiper('.sec5 .swiper', {
   observe: true,
   observeParents: true,
   loop: false,
-  slidesPerView: 3.2,
+  slidesPerView: 3,
   spaceBetween: 42,
 
   navigation: {
@@ -30,7 +30,7 @@ new Swiper('.sec5 .swiper', {
 
   scrollbar: {
     el: '.sec5 .inner .swiper .swiper-scrollbar',
-    dragSize: 800,
+    dragSize: 500,
   },
 });
 
@@ -59,17 +59,17 @@ const bModalClose = document.getElementsByClassName('close')[0];
 
 // When the user clicks the button, open the modal
 bBtn.onclick = function () {
-  bModal.style.display = 'block';
+  bModal.classList.add('modal-open');
 };
 
 // When the user clicks on <span> (x), close the modal
 bModalClose.onclick = function () {
-  bModal.style.display = 'none';
+  bModal.classList.remove('modal-open');
 };
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == bModal) {
-    bModal.style.display = 'none';
+    bModal.classList.remove('modal-open');
   }
 };
