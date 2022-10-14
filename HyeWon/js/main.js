@@ -28,10 +28,12 @@ new Swiper('#selection-section .swiper', {
   },
 });
 
+const paginationEl = document.querySelector('#store-section .swiper-pagination');
 new Swiper('#store-section .swiper', {
-  loop: true,
+  // loop: true,
+  rewind: true,
   autoplay: {
-    delay: 2000,
+    delay: 3000,
     // disableOnInteraction: false,
   },
   slidesPerView: 1,
@@ -39,6 +41,38 @@ new Swiper('#store-section .swiper', {
     el: '#store-section .swiper-scrollbar',
     dragSize: 370,
     // snapOnRelease: true,
+  },
+  pagination: {
+    el: '#store-section .swiper-pagination',
+    type: 'custom',
+    renderCustom: function (swiper, current, total) {
+      let text;
+      // current : 슬라이드 순서
+      switch (current) {
+        case 1:
+          text = '이솝 파르나스';
+          break;
+        case 2:
+          text = '이솝 성수';
+          break;
+        case 3:
+          text = '이솝 한남';
+          break;
+        default:
+          text = 'None';
+          break;
+      }
+      // gsap.to(요소, 지속시간, 옵션);
+      gsap.to(paginationEl, 0.1, {
+        opacity: 0,
+      });
+      setTimeout(() => {
+        paginationEl.textContent = text;
+        gsap.to(paginationEl, 0.1, {
+          opacity: 1,
+        });
+      }, 300);
+    },
   },
   navigation: {
     prevEl: '#store-section .swiper-button-prev',
