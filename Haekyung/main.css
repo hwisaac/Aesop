@@ -9,6 +9,7 @@ a {
 .material-symbols-outlined {
 }
 body {
+  position: relative;
 }
 body .msg {
   size: 37px;
@@ -86,11 +87,14 @@ body .msg {
   font-family: 'Suisse Medium', sans-serif;
   color: #fffef2;
 }
-.header .header-inner ul.menu li a {
+.header .header-inner ul.menu li button {
   margin: auto;
   font-size: 14px;
   font-family: 'Suisse Medium', sans-serif;
+  background-color: #333;
   color: #fffef2;
+  border: none;
+  cursor: pointer;
 }
 .header .header-inner ul.login-menu {
   height: 80px;
