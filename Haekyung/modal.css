@@ -15,14 +15,14 @@
   left: 0;
   top: 0;
   width: 50vw;
-  height: 100%;
+  height: 100vh;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 14px;
   background-color: #f1f0e8;
-  padding-top: 40rem;
+  padding-top: 1200px;
   padding-left: 10vw;
   padding-right: 10vw;
   box-sizing: border-box;

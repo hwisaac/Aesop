@@ -65,7 +65,7 @@ footer .row ul.list li.email .textbox input {
   background-color: #252525;
   width: 100%;
   font-size: 18px;
-  color: white;
+  border: none;
 }
 footer .row ul.list li.email .textbox input::placeholder {
   color: white;
