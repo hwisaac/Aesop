@@ -246,6 +246,7 @@ header {
   padding: 0 40px;
   box-sizing: border-box;
   font-size: 14px;
+  z-index: 10;
 }
 header .main-menu {
   display: flex;
@@ -259,9 +260,46 @@ header .main-menu .material-symbols-outlined {
   font-weight: normal;
 }
 
+header .main-menu li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header .main-menu li::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+header .main-menu li.on::after {
+  opacity: 1;
+}
 header .main-menu li > a:hover {
   color: #f6f5e8;
 }
+
+header .header__closeBtn {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-left: 20px;
+  color: #333;
+}
+
+header .header__closeBtn span {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
 header .sub-menu {
   display: flex;
   justify-content: center;
@@ -272,7 +310,101 @@ header .sub-menu {
   right: 40px;
   gap: 20px;
 }
+header.on {
+  background-color: #fffef2;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+header.on .main-menu li > a:hover {
+  color: inherit;
+}
 
+/* MENU NAV */
+.menu__nav {
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 80px);
+  top: 80px;
+  z-index: 9;
+  font-size: 18px;
+}
+.menu__nav .menu__list > li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.menu__nav .menu__list .nav__list {
+  padding: 80px 50px;
+  box-sizing: border-box;
+  width: 70%;
+  display: flex;
+}
+
+.menu__nav .menu__list .nav__list .nav__logo {
+  width: 25%;
+}
+
+.menu__nav .menu__list .nav__list > li {
+  width: calc(75% / 2);
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__nav .menu__list .nav__list h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.menu__nav .menu__list .nav__list > li .inner > li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.menu__nav .menu__list .nav__list > li .inner > li > a {
+  position: relative;
+  padding: 5px 0;
+}
+.menu__nav .menu__list .nav__list > li .inner > li a::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #333;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+
+.menu__nav .menu__list .nav__list > li .inner > li a:hover::after {
+  width: 100%;
+}
+
+.menu__nav .menu__list .nav__image {
+  width: 30%;
+  background: url("../images/Aesop_Homepage_Navigation_Category_Skin_Desktop_1700x2400px.jpeg") no-repeat center;
+  background-size: cover;
+}
+
+#skin-care {
+  z-index: 1;
+  background-color: rgb(240, 239, 224);
+}
+
+#skin-care .skin__type .inner:nth-child(2) {
+  margin-top: 65px;
+}
+
+#skin-care .more {
+}
 
 /* CONTENTS */
 /* visual */
@@ -488,7 +620,7 @@ header .sub-menu {
 .locater .store {
   width: 65%;
   margin-left: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   box-sizing: border-box;
 }
 
@@ -506,7 +638,7 @@ header .sub-menu {
   width: 100%;
   top: inherit;
   left: 0;
-  bottom: 0;
+  bottom: 50px;
   height: 2px;
 }
 
@@ -540,7 +672,8 @@ header .sub-menu {
 
 .locater .store button.swiper-button-next,
 .locater .store button.swiper-button-prev  {
-  top: calc(50% - 50px);
+  top: calc(50% - 25px);
+  transform: translateY(-50%);
   display: block;
 }
 
@@ -562,9 +695,6 @@ header .sub-menu {
   bottom: 0;
   width: 100px;
   height: 20px;
-}
-.locater .store-locate li {
-  background-color: #fffef2;
 }
 
 /* FOOTER */
