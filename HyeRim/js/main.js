@@ -132,3 +132,42 @@ panelBackground.addEventListener('click', () => {
   topBannerPanel.classList.remove('on');
   document.querySelector('body').style.overflow = "visible";
 })
+
+// NAV
+// jquery
+$(document).ready(function() {
+  let mainMenu = $('.main-menu')
+  let mainMenuLi = mainMenu.find('> li > a');
+  let mainMenuPanel = mainMenu.find('.nav-panel');
+  let mainMenuCloseBtn = $('header .header__closeBtn');
+
+  mainMenuLi.on('click', function() {
+    mainMenu.children('li').removeClass('on');
+    $(this).parent('li').addClass('on');
+    mainMenuPanel.fadeOut(500);
+    // mainMenuPanel.find('.flex ul').fadeOut(500);
+    mainMenuPanel.find('.nav__image').fadeOut(500);
+    $('header').addClass('on');
+
+    if($(this).parent('li').hasClass('on')) {
+      $(this).siblings('.nav-panel').show();
+      $(this).siblings('.nav-panel').find('.flex ul').fadeIn(500);
+      $(this).siblings('.nav-panel').find('.nav__image').fadeIn(500);
+    }
+
+    if($('header').hasClass('on')) {
+      $('body').css('overflow-y', 'hidden')
+    }
+
+  })
+
+  mainMenuCloseBtn.on('click', function() {
+    $('header').removeClass('on');
+    mainMenuPanel.fadeOut(500);
+
+    if(! $('header').hasClass('on')) {
+      $('body').css('overflow-y', 'visible')
+    }
+
+  })
+})
