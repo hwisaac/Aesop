@@ -52,12 +52,12 @@ body .msg {
 }
 .shipping-banner .banner-inner #banner-btn p.banner-btn-content {
   font-size: 14px;
-  font-family: 'Suisse Medium', sans-serif;
+  font-family: "Suisse Medium", sans-serif;
 }
 .shipping-banner .banner-inner #banner-btn span.banner-btn-icon {
   fill: #fffef2;
   margin-left: 20px;
-  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 0;
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 0;
 }
 
 /* HEADER */
@@ -84,7 +84,7 @@ body .msg {
 }
 .header .header-inner ul.menu li {
   margin-right: 27px;
-  font-family: 'Suisse Medium', sans-serif;
+  font-family: "Suisse Medium", sans-serif;
   color: #fffef2;
 }
 .header .header-inner ul.menu li button {
@@ -108,7 +108,7 @@ body .msg {
 }
 .header .header-inner ul.login-menu li a {
   font-size: 14px;
-  font-family: 'Suisse Medium', sans-serif;
+  font-family: "Suisse Medium", sans-serif;
   color: #fffef2;
 }
 
@@ -679,7 +679,7 @@ body .msg {
   display: flex;
   align-items: center;
 }
-.footer .inner .inner-1 .communication input[type='checkbox'] {
+.footer .inner .inner-1 .communication input[type="checkbox"] {
   cursor: pointer;
   -webkit-appearance: none;
   width: 12px;
@@ -688,8 +688,8 @@ body .msg {
   background-color: inherit;
   position: relative;
 }
-.footer .inner .inner-1 .communication input[type='checkbox']:checked::before {
-  content: '\2713';
+.footer .inner .inner-1 .communication input[type="checkbox"]:checked::before {
+  content: "\2713";
   position: absolute;
   top: 50%;
   left: 50%;
