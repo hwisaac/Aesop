@@ -1,18 +1,21 @@
 #banner-modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
-  /* padding-top: 100px; Location of the box */
+  display: block;
+  position: fixed;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
+  z-index: -1;
+  width: 100%;
   height: 100%;
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  background-color: transparent;
+  transition: 0.3s;
 }
-.banner-modal-content {
+#banner-modal.modal-open {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#banner-modal .banner-modal-content {
   position: absolute;
-  left: 0;
+  left: calc(-50vw);
   top: 0;
   width: 50vw;
   height: 100vh;
@@ -22,15 +25,15 @@
   justify-content: center;
   font-size: 14px;
   background-color: #f1f0e8;
-  padding-top: 1200px;
+  padding-top: 50em;
   padding-left: 10vw;
   padding-right: 10vw;
   box-sizing: border-box;
+  transition: 0.3s;
 }
-/* .banner-modal-wrapper {
-  display: block;
-  margin-top: 200px;
-} */
+#banner-modal.modal-open .banner-modal-content {
+  left: 0;
+}
 .banner-modal-content ul li {
   border-bottom: 1px solid rgba(51, 51, 51, 0.2);
   padding-top: 1em;
@@ -59,10 +62,85 @@
   top: 20px;
   right: 20px;
   margin-bottom: 50px;
+  display: block;
+  height: 30px;
 }
 
 .close:hover,
 .close:focus {
   text-decoration: none;
   cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#modal-skincare {
+  position: absolute;
+  top: -100%;
+  background-color: #f0efe0;
+  font-size: 16px;
+  transition: 0.5s;
+}
+#modal-skincare.modal-skincare-open {
+  position: relative;
+}
+#modal-skincare .inner {
+  display: flex;
+  padding-top: 90px;
+  padding-left: 300px;
+  justify-content: space-between;
+}
+#modal-skincare svg {
+  position: absolute;
+  top: 200px;
+  left: 35px;
+  position: fixed;
+}
+#modal-skincare a {
+  color: #000;
+}
+#modal-skincare .inner .column-1 {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#modal-skincare .inner .column-2 {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#modal-skincare .inner .column-3 {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  line-height: 1.5;
+}
+/* #modal-skincare .inner .right-side {
+  overflow: hidd;
+} */
+#modal-skincare .inner .right-side img {
+  width: 487px;
+  height: 100%;
+  margin-top: -90px;
+}
+#modal-skincare .inner .skincare-detail {
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  width: 355px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#modal-skincare .inner .skincare-detail span {
+  font-size: 14px;
+}
+#modal-skincare .inner .skincare-detail img {
+  width: 355px;
 }

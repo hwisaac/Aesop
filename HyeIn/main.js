@@ -1,14 +1,11 @@
 new Swiper(".section1 .swiper", {
-  // Optional parameters
   slidesPerView: 4.2,
 
-  // Navigation arrows
   navigation: {
     nextEl: ".section1 .swiper-button-next",
     prevEl: ".section1 .swiper-button-prev",
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: ".section1 .swiper-scrollbar",
     draggable: false,
@@ -25,16 +22,13 @@ new Swiper(".section1 .swiper", {
 });
 
 new Swiper(".section4 .swiper", {
-  // Optional parameters
   slidesPerView: 4,
 
-  // Navigation arrows
   navigation: {
     nextEl: ".section4 .swiper-button-next",
     prevEl: ".section4 .swiper-button-prev",
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: ".section4 .swiper-scrollbar",
     draggable: false,
@@ -44,17 +38,14 @@ new Swiper(".section4 .swiper", {
 });
 
 new Swiper(".section5 .swiper", {
-  // Optional parameters
   autoplay: true,
   rewind: true,
 
-  // Navigation arrows
   navigation: {
     nextEl: ".section5 .swiper-button-next",
     prevEl: ".section5 .swiper-button-prev",
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: ".section5 .swiper-scrollbar",
     draggable: false,
@@ -95,3 +86,50 @@ body.addEventListener("click", (e) => {
     body.style.overflow = "visible";
   }
 });
+
+/* https://code-study.tistory.com/23
+const gnb = document.querySelector(".head-bottom");
+let lastScrollTop = 0;
+let delta = 5;
+let fixBox = document.querySelector(".bottomNav");
+let gnbHeight = gnb.offsetHeight;
+let didScroll;
+console.log(gnbHeight); 
+*/
+/* setInterval(function () {
+  if (didScroll) {
+    hasScrolled();
+    didScroll = false;
+  }
+}, 250);
+
+function hasScrolled() {
+  var nowScrollTop = window.scrollY;
+  if (Math.abs(lastScrollTop - nowScrollTop) <= delta) {
+    return;
+  }
+  if (nowScrollTop > lastScrollTop && nowScrollTop > fixBoxHeight) {
+    //Scroll down (하단 고정메뉴 숨김)
+    fixBox.classList.remove("show");
+  } else {
+    if (nowScrollTop + window.innerHeight < document.body.offsetHeight) {
+      //Scroll up (하단 고정메뉴 보임)
+      fixBox.classList.add("show");
+    }
+  }
+  lastScrollTop = nowScrollTop;
+} */
+
+/* 스크롤 이벤트
+document.addEventListener("scroll", () => {
+  console.log(window.scrollY);
+  if (window.scrollY === 125) {
+    console.log("여기!");
+  }
+});
+ */
+/* console.log(gnb.getBoundingClientRect().bottom); */
+/* if (window.scrollY === 125) {
+  console.log("125");
+}
+console.log(window.scrollY); */

@@ -29,49 +29,87 @@ new Swiper('.perfume.swiper', {
 // SWIPER
 // locater
 const timer = 700;
+const locateTxt = document.querySelector('.store-locate')
 
 const locaterSwiper = new Swiper('.store.swiper', {
-  loop: true,
+  // loop: true,
   autoplay: true,
   slidesPerView: 1,
   speed: timer,
   slideToClickedSlide: true,
   rewind: true,
-  pagination: {
-    el: '.store .swiper-pagination',
-    type: "progressbar",
-  },
-  scrollbar: {
-    el: '.store .swiper-scrollbar',
-    type: "progressbar",
-  },
   navigation: {
     nextEl: '.store .swiper-button-next',
     prevEl: '.store .swiper-button-prev',
+  },
+  // pagination: {
+  //   el: '.store .swiper-pagination',
+  //   type: "progressbar",
+  // },
+  // scrollbar: {
+  //   el: '.store .swiper-scrollbar',
+  //   type: "progressbar",
+  // },
+  pagination: {
+    el: locateTxt,
+    type: "custom",
+    renderCustom: function (swiper, current, total) {
+      let text;
+      switch (current) {
+        case 1:
+          text = "이솝 파르나스";
+          break;
+        case 2:
+          text = "이솝 성수";
+          break;
+        case 3:
+          text = "이솝 한남";
+          break;
+        default:
+          text = "None";
+          break;
+      }
+      gsap.to(locateTxt, 0.5, {
+        opacity: 0,
+      });
+      setTimeout(() => {
+        locateTxt.textContent = text;
+        gsap.to(locateTxt, 0.5, {
+          opacity: 1,
+        });
+      }, 500);
+    },
+  },
+  scrollbar: {
+    el: '.store .swiper-scrollbar',
+    type: "custom",
+    
   },
 });
 
 document.querySelector('.store.swiper').addEventListener('mouseover', function() {
   locaterSwiper.autoplay.stop();
-  locaterTxtSwiper.autoplay.stop();
+  // locaterTxtSwiper.autoplay.stop();
 })
 
 document.querySelector('.store.swiper').addEventListener('mouseleave', function() {
   locaterSwiper.autoplay.start();
-  locaterTxtSwiper.autoplay.start();
+  // locaterTxtSwiper.autoplay.start();
 })
 
-const locaterTxtSwiper = new Swiper('.store-locate.swiper', {
-  loop: true,
-  autoplay: true,
-  speed: timer,
-  effect: 'fade',
-  navigation: {
-    nextEl: '.store .swiper-button-next',
-    prevEl: '.store .swiper-button-prev',
-  },
-});
+// const locaterTxtSwiper = new Swiper('.store-locate.swiper', {
+//   loop: true,
+//   autoplay: true,
+//   speed: timer,
+//   effect: 'fade',
+//   navigation: {
+//     nextEl: '.store .swiper-button-next',
+//     prevEl: '.store .swiper-button-prev',
+//   },
+// });
 
+
+// TOP BANNER LEFT PANEL
 const topBanner = document.querySelector('.shippingBanner-body a');
 const panelBackground = document.querySelector('.panelBackground');
 const topBannerPanel = document.querySelector('.shippingBanner-body__panel');
