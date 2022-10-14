@@ -53,6 +53,7 @@ const s6_swiper = new Swiper('.sec6 .inner .swiper', {
   },
 });
 
+// BANNER-MODAL
 const bModal = document.getElementById('banner-modal');
 const bBtn = document.getElementById('banner-btn');
 const bModalClose = document.getElementsByClassName('close')[0];
