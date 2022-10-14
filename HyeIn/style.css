@@ -10,10 +10,38 @@ a {
 }
 body {
   background-color: #fffef2;
-  height: 100vh;
 }
-html {
-  height: 100vh;
+
+.btn {
+  outline: none;
+  background-color: transparent;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn.btn--dark {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn.btn--dark:hover {
+  background-color: #fffef2;
+  color: black;
+}
+.btn.btn--dark svg {
+  fill: #fff;
+}
+.btn.btn--dark:hover svg {
+  fill: black;
+}
+.btn.btn--light {
+  border: 1px solid rgba(51, 51, 51, 0.2);
+}
+.btn.btn--light:hover {
+  background-color: #333333;
+  color: #fff;
+}
+.btn.btn--light:hover svg {
+  fill: #fff;
 }
 
 /* HEADER */
@@ -104,6 +132,7 @@ header {
 
   left: -50vw;
 }
+
 .head-top .modal-wrap i {
   cursor: pointer;
   position: absolute;
@@ -136,6 +165,7 @@ header {
 }
 .modal-contents .modal-cont-wrap p {
   color: #666;
+  width: 29vw;
 }
 .modal-contents .modal-cont-wrap .modal-cont-down div {
   display: flex;
@@ -144,7 +174,24 @@ header {
 .modal-contents .modal-cont-wrap .modal-cont-down div:first-child {
   margin-bottom: 40px;
 }
+.modal-contents .modal-cont-wrap .modal-cont-down div span {
+  color: #666;
+}
+.modal-contents .modal-cont-wrap p a {
+  text-decoration: underline;
+}
 
+/* GNB */
+.gnb-main {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 1000;
+  height: calc(100vh - 80px);
+}
+.gnb-main-area.skin {
+  background-color: #f0efe0;
+}
 /* MAIN */
 .main-back-img {
   width: 100%;
@@ -159,8 +206,10 @@ header {
   left: 40px;
   display: flex;
 }
-.main-banner-wrap > svg {
+.main-banner-wrap svg {
   fill: white;
+  outline: none;
+  cursor: pointer;
 }
 .main-banner-txt {
   color: #fff;
@@ -179,24 +228,7 @@ header {
   font-size: 16px;
   margin-bottom: 35px;
 }
-.main-banner-txt button {
-  outline: none;
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 20px;
-  cursor: pointer;
-}
-.main-banner-txt button:hover {
-  background-color: #fffef2;
-  color: black;
-  transition: 0.5s;
-}
-.main-banner-txt button:hover > svg {
-  fill: black;
-}
-.main-banner-txt button svg {
-  fill: #fff;
+.main-banner-txt .btn svg {
   margin-left: 150px;
 }
 
@@ -330,24 +362,8 @@ header {
 .section2 video {
   width: 60%;
 }
-.sec2-txt > button {
-  cursor: pointer;
-  outline: none;
-  padding: 20px;
-  border: 1px solid rgba(51, 51, 51, 0.2);
-  background-color: transparent;
-}
-.sec2-txt button:hover {
-  background-color: #333333;
-  color: #fff;
-  transition: 0.5s;
-}
-
-.sec2-txt > button > svg {
+.sec2-txt .btn svg {
   margin-left: 200px;
-}
-.sec2-txt button:hover > svg {
-  fill: #fff;
 }
 
 /* SECTION3 */
@@ -371,23 +387,8 @@ header {
   line-height: 25px;
   margin-bottom: 30px;
 }
-.sec3-txt button {
-  cursor: pointer;
-  outline: none;
-  padding: 20px;
-  border: 1px solid rgba(51, 51, 51, 0.2);
-  background-color: transparent;
-}
-.sec3-txt button:hover {
-  background-color: #333333;
-  color: #fff;
-  transition: 0.5s;
-}
-.sec3-txt button svg {
+.sec3-txt .btn svg {
   margin-left: 200px;
-}
-.sec3-txt button:hover > svg {
-  fill: #fff;
 }
 
 /* SECTION4 */
@@ -508,23 +509,8 @@ header {
   line-height: 30px;
   margin-bottom: 30px;
 }
-.sec5-txt button {
-  cursor: pointer;
-  outline: none;
-  padding: 20px;
-  border: 1px solid rgba(51, 51, 51, 0.2);
-  background-color: transparent;
-}
-.sec5-txt button:hover {
-  background-color: #333333;
-  color: #fff;
-  transition: 0.5s;
-}
-.sec5-txt button svg {
+.sec5-txt .btn svg {
   margin-left: 130px;
-}
-.sec5-txt button:hover > svg {
-  fill: #fff;
 }
 .section5 .swiper {
   width: 1100px;
