@@ -1,7 +1,7 @@
 console.log('hello');
-// SUPER-HEADER
+// SUPER-HEADER-MODAL
 const superHeaderEl = document.querySelector('.super-header');
-const superHeaderModalEl = document.querySelector('.super-header-modal');
+const superheaderModalArea = document.querySelector('.super-header-modal');
 const superHeaderModalCloseEl = document.querySelector(
   '.super-header-modal .close-container .material-symbols-outlined'
 );
@@ -10,7 +10,7 @@ let superHeaderModalBool = false;
 const bodyEl = document.querySelector('body');
 bodyEl.addEventListener('click', (e) => {
   if (e.x > 600 && superHeaderModalBool && e.y > 40) {
-    superHeaderModalEl.classList.remove('show');
+    superheaderModalArea.classList.remove('show');
     superHeaderModalBool = false;
   }
 });
@@ -18,25 +18,28 @@ superHeaderEl.addEventListener('click', () => {
   if (superHeaderModalBool) {
     // 열려있는 경우 닫아주기
     console.log('열려있는 경우 닫아주기');
-    superHeaderModalEl.classList.remove('show');
+    superheaderModalArea.classList.remove('show');
     superHeaderModalBool = false;
   } else {
     //닫혀 있는 경우 열어주기
     console.log('열려있는 경우 닫아주기');
-    superHeaderModalEl.classList.add('show');
+    superheaderModalArea.classList.add('show');
     superHeaderModalBool = true;
   }
   console.log(superHeaderModalBool);
 });
 superHeaderModalCloseEl.addEventListener('click', () => {
-  superHeaderModalEl.classList.remove('show');
+  superheaderModalArea.classList.remove('show');
   superHeaderModalBool = false;
 });
 
 // HEADER
 window.__scrollPosition = document.documentElement.scrollTop || 0;
 const headerEl = document.querySelector('#header');
-
+function removeHeaderOptions() {
+  headerEl.classList.remove('header--white');
+  headerEl.classList.remove('header--fixed');
+}
 //윈도우 스크롤 감지해서 헤더 작동시키기
 window.addEventListener(
   'scroll',
@@ -46,9 +49,8 @@ window.addEventListener(
     console.log(_direction, window.scrollY); // 콘솔창에 스크롤 방향을 출력
 
     if (window.scrollY === 0) {
-      headerEl.classList.remove('header--white');
-      headerEl.classList.remove('header--fixed');
-    } else if (_direction === 'down' && window.scrollY > 100) {
+      removeHeaderOptions();
+    } else if (_direction === 'down' && window.scrollY > 40 + 77) {
       headerEl.classList.add('header--white');
       gsap.to(headerEl, 0.2, {
         y: -120,
@@ -60,6 +62,7 @@ window.addEventListener(
         y: 0,
       });
     } else if (_direction === 'up' && window.scrollY <= 40) {
+      //최상단 근처로 오면 fixed 를 해제
       headerEl.classList.remove('header--fixed');
     }
 
@@ -67,18 +70,43 @@ window.addEventListener(
   }, 10)
 );
 
-// HEADER 메뉴 클릭하여 모달
-const headerModalEl = document.querySelector('.section1 .header-modal');
-const headerCloseBtnEl = document.querySelector('#closeBtnInMenu');
+//////////////////////////////////////////////////////////////////////////// MODAL FOR HEADER MENUES
+const headerModalArea = document.querySelector('.section1 .header-modal');
+// BUTTONS ELEMENT
 const skinCareBtnEl = document.querySelector(
   '.section1 .header .left__list .skin-care'
 );
-const bodyHnadBtnEl = document.querySelector(
+const bodyHandBtnEl = document.querySelector(
   '.section1 .header .left__list .body-hand'
 );
-
+const hairBtnEl = document.querySelector('.section1 .header .left__list .hair');
+const perfumeBtnEl = document.querySelector(
+  '.section1 .header .left__list .perfume'
+);
+const homeBtnEl = document.querySelector('.section1 .header .left__list .home');
+const kitBtnEl = document.querySelector('.section1 .header .left__list .kit');
+const giftBtnEl = document.querySelector('.section1 .header .left__list .gift');
+const readingBtnEl = document.querySelector(
+  '.section1 .header .left__list .reading'
+);
+const storeBtnEl = document.querySelector(
+  '.section1 .header .left__list .store'
+);
+const searchBtnEl = document.querySelector(
+  '.section1 .header .left__list .material-icons-search'
+);
+const headerCloseBtnEl = document.querySelector('#closeBtnInMenu');
+// MODAL ELEMENTS
 const skinCareModalEl = document.querySelector('.section1 .skin-care-modal');
 const bodyHandModalEl = document.querySelector('.section1 .body-hand-modal');
+const hairModalEl = document.querySelector('.section1 .hair-modal');
+const perfumeModalEl = document.querySelector('.section1 .perfume-modal');
+const homeModalEl = document.querySelector('.section1 .home-modal');
+const kitModalEl = document.querySelector('.section1 .kit-modal');
+const giftModalEl = document.querySelector('.section1 .gift-modal');
+const readingModalEl = document.querySelector('.section1 .reading-modal');
+const storeModalEl = document.querySelector('.section1 .store-modal');
+const searchModalEl = document.querySelector('.section1 .search-modal');
 
 let headerMenuBools = [
   false,
@@ -90,60 +118,87 @@ let headerMenuBools = [
   false,
   false,
   false,
+  false,
+];
+let headerMenuBtns = [
+  skinCareBtnEl,
+  bodyHandBtnEl,
+  hairBtnEl,
+  perfumeBtnEl,
+  homeBtnEl,
+  kitBtnEl,
+  giftBtnEl,
+  readingBtnEl,
+  storeBtnEl,
+  searchBtnEl,
+];
+let headerMenuContents = [
+  skinCareModalEl,
+  bodyHandModalEl,
+  hairModalEl,
+  perfumeModalEl,
+  homeModalEl,
+  kitModalEl,
+  giftModalEl,
+  readingModalEl,
+  storeModalEl,
+  searchModalEl,
 ];
 
-let headerMenuContents = [skinCareModalEl, bodyHandModalEl];
-
-function offAllHeaderMenuBools() {
+//  버튼bools를 false &  버튼들 active 제거 & 컨텐츠 모두 닫기 & 닫기 버튼 제거
+function turnOffAllHeaderMenu() {
   for (let i = 0; i < headerMenuBools.length; i++) {
     headerMenuBools[i] = false;
   }
-  for (let i = 0; i < headerMenuContents.length; i++) {
-    headerMenuContents[i].classList.remove('show');
-  }
-  headerCloseBtnEl.classList.remove('show');
+  // headerMenuBools.forEach((bool) => (bool = false)); // bools false로 이상하게 작동 안하네?
+
+  headerMenuContents.forEach((content) => content.classList.remove('show')); // 컨텐츠 모두 제거
+  headerMenuBtns.forEach((btn) => btn.classList.remove('active')); // 모든 버튼 밑줄 제거
+  headerCloseBtnEl.classList.remove('show'); // close 버튼 제거
 }
 
+// 닫기 버튼 눌렀을 때
 headerCloseBtnEl.addEventListener('click', () => {
-  offAllHeaderMenuBools();
-  headerModalEl.classList.remove('show');
-  headerModalEl.classList.remove('show');
+  turnOffAllHeaderMenu();
+  headerModalArea.classList.remove('show');
+  superHeaderEl.classList.remove('hidden');
+  removeHeaderOptions();
 });
 
-skinCareBtnEl.addEventListener('click', () => {
-  offAllHeaderMenuBools();
+function handleMenuBtn() {
+  const i = Number(this.id);
+  turnOffAllHeaderMenu();
+  // super-header감추기
+  superHeaderEl.classList.add('hidden');
+  //헤더 컨트롤
+  headerEl.classList.add('header--white');
+  headerEl.classList.add('header--fixed');
+  gsap.to(headerEl, 0.2, {
+    y: 0,
+  });
 
-  console.log('스킨케어 클릭!');
-  if (headerMenuBools[0]) {
-    headerModalEl.classList.remove('show');
-    skinCareModalEl.classList.remove('show');
+  //버튼에 active 클래스 달기
+  this.classList.add('active');
+
+  if (headerMenuBools[i]) {
+    headerModalArea.classList.remove('show');
+    headerMenuContents[i].classList.remove('show');
     headerCloseBtnEl.classList.remove('show');
   } else {
-    // 열기
-    headerModalEl.classList.add('show');
-    skinCareModalEl.classList.add('show');
+    headerModalArea.classList.add('show');
+    headerMenuContents[i].classList.add('show');
     headerCloseBtnEl.classList.add('show');
   }
-  headerMenuBools[0] = !headerMenuBools[0];
-});
+  headerMenuBools[i] = !headerMenuBools[i];
+  console.log(headerMenuBools);
+}
+
+headerMenuBtns.forEach((el) => el.addEventListener('click', handleMenuBtn));
+// skinCareBtnEl.addEventListener('click', handleMenuBtn);
 
 // body-hand 버튼 핸들
-bodyHnadBtnEl.addEventListener('click', () => {
-  offAllHeaderMenuBools();
-  console.log('바디핸드 클릭!');
-  if (headerMenuBools[1]) {
-    headerModalEl.classList.remove('show');
-    bodyHandModalEl.classList.remove('show');
-    headerCloseBtnEl.classList.remove('show');
-  } else {
-    // 열기
-    headerModalEl.classList.add('show');
-    bodyHandModalEl.classList.add('show');
-    headerCloseBtnEl.classList.add('show');
-  }
-  headerMenuBools[1] = !headerMenuBools[1];
-});
-// Section 2
+// bodyHandBtnEl.addEventListener('click', handleMenuBtn);
+///////////////////////////////////////////////////////////////////////////////////// Section 2
 
 //section2 버튼
 const s2_prevBtn = document.querySelector('.section2 .prev-btn');
