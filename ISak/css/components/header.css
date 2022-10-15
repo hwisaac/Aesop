@@ -66,7 +66,9 @@
   transition: 1s;
 }
 .super-header.hidden {
-  display: none;
+  /* display:none 으로 하면 재등장할 때마다 스크롤을 40px 씩 아래로 밀어버리는 현상이 나타남 */
+  position: absolute;
+  top: -40px;
 }
 .super-header span {
   position: relative;
@@ -103,7 +105,7 @@
 .header.header--white {
   background-color: #fffef2;
   color: #666666;
-  border-bottom: 1px solid #666;
+  border-bottom: 0.5px solid #666;
   z-index: 9000;
 }
 .header.header--fixed {
@@ -133,7 +135,7 @@
   align-items: center;
   height: 75px;
   top: 0;
-
+  transition: border-bottom 0.8s;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 .header .left__list li.active {
@@ -162,13 +164,12 @@
 
 /* HEADER MODAL  */
 .header-modal {
-  /* background-color: rgba(255, 255, 0, 0.5); */
-  background-color: #f0efdf;
+  /* 여기 */
+  background-color: #fffef2;
   /* display: flex; */
   display: none;
   height: calc(100vh - 77px);
   width: 100vw;
-  /* position: absolute; */
   position: fixed;
   top: 77px;
   color: #333333;
@@ -180,9 +181,20 @@
 }
 .header-modal__inner {
   width: 100%;
-  display: none;
+  display: flex;
+  pointer-events: none;
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
   justify-content: space-between;
+  background-color: #fffef2;
 }
+.header-modal__inner.show {
+  opacity: 1;
+  transition: opacity 1.5s;
+  pointer-events: auto;
+}
+
 .header-modal__inner svg,
 .header-modal__inner ul.items {
   margin-top: 100px;
@@ -199,6 +211,7 @@
 .header-modal__inner svg {
   margin-left: 50px;
   position: fixed;
+  opacity: 1;
 }
 .header-modal__inner img {
   height: calc(100vh - 77px);
@@ -243,66 +256,87 @@
   width: 100%;
 }
 
-.section1 .header-modal__inner.skin-care-modal.show {
-  display: flex;
+.header-modal__inner.skin-care-modal.show {
+  background-color: #f0efdf;
 }
 
-.section1 .header-modal__inner.body-hand-modal.show {
-  display: flex;
+.header-modal__inner.body-hand-modal.show {
   background-color: #ebe2d3;
 }
-.section1 .header-modal__inner.hair-modal.show {
-  display: flex;
+.header-modal__inner.hair-modal.show {
   background-color: #ded8d3;
 }
-.section1 .header-modal__inner.perfume-modal.show {
-  display: flex;
+.header-modal__inner.perfume-modal.show {
   background-color: #f4ebe4;
 }
-.section1 .header-modal__inner.home-modal.show {
-  display: flex;
+.header-modal__inner.home-modal.show {
   background-color: #f7f1ec;
 }
-.section1 .header-modal__inner.kit-modal.show {
-  display: flex;
+.header-modal__inner.kit-modal.show {
   background-color: #e8f0e3;
 }
-.section1 .header-modal__inner.gift-modal.show {
-  display: flex;
+.header-modal__inner.gift-modal.show {
   background-color: #ebeadf;
 }
-.section1 .header-modal__inner.reading-modal.show {
-  display: flex;
+.header-modal__inner.reading-modal.show {
   background-color: #ebeadf;
 }
 
-.section1 .header-modal__inner.store-modal.show {
-  display: flex;
+.header-modal__inner.store-modal.show {
   background-color: #fffef2;
+  height: 100%;
 }
-.section1 .header-modal__inner.search-modal.show {
-  display: flex;
+
+.header-modal__inner.search-modal.show {
   background-color: #fffef2;
+  height: 100%;
 }
-.section1 .header-modal__inner .container {
+/* 애니메이션 효과  */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.header-modal__inner.search-modal.show .search-list .item {
+  /* 처음엔 투명하게 시작. forwards 옵션으로 애니메이션 끝난 유지 */
+  opacity: 0;
+  animation: fade-in 2s ease-out forwards;
+}
+.header-modal__inner.search-modal.show .search-list .item:nth-child(2) {
+}
+.header-modal__inner.search-modal.show .search-list .item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.header-modal__inner.search-modal.show .search-list .item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.header-modal__inner.search-modal.show .search-list .item:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.header-modal__inner .container {
   margin-left: 50px;
   display: flex;
   flex-direction: column;
-  /* border: 0.1px dotted blue; */
   height: auto;
   width: auto;
   top: 250px;
   position: fixed;
 }
-.section1 .header-modal__inner .container .btn {
+.header-modal__inner .container .btn {
   justify-content: center;
   width: 200px;
 }
-.section1 .header-modal__inner .container span.text--bold {
+.header-modal__inner .container span.text--bold {
   margin: 30px 0 40px 0;
   font-size: 12px;
 }
-.section1 .header-modal__inner .container .textbox {
+.header-modal__inner .container .textbox {
   width: 385px;
   height: 40px;
   display: flex;
@@ -311,7 +345,7 @@
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
   position: relative;
 }
-.section1 .header-modal__inner .container .textbox input {
+.header-modal__inner .container .textbox input {
   background-color: rgba(0, 0, 0, 0);
   width: 100%;
   font-size: 25px;
@@ -319,10 +353,10 @@
   position: relative;
 }
 
-.section1 .header-modal__inner .container .textbox input:focus {
+.header-modal__inner .container .textbox input:focus {
 }
 
-.section1 .header-modal__inner .container span.material-icons {
+.header-modal__inner .container span.material-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -330,26 +364,27 @@
   font-size: 18px;
   color: #333;
 }
-.section1 .header-modal__inner .container span.hover-text {
+.header-modal__inner .container span.hover-text {
   position: absolute;
   font-size: 20px;
   color: #666;
   transition: 0.2s ease-out;
+  pointer-events: none;
 }
-.section1 .header-modal__inner .container input:focus ~ span.hover-text {
+.header-modal__inner .container input:focus ~ span.hover-text {
   font-size: 14px;
   transform: translateY(-35px);
 }
-.section1 .header-modal__inner .container .search-list {
+.header-modal__inner .container .search-list {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   gap: 10px;
 }
-.section1 .header-modal__inner .container .search-list .title {
+.header-modal__inner .container .search-list .title {
   color: rgba(0, 0, 0, 0.6);
 }
-.section1 .header-modal__inner .container .search-list .item {
+.header-modal__inner .container .search-list .item {
   font-size: 25px;
   color: #666;
 }
