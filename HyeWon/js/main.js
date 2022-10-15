@@ -80,6 +80,9 @@ new Swiper('#store-section .swiper', {
   },
 });
 
+//  Header
+const headerEl = document.querySelector('.header');
+
 // Press the Header button to open a modal window
 const body = document.querySelector('body');
 const headerBtn = document.querySelector('.header .header-btn');
@@ -107,3 +110,46 @@ const closeModal = () => {
 
 overlay.addEventListener('click', closeModal);
 modalBtn.addEventListener('click', closeModal);
+
+// Press the GNB to open a modal window
+const gnbItems = document.querySelectorAll('.gnb .gnb-item');
+const gnb = document.querySelector('.gnb');
+const gnbBox = document.querySelector('.gnb .gnb-box');
+const gnbItem = gnb.querySelector('.gnb-item');
+const closeBtn = gnb.querySelector('.gnb-item.close');
+
+const gnbModals = document.querySelectorAll('.gnb-item .gnb-modal');
+const gnbModal = document.querySelector('.gnb-item .gnb-modal');
+const header = document.querySelector('.header');
+
+const openGnbModal = () => {
+  gnbModal.classList.add('open');
+  closeBtn.classList.remove('hidden');
+  if (gnbModal.classList.contains('open')) {
+    body.style.overflow = 'hidden';
+    headerEl.classList.add('hidden');
+    gnbBox.classList.add('open');
+  }
+};
+
+gnbItem.addEventListener('click', openGnbModal);
+
+// gnbItems.forEach((gnbItem, gindex) => {
+//   gnbModals.forEach((gnbModal, mindex) => {
+//     if (gindex === mindex) {
+//       gnbItem.addEventListener('click', openGnbModal);
+//     }
+//   });
+// });
+
+const closeGnbModal = () => {
+  closeBtn.classList.add('hidden');
+  if (closeBtn.classList.contains('hidden')) {
+    gnbModal.classList.remove('open');
+    body.style.overflow = 'scroll';
+    headerEl.classList.remove('hidden');
+  }
+};
+closeBtn.addEventListener('click', closeGnbModal);
+
+// Press the GNB to close a modal window
