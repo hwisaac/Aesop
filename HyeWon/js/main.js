@@ -107,3 +107,36 @@ const closeModal = () => {
 
 overlay.addEventListener('click', closeModal);
 modalBtn.addEventListener('click', closeModal);
+
+// Press the GNB to open a modal window
+// const gnbItems = document.querySelectorAll('.gnb .gnb-item');
+const gnb = document.querySelector('.gnb');
+const gnbItem = gnb.querySelector('.gnb-item:first-child');
+const gnbItem2 = gnb.querySelector('.gnb-item:nth-child(3)');
+
+// const gnbModals = document.querySelectorAll('.gnb-item .gnb-modal');
+const gnbModal = document.querySelector('.gnb-item .gnb-modal');
+const gnbModal2 = document.querySelector('.gnb-item:nth-child(3) .gnb-modal');
+const header = document.querySelector('.header');
+
+const openGnbModal = () => {
+  gnbModal2.classList.add('open');
+  gnb.classList.add('open');
+  if (gnbModal2.classList.contains('open')) {
+    body.style.overflow = 'hidden';
+  }
+};
+
+gnbItem2.addEventListener('click', openGnbModal);
+
+// gnbItems.forEach((item) => {
+//   item.addEventListener('click', () => {
+//     gnbModals.forEach((modal) => {
+//       modal.classList.add('open');
+//       if (modal.classList.contains('open')) {
+//         // header.classList.add('hidden');
+//         body.style.overflow = 'hidden';
+//       }
+//     });
+//   });
+// });
