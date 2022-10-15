@@ -1,3 +1,88 @@
+/* GNB */
+const header = document.querySelector(".head-bottom");
+const gnbWrap = document.querySelector(".head-gnb-wrap");
+const gnbDepth = document.querySelector(".gnb-main");
+const main = document.querySelector("main");
+
+gnbWrap.addEventListener("click", (e) => {
+  gnbDepth.classList.add("open");
+
+  header.style.zIndex = 100000000;
+  header.style.position = "fixed";
+  header.style.top = 0;
+
+  body.style.overflowY = "hidden";
+
+  let selectLi = e.target;
+  console.log(selectLi);
+  if (selectLi == document.querySelector(".head-skin")) {
+    document.querySelector(".gnb-main-area.skin").style.zIndex = 10;
+  } else {
+    document.querySelector(".gnb-main-area.skin").style.zIndex = 0;
+  }
+  if (selectLi == document.querySelector(".head-body")) {
+    document.querySelector(".gnb-main-area.body").style.zIndex = 10;
+  } else {
+    document.querySelector(".gnb-main-area.body").style.zIndex = 0;
+  }
+  if (selectLi == document.querySelector(".head-hair")) {
+    document.querySelector(".gnb-main-area.hair").style.zIndex = 10;
+  } else {
+    document.querySelector(".gnb-main-area.hair").style.zIndex = 0;
+  }
+});
+
+/* HEADER-SCROLL */
+let lastScrollY = 0;
+
+addEventListener("scroll", () => {
+  let scrollY = window.scrollY;
+  if (scrollY < lastScrollY && scrollY > 40) {
+    lastScrollY = scrollY;
+    console.log("스크롤업");
+    header.classList.add("scroll-up");
+  } else {
+    lastScrollY = scrollY;
+    console.log("스크롤다운");
+    header.classList.remove("scroll-up");
+  }
+  console.log(lastScrollY);
+});
+
+/* MODAL */
+const modalBtn = document.querySelector(".head-top-wrap");
+const modalBg = document.querySelector(".modal-bg");
+const modalArea = document.querySelector(".modal-wrap");
+const modalCloseBtn = document.querySelector(".modal-close");
+const body = document.querySelector("body");
+
+modalBtn.addEventListener("click", () => {
+  modalBg.style.opacity = 1;
+  modalBg.style.zIndex = 1000;
+  modalBg.style.transition = 1 + "s";
+  modalArea.style.left = 0;
+  modalArea.style.zIndex = 1001;
+  modalArea.style.transition = 1 + "s";
+  body.style.overflow = "hidden";
+});
+modalCloseBtn.addEventListener("click", () => {
+  modalBg.style.opacity = 0;
+  modalBg.style.zIndex = -10;
+  modalArea.style.left = -50 + "vw";
+  body.style.overflow = "visible";
+});
+body.addEventListener("click", (e) => {
+  const selected = e.target;
+  let state = window.getComputedStyle(selected).display;
+  if (state === "block" && !selected.closest(".modal-wrap")) {
+    modalBg.style.opacity = 0;
+    modalBg.style.zIndex = -10;
+    modalArea.style.left = -50 + "vw";
+    body.style.overflow = "visible";
+  }
+});
+
+/* SWIPER */
 new Swiper(".section1 .swiper", {
   slidesPerView: 4.2,
 
@@ -52,39 +137,6 @@ new Swiper(".section5 .swiper", {
     dragSize: 330,
     snapOnRelease: true,
   },
-});
-
-/* MODAL */
-const modalBtn = document.querySelector(".head-top-wrap");
-const modalBg = document.querySelector(".modal-bg");
-const modalArea = document.querySelector(".modal-wrap");
-const modalCloseBtn = document.querySelector(".modal-close");
-const body = document.querySelector("body");
-
-modalBtn.addEventListener("click", () => {
-  modalBg.style.opacity = 1;
-  modalBg.style.zIndex = 1000;
-  modalBg.style.transition = 1 + "s";
-  modalArea.style.left = 0;
-  modalArea.style.zIndex = 1001;
-  modalArea.style.transition = 1 + "s";
-  body.style.overflow = "hidden";
-});
-modalCloseBtn.addEventListener("click", () => {
-  modalBg.style.opacity = 0;
-  modalBg.style.zIndex = -10;
-  modalArea.style.left = -50 + "vw";
-  body.style.overflow = "visible";
-});
-body.addEventListener("click", (e) => {
-  const selected = e.target;
-  let state = window.getComputedStyle(selected).display;
-  if (state === "block" && !selected.closest(".modal-wrap")) {
-    modalBg.style.opacity = 0;
-    modalBg.style.zIndex = -10;
-    modalArea.style.left = -50 + "vw";
-    body.style.overflow = "visible";
-  }
 });
 
 /* https://code-study.tistory.com/23
