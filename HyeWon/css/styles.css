@@ -31,6 +31,8 @@ body {
   color: var(--color-semi-dark-gray);
   background-color: var(--color-light-white);
   line-height: 1.5;
+  width: 100%;
+  height: 100%;
 }
 
 /* Typograhy */
@@ -68,10 +70,9 @@ h3 {
 
 /* header */
 .header {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 45px;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,6 +81,11 @@ h3 {
   color: var(--color-light-white);
   padding: 12px 20px 13px;
   box-sizing: border-box;
+  z-index: 500;
+}
+
+.header.hidden {
+  display: none;
 }
 
 .header-btn {
@@ -107,18 +113,39 @@ h3 {
 
 /* GNB */
 .gnb {
+  position: relative;
+}
+
+.gnb .gnb-box {
   position: absolute;
+  top: 0;
   width: 100%;
-  height: 81px;
-  top: 45px;
+  height: 90px;
   background-color: var(--color-semi-dark-gray);
   color: var(--color-light-white);
+  padding: 26px 35px;
+  font-size: var(--font-regular);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 26px 35px;
-  font-size: var(--font-regular);
+  z-index: 100;
 }
+
+/* .gnb .gnb-box.open {
+  background-color: var(--color-light-white);
+  font-size: var(--color-semi-dark-gray);
+} */
+
+/* .gnb .gnb-box::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: calc(90px - 1px);
+  border-bottom: 1px solid transparent;
+  background-color: var(--color-semi-dark-gray);
+} */
 
 .gnb-container {
   display: flex;
@@ -137,6 +164,21 @@ h3 {
 
 .gnb-item a {
   color: var(--color-light-white);
+}
+
+.gnb-item.hidden {
+  display: none;
+}
+
+.gnb-item.close a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.gnb-item.close a .material-icons {
+  font-size: 18px;
 }
 
 .gnb-list {
@@ -329,11 +371,13 @@ h3 {
   background-position: center;
   background-size: cover;
   color: var(--color-light-white);
-  height: 548px;
+  /* position: absolute; */
+  height: 595px;
+  width: 100%;
   display: flex;
-  padding: 110px 50px;
+  padding: 200px 50px;
   gap: 92px;
-  margin-top: 126px;
+  /* margin-top: 126px; */
 }
 
 #kv svg.Icon-module_base__jrPbu {
@@ -975,10 +1019,10 @@ h3 {
 
 .modal {
   /* display: none; */
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   color: #666666;
   z-index: 9999;
@@ -992,7 +1036,7 @@ h3 {
 
 .modal .modal__overlay {
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }

@@ -80,6 +80,9 @@ new Swiper('#store-section .swiper', {
   },
 });
 
+//  Header
+const headerEl = document.querySelector('.header');
+
 // Press the Header button to open a modal window
 const body = document.querySelector('body');
 const headerBtn = document.querySelector('.header .header-btn');
@@ -109,34 +112,44 @@ overlay.addEventListener('click', closeModal);
 modalBtn.addEventListener('click', closeModal);
 
 // Press the GNB to open a modal window
-// const gnbItems = document.querySelectorAll('.gnb .gnb-item');
+const gnbItems = document.querySelectorAll('.gnb .gnb-item');
 const gnb = document.querySelector('.gnb');
-const gnbItem = gnb.querySelector('.gnb-item:first-child');
-const gnbItem2 = gnb.querySelector('.gnb-item:nth-child(3)');
+const gnbBox = document.querySelector('.gnb .gnb-box');
+const gnbItem = gnb.querySelector('.gnb-item');
+const closeBtn = gnb.querySelector('.gnb-item.close');
 
-// const gnbModals = document.querySelectorAll('.gnb-item .gnb-modal');
+const gnbModals = document.querySelectorAll('.gnb-item .gnb-modal');
 const gnbModal = document.querySelector('.gnb-item .gnb-modal');
-const gnbModal2 = document.querySelector('.gnb-item:nth-child(3) .gnb-modal');
 const header = document.querySelector('.header');
 
 const openGnbModal = () => {
-  gnbModal2.classList.add('open');
-  gnb.classList.add('open');
-  if (gnbModal2.classList.contains('open')) {
+  gnbModal.classList.add('open');
+  closeBtn.classList.remove('hidden');
+  if (gnbModal.classList.contains('open')) {
     body.style.overflow = 'hidden';
+    headerEl.classList.add('hidden');
+    gnbBox.classList.add('open');
   }
 };
 
-gnbItem2.addEventListener('click', openGnbModal);
+gnbItem.addEventListener('click', openGnbModal);
 
-// gnbItems.forEach((item) => {
-//   item.addEventListener('click', () => {
-//     gnbModals.forEach((modal) => {
-//       modal.classList.add('open');
-//       if (modal.classList.contains('open')) {
-//         // header.classList.add('hidden');
-//         body.style.overflow = 'hidden';
-//       }
-//     });
+// gnbItems.forEach((gnbItem, gindex) => {
+//   gnbModals.forEach((gnbModal, mindex) => {
+//     if (gindex === mindex) {
+//       gnbItem.addEventListener('click', openGnbModal);
+//     }
 //   });
 // });
+
+const closeGnbModal = () => {
+  closeBtn.classList.add('hidden');
+  if (closeBtn.classList.contains('hidden')) {
+    gnbModal.classList.remove('open');
+    body.style.overflow = 'scroll';
+    headerEl.classList.remove('hidden');
+  }
+};
+closeBtn.addEventListener('click', closeGnbModal);
+
+// Press the GNB to close a modal window
