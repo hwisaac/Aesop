@@ -121,6 +121,11 @@ button.swiper-button-prev::after {
   color: #fff;
 }
 
+input[type="text"] {
+  background-color: inherit;
+  border: none;
+}
+
 /* TOP BANNER */
 .shippingBanner-body {
   background-color: #252525;
@@ -658,6 +663,89 @@ header #store {
   background-color: rgb(254, 254, 242);
 }
 
+header #store .nav__list {
+  display: block;
+}
+
+header #store .nav__list .nav__logo {
+  height: 38px;
+  margin-bottom: 50px;
+}
+
+header #store .nav__list .btnHover {
+  width: auto;
+  font-size: 14px;
+  padding: 20px 50px;
+}
+
+header #store .store__load {
+  margin-top: 40px;
+}
+
+header #store .store__load h2 {
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+header #store .store__load__input {
+  position: relative;
+  height: 40px;
+  width: 50%;
+}
+
+header #store .store__load__input label {
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  color: #666;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+
+header #store .store__load__input label.on {
+  top: -50%;
+  transform: translateY(0);
+  color: #666;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+header #store .store__load__input input {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 30px;
+  padding: 0 50px 0 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+header #store .store__load__input input:focus {
+  border-bottom: 1px solid #333;
+}
+
+header #store .store__load__input input:focus {
+  outline: none;
+}
+
+header #store .store__load__input button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  right: 0;
+  height: 100%;
+  padding: 0;
+}
+
+header #store .store__load__input button span {
+  vertical-align: middle;
+  color: #333;
+}
+
 header #search {
   background-color: rgb(254, 254, 242);
 }
@@ -999,11 +1087,6 @@ footer input[type="checkbox"]:checked::before {
 footer input[type="checkbox"]:checked {
   color: #fff;
   font-weight: bold;
-}
-
-footer input[type="text"] {
-  background-color: inherit;
-  border: none;
 }
 
 footer>ul {
