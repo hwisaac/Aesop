@@ -1,35 +1,168 @@
 /* GNB */
 const header = document.querySelector(".head-bottom");
-const gnbWrap = document.querySelector(".head-gnb-wrap");
+/* const gnbWrapLi = document.querySelectorAll(".head-gnb-wrap li"); */
 const gnbDepth = document.querySelector(".gnb-main");
+const gnbDepthAll = document.querySelectorAll(".gnb-main div");
 const main = document.querySelector("main");
 
-gnbWrap.addEventListener("click", (e) => {
-  gnbDepth.classList.add("open");
+const gnbSkin = document.querySelector(".head-skin");
+const gnbSkinCont = document.querySelector(".gnb-main-area.skin");
+const gnbBody = document.querySelector(".head-body");
+const gnbBodyCont = document.querySelector(".gnb-main-area.body");
+const gnbHair = document.querySelector(".head-hair");
+const gnbHairCont = document.querySelector(".gnb-main-area.hair");
+const gnbPerfume = document.querySelector(".head-perfume");
+const gnbPerfumeCont = document.querySelector(".gnb-main-area.perfume");
+const gnbHome = document.querySelector(".head-home");
+const gnbHomeCont = document.querySelector(".gnb-main-area.home");
+const gnbKit = document.querySelector(".head-kit");
+const gnbKitCont = document.querySelector(".gnb-main-area.kit");
+const gnbGift = document.querySelector(".head-gift");
+const gnbGiftCont = document.querySelector(".gnb-main-area.gift");
+const gnbRead = document.querySelector(".head-read");
+const gnbReadCont = document.querySelector(".gnb-main-area.read");
+const gnbStore = document.querySelector(".head-store");
+const gnbStoreCont = document.querySelector(".gnb-main-area.store");
+const gnbSearch = document.querySelector(".head-search");
+const gnbSearchCont = document.querySelector(".gnb-main-area.search");
+const gnbCloseBtn = document.querySelector(".head-close-btn");
 
-  header.style.zIndex = 100000000;
-  header.style.position = "fixed";
-  header.style.top = 0;
+gnbSkin.addEventListener("click", (e) => {
+  body.style.overflow = "hidden";
 
-  body.style.overflowY = "hidden";
+  gnbDepthAll.forEach((each) => {
+    each.classList.remove("up");
+  });
+  if (e.target == gnbSkin) {
+    header.classList.add("fixed");
+    gnbDepth.classList.add("open");
+    gnbSkinCont.classList.add("up");
+  } else {
+    header.classList.remove("fixed");
+    gnbDepth.classList.remove("open");
+  }
+});
+gnbBody.addEventListener("click", (e) => {
+  gnbDepthAll.forEach((each) => {
+    each.classList.remove("up");
+  });
+  if (e.target == gnbBody) {
+    header.classList.add("fixed");
+    gnbDepth.classList.add("open");
+    gnbBodyCont.classList.add("up");
+  } else {
+    header.classList.remove("fixed");
+    gnbDepth.classList.remove("open");
+  }
+});
+gnbHair.addEventListener("click", (e) => {
+  gnbDepthAll.forEach((each) => {
+    each.classList.remove("up");
+  });
+  if (e.target == gnbHair) {
+    header.classList.add("fixed");
+    gnbDepth.classList.add("open");
+    gnbHairCont.classList.add("up");
+  } else {
+    header.classList.remove("fixed");
+    gnbDepth.classList.remove("open");
+  }
+});
+gnbPerfume.addEventListener("click", (e) => {
+  gnbDepthAll.forEach((each) => {
+    each.classList.remove("up");
+  });
+  if (e.target == gnbPerfume) {
+    header.classList.add("fixed");
+    gnbDepth.classList.add("open");
+    gnbPerfumeCont.classList.add("up");
+  } else {
+    header.classList.remove("fixed");
+    gnbDepth.classList.remove("open");
+  }
+});
+gnbHome.addEventListener("click", (e) => {
+  gnbDepthAll.forEach((each) => {
+    each.classList.remove("up");
+  });
+  if (e.target == gnbHome) {
+    header.classList.add("fixed");
+    gnbDepth.classList.add("open");
+    gnbPerfumeCont.classList.add("up");
+  } else {
+    header.classList.remove("fixed");
+    gnbDepth.classList.remove("open");
+  }
+});
+gnbKit.addEventListener("click", (e) => {
+  gnbDepthAll.forEach((each) => {
+    each.classList.remove("up");
+  });
+  if (e.target == gnbKit) {
+    header.classList.add("fixed");
+    gnbDepth.classList.add("open");
+    gnbKitCont.classList.add("up");
+  } else {
+    header.classList.remove("fixed");
+    gnbDepth.classList.remove("open");
+  }
+});
+gnbGift.addEventListener("click", (e) => {
+  gnbDepthAll.forEach((each) => {
+    each.classList.remove("up");
+  });
+  if (e.target == gnbGift) {
+    header.classList.add("fixed");
+    gnbDepth.classList.add("open");
+    gnbGiftCont.classList.add("up");
+  } else {
+    header.classList.remove("fixed");
+    gnbDepth.classList.remove("open");
+  }
+});
+gnbRead.addEventListener("click", (e) => {
+  gnbDepthAll.forEach((each) => {
+    each.classList.remove("up");
+  });
+  if (e.target == gnbRead) {
+    header.classList.add("fixed");
+    gnbDepth.classList.add("open");
+    gnbReadCont.classList.add("up");
+  } else {
+    header.classList.remove("fixed");
+    gnbDepth.classList.remove("open");
+  }
+});
+gnbStore.addEventListener("click", (e) => {
+  gnbDepthAll.forEach((each) => {
+    each.classList.remove("up");
+  });
+  if (e.target == gnbStore) {
+    header.classList.add("fixed");
+    gnbDepth.classList.add("open");
+    gnbStoreCont.classList.add("up");
+  } else {
+    header.classList.remove("fixed");
+    gnbDepth.classList.remove("open");
+  }
+});
+gnbSearch.addEventListener("click", (e) => {
+  gnbDepthAll.forEach((each) => {
+    each.classList.remove("up");
+  });
+  if (e.target == gnbSearch) {
+    header.classList.add("fixed");
+    gnbDepth.classList.add("open");
+    gnbSearchCont.classList.add("up");
+  } else {
+    header.classList.remove("fixed");
+    gnbDepth.classList.remove("open");
+  }
+});
 
-  let selectLi = e.target;
-  console.log(selectLi);
-  if (selectLi == document.querySelector(".head-skin")) {
-    document.querySelector(".gnb-main-area.skin").style.zIndex = 10;
-  } else {
-    document.querySelector(".gnb-main-area.skin").style.zIndex = 0;
-  }
-  if (selectLi == document.querySelector(".head-body")) {
-    document.querySelector(".gnb-main-area.body").style.zIndex = 10;
-  } else {
-    document.querySelector(".gnb-main-area.body").style.zIndex = 0;
-  }
-  if (selectLi == document.querySelector(".head-hair")) {
-    document.querySelector(".gnb-main-area.hair").style.zIndex = 10;
-  } else {
-    document.querySelector(".gnb-main-area.hair").style.zIndex = 0;
-  }
+gnbCloseBtn.addEventListener("click", (e) => {
+  header.classList.remove("fixed");
+  gnbDepth.classList.remove("open");
 });
 
 /* HEADER-SCROLL */
@@ -40,11 +173,11 @@ addEventListener("scroll", () => {
   if (scrollY < lastScrollY && scrollY > 40) {
     lastScrollY = scrollY;
     console.log("스크롤업");
-    header.classList.add("scroll-up");
+    header.classList.add("fixed");
   } else {
     lastScrollY = scrollY;
     console.log("스크롤다운");
-    header.classList.remove("scroll-up");
+    header.classList.remove("fixed");
   }
   console.log(lastScrollY);
 });
@@ -138,50 +271,3 @@ new Swiper(".section5 .swiper", {
     snapOnRelease: true,
   },
 });
-
-/* https://code-study.tistory.com/23
-const gnb = document.querySelector(".head-bottom");
-let lastScrollTop = 0;
-let delta = 5;
-let fixBox = document.querySelector(".bottomNav");
-let gnbHeight = gnb.offsetHeight;
-let didScroll;
-console.log(gnbHeight); 
-*/
-/* setInterval(function () {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
-}, 250);
-
-function hasScrolled() {
-  var nowScrollTop = window.scrollY;
-  if (Math.abs(lastScrollTop - nowScrollTop) <= delta) {
-    return;
-  }
-  if (nowScrollTop > lastScrollTop && nowScrollTop > fixBoxHeight) {
-    //Scroll down (하단 고정메뉴 숨김)
-    fixBox.classList.remove("show");
-  } else {
-    if (nowScrollTop + window.innerHeight < document.body.offsetHeight) {
-      //Scroll up (하단 고정메뉴 보임)
-      fixBox.classList.add("show");
-    }
-  }
-  lastScrollTop = nowScrollTop;
-} */
-
-/* 스크롤 이벤트
-document.addEventListener("scroll", () => {
-  console.log(window.scrollY);
-  if (window.scrollY === 125) {
-    console.log("여기!");
-  }
-});
- */
-/* console.log(gnb.getBoundingClientRect().bottom); */
-/* if (window.scrollY === 125) {
-  console.log("125");
-}
-console.log(window.scrollY); */
