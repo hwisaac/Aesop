@@ -20,7 +20,11 @@ body .msg {
   border: none;
   outline: none;
   padding: 50px;
-  z-index: 3;
+  z-index: 99;
+}
+body .msg img {
+  border: 1px solid #fffef2;
+  border-radius: 50%;
 }
 
 /* SHIPPING-BANNER */
@@ -57,13 +61,23 @@ body .msg {
 .shipping-banner .banner-inner #banner-btn span.banner-btn-icon {
   fill: #fffef2;
   margin-left: 20px;
-  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 0;
+  font-variation-settings: 'FILL' 20, 'wght' 400, 'GRAD' 20, 'opsz' 20;
 }
 
 /* HEADER */
 .header {
+  /* position: fixed; */
+  z-index: 20;
   width: 100%;
   background-color: #333;
+  color: #fffef2;
+  transition: all 0.5s;
+}
+.header.white-version {
+  position: fixed;
+  width: 100%;
+  background-color: #fffef2;
+  color: #333;
 }
 .header .header-inner {
   height: 80px;
@@ -73,7 +87,6 @@ body .msg {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  color: #fffef2;
 }
 .header .header-inner ul.menu {
   height: 80px;
@@ -83,18 +96,25 @@ body .msg {
   left: 0;
 }
 .header .header-inner ul.menu li {
-  margin-right: 27px;
-  font-family: "Suisse Medium", sans-serif;
-  color: #fffef2;
+  margin-right: 10px;
+  font-family: 'Suisse Medium', sans-serif;
+  color: inherit;
 }
 .header .header-inner ul.menu li button {
   margin: auto;
   font-size: 14px;
   font-family: 'Suisse Medium', sans-serif;
-  background-color: #333;
-  color: #fffef2;
+  background-color: inherit;
+  color: inherit;
   border: none;
   cursor: pointer;
+}
+.header .header-inner ul.menu li:last-child button {
+  display: none;
+}
+.header .header-inner ul.menu li:last-child.open button {
+  display: flex;
+  align-items: center;
 }
 .header .header-inner ul.login-menu {
   height: 80px;
@@ -108,8 +128,8 @@ body .msg {
 }
 .header .header-inner ul.login-menu li a {
   font-size: 14px;
-  font-family: "Suisse Medium", sans-serif;
-  color: #fffef2;
+  font-family: 'Suisse Medium', sans-serif;
+  color: inherit;
 }
 
 /* SECTION1 */
@@ -786,7 +806,7 @@ body .msg {
   font-size: 16px;
   padding: 26px 0 26px 40px;
 }
-span.material-symbols-outlined {
+.footer .inner span.material-symbols-outlined {
   font-size: 15px;
   vertical-align: middle;
   margin-left: 3px;
