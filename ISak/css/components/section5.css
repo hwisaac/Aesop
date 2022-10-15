@@ -3,36 +3,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
-.section5 .inner-left {
+.section5 .row {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
 }
-.section5 .inner-left h2 {
+.section5 .row h2 {
+  margin-left: 70px;
+  position: relative;
 }
-.section5 .inner-left .swiper-container {
+.section5 .row .swiper {
   margin-top: 100px;
+  width: 100%;
 }
-.section5 .inner-left .swiper-wrapper {
+.section5 .row .swiper-wrapper {
   gap: 100px;
 }
-.section5 .inner-left .swiper-slide {
+.section5 .row .swiper-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 375px;
 }
-.section5 .inner-left .swiper-slide img {
+.section5 .row .swiper-slide img {
   width: 375px;
   height: 375px;
   cursor: pointer;
 }
-.section5 .inner-left .swiper-slide .title {
+.section5 .row .swiper-slide .title {
 }
-.section5 .inner-left .swiper-slide:hover .title {
+.section5 .row .swiper-slide:hover .title {
   text-decoration: underline;
 }
-.section5 .inner-left .swiper-slide .description {
+.section5 .row .swiper-slide .description {
+}
+
+.section5 .row .prev-btn,
+.section5 .row .next-btn {
+  top: 50%;
 }
 
 .section5 .pagination-bars {
@@ -41,12 +53,10 @@
   margin-top: 30px;
   display: flex;
   margin-top: 70px;
+  background-color: #cccbc1;
+  border-radius: 2px;
 }
-.section5 .pagination-bars .bar {
-  width: 40vw;
-  height: 3px;
-  background-color: #dee1e6;
-}
+
 .section5 .pagination-bars .bar.active {
   background-color: #51514d;
 }

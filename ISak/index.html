@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./rice.png" />
     <title>[클론]이솝 스킨케어 | 스킨, 바디 & 핸드 케어 | 이솝 대한민국</title>
-    <!-- SWIPER : 슬라이드 모션-->
+    <!--SWIPER : 슬라이드 모션-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -38,41 +39,287 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
     <!-- 스타일 -->
     <link defer rel="stylesheet" href="./css/style.css" />
     <!-- 스크립트 -->
     <script defer src="./js/main.js"></script>
   </head>
   <body>
-    <div class="super-header">
-      <span>전 구매 무료 배송과 선물포장 혜택을 즐겨보세요. +</span>
-    </div>
-    <!-- HEADER  -->
-    <header class="header" id="header">
-      <div class="inner">
-        <div class="left">
-          <ul class="left__list">
-            <li>스킨 케어</li>
-            <li>바디&핸드</li>
-            <li>헤어</li>
-            <li>향수</li>
-            <li>홈</li>
-            <li>키트&여행 제품</li>
-            <li>읽기</li>
-            <li>스토어</li>
-            <li class="material-icons">search</li>
-          </ul>
-        </div>
-        <div class="right">
-          <ul class="right__list">
-            <li>로그인</li>
-            <li>카트</li>
-          </ul>
-        </div>
+    <div class="super-header-modal">
+      <div class="close-container">
+        <span class="material-symbols-outlined">
+          close
+          </span>
       </div>
-    </header>
+      <div class="row">
+        <span class="title">전 구매 무료 배송</span>
+      </div>
+      <div class="row">
+        <span class="title">CJ 대한통운</span>
+        <div><span>전 제품</span> <span>무료 배송</span></div>
+        <div><span>전 지역</span> <span>영업일 기준, 2-3일</span></div>
+      </div>
+      <div class="row">
+        <span class="title">군부대/사서함 배송 불가 안내</span>
+        <span class="text">
+          군부대 및 사서함으로 배송되는 주문의 경우, CJ대한통운을 통한 배송이 불가하여 별도 문자 안내와 함꼐 자동 주문 취소 처리 될 예정입니다.
+        </span>
+      </div>
+      <div class="row">
+        <span class="title">군부대/사서함 배송 불가 안내</span>
+        <span class="text">
+          군부대 및 사서함으로 배송되는 주문의 경우, CJ대한통운을 통한 배송이 불가하여 별도 문자 안내와 함꼐 자동 주문 취소 처리 될 예정입니다.
+        </span>
+      </div>
+      <div class="row">
+        <span class="title">무료 선물 포장 서비스</span>
+        <span class="text">
+          주문하신 제품을 기프트 메시지와 함께 선물 포장해 드립니다. 기프트 메시지는 주문 시에 작성하실 수 있습니다.
+        </span>
+      </div>
+      <div class="row">
+        <span class="title">샘플&코튼 백 증정</span>
+        <span class="text">
+          이솝 공식 온라인 몰의 모든 주문 건에 무료 샘플과 코튼 백을 제공해 드립니다. 제공되는 코튼 백의 사이즈는 제품의 크기에 따라 다릅니다. 샘플은 재고 상황에 따라 변경될 수 있으며 임의 지정은 불가합니다.
+        </span>
+      </div>
+      <div class="row">
+        <span class="title">교환 및 반품</span>
+        <span class="text">
+          이솝 공식 온라인 몰에서 구매하신 미개봉 제품은 구매 후 30일 이내 무료 반품이 가능하며 교환은 반품 후 재주문 또는 전국 이솝 매장에서 가능합니다. 자세한 내용은 자주 묻는 질문을 참고하세요.
+        </span>
+      </div>
+      <div class="row">
+        <span class="title">탄소중립 배송</span>
+        <span class="text">
+          이솝 온라인 몰의 모든 주문 배송 건은 탄소중립을 지키기 위해 노력하고 있습니다.
+        </span>
+      </div>
+      <div class="row">
+        <span class="title">온라인 패키징</span>
+        <span class="text">
+          이솝은 환경에 미치는 영향을 최소화하기 위한 포장재를 사용하며 내부에는 재활용이 가능한 종이 완충재를 선택해 사용하고 있습니다.
+        </span>
+      </div>
+    </div>
+    <div class="super-header">
+      <span>전 구매 무료 배송과 선물포장 혜택을 즐겨보세요.</span>
+    </div>
+    
+    
     <!-- SECTION 1  -->
     <section class="section1">
+      <!-- HEADER  -->
+      <header class="header" id="header">
+        
+          <div class="left">
+            <ul class="left__list">
+              <li class="skin-care">스킨 케어</li>
+              <li class="body-hand">바디&핸드</li>
+              <li class="hair">헤어</li>
+              <li class="perfume">향수</li>
+              <li class="home">홈</li>
+              <li class="kit">키트&여행 제품</li>
+              <li class="reading">읽기</li>
+              <li class="store">스토어</li>
+              <li class="material-icons material-icons-search">search</li>
+              <li class="close-item material-icons-close" id="closeBtnInMenu">닫기 <span class="material-icons">close</li>
+            </ul>
+          </div>
+          <div class="right">
+            <ul class="right__list">
+              <li>로그인</li>
+              <li>카트</li>
+            </ul>
+          </div>
+      </header>
+      <!-- HEADER END  -->
+      <!-- HEADER MODAL  -->
+      <div class="header-modal">
+        <div class="header-modal__inner skin-care-modal">
+          <svg
+          aria-labelledby="aesop-2365"
+          class="Icon-module_base__jrPbu Icon-module_dark__3bVJI Logo-module_icon__2mAWS"
+          data-testid="data-testid-Icon"
+          focusable="false"
+          height="40"
+          role="img"
+          tabindex="-1"
+          viewBox="0 0 489.7 154.3"
+          width="120"
+          style="height: 40px; width: 120px; fill: #333"
+        >
+          <title id="aesop-2365">aesop</title>
+          <g>
+            <path
+              d="M48.6,22.5L31.8,62.2h34.2L48.6,22.5z M28.6,70.3c-3.2,7.4-9.6,21.7-14.9,42c-1.9-0.3-3.5-0.9-6.6-0.9c-3.1,0-5,0.6-7.1,0.9C14.3,81.2,38,28.9,49.4,0c1.3,0.2,2.3,0.5,4,0.5c1.4,0,2.3-0.2,3.5-0.5c12.3,33.7,47.8,111.7,48.1,112.3c-2.7-0.5-5.5-0.9-9.5-0.9c-4.2,0-7.2,0.5-10.3,0.9c-5.6-19.2-12.2-33.2-16.2-42H28.6z"
+            ></path>
+            <path
+              d="M172.4,66.6c0-5.3,0-26.6-19.2-26.6c-14,0-20.7,10.6-22.2,26.6H172.4z M130.9,73.3c0,4.5,0,13.6,4.3,21c7.4,12.1,17.8,12.5,22.5,12.5c15.7,0,23.1-9.6,25.5-13l1.9,0.4c-1,4.5-1,7.1-1.1,9.6c-7.1,6.7-16.8,10.5-29.8,10.5c-24.4,0-39.3-15.4-39.3-40.1c0-22.1,12.2-40.7,38.5-40.7c35.8,0,35.3,31.1,35.1,39.8H130.9z"
+            ></path>
+            <path
+              d="M249.6,52.1c-0.6-2.4-1.6-6.4-6.2-9.6c-3.4-2.4-7.8-2.7-10.4-2.7c-9.8,0-14.9,5.1-14.9,12c0,9.3,9.5,12.7,15.1,14.1c14.3,3.7,25.8,6.7,25.8,22.8c0,12.2-8.5,25.8-30.8,25.8c-13,0-22-5.5-23.7-6.7c2.1-3.9,3.4-10.7,3.7-12.8l1.9-0.5c1.1,2.7,2.7,7.1,8.7,10.6c4,2.4,8.2,3,11.7,3c8.4,0,16.2-4,16.2-13.2c0-9.1-5.5-10.9-22.3-16.4c-6.9-2.3-18.3-7.2-18.3-21.3c0-9.1,5.6-23.9,27.8-23.9c11.1,0,17.5,3.4,21.2,5.3c-1.6,4.2-2.7,8-3.2,13.5H249.6z"
+            ></path>
+            <path
+              d="M291.5,73.5c0,22.3,9.8,34.6,24.5,34.6c15.4,0,25.5-13.3,25.5-34.5c0-12.5-3.9-33.8-24.7-33.8C291.5,39.8,291.5,68.6,291.5,73.5 M357.9,73c0,25.5-17.6,41.5-42,41.5c-17,0-40.8-7.7-40.8-40.6c0-25,16.7-40.6,40.8-40.6 C346.3,33.4,357.9,53.4,357.9,73"
+            ></path>
+            <path
+              d="M399.4,49.6c-3.2,4-6.6,9.8-6.6,25.7c0,14.1,3.2,19.4,6.6,23.4c4.1,5,9.6,7.9,17,7.9 c22.9,0,22.9-27.1,22.9-32.3c0-24.2-11.6-33-22-33C408.7,41.2,403.1,44.9,399.4,49.6 M419.3,114.7c-15.1,0-23.6-8.3-26.2-14.9 c0,25.2-0.2,39.8,0.8,54.5c-2.4-0.6-4.5-0.9-8.4-0.9c-4,0-6.1,0.3-8.6,0.9c1.3-20.8,1.8-41.9,1.8-62.7c0-14.6-0.3-34.3-0.8-57.6 c2.2,0.5,4.8,0.9,7.9,0.9c2.9,0,5.6-0.5,7.9-0.9c-0.6,8.8-0.6,11.2-0.6,14.6c2.6-4.2,9.5-15.4,27.3-15.4c16,0,35.6,11.7,35.6,40.3 C455.9,98.8,440.3,114.7,419.3,114.7"
+            ></path>
+            <rect x="131.8" y="13.5" width="44.3" height="5"></rect>
+            <path
+              d="M477.2,98.1c0,1.6,0,3,0,4.4c1.3,0,4.3,0,4.3-2.3C481.5,98.1,479.2,98.1,477.2,98.1 M484.9,109.1 c-0.4,0-0.7-0.1-1.2-0.1c-0.4,0-0.8,0.1-1.5,0.1c-2-2.9-3.6-4.5-4.7-5.8h-0.4c0,1.8,0,3.2,0.2,5.8c-0.5,0-0.7-0.1-1.3-0.1 c-0.6,0-0.8,0.1-1.1,0.1c0.1-1.3,0.2-2.7,0.2-6.2c0-3-0.1-4.4-0.1-5.7c0.9,0,1.5,0,2.9,0c2.9,0,5.9,0,5.9,2.8c0,2.5-2.7,2.9-3.9,3 c0.8,1.1,4.4,5.1,5.1,5.9L484.9,109.1z M479.2,94.8c-4.8,0-8.5,3.8-8.5,8.6c0,4.9,3.6,8.6,8.5,8.6c4.9,0,8.5-3.7,8.5-8.6 C487.8,98.7,484.3,94.8,479.2,94.8 M479.2,92.9c5.9,0,10.5,4.7,10.5,10.5c0,5.9-4.7,10.5-10.5,10.5c-5.8,0-10.5-4.6-10.5-10.5 C468.8,97.5,473.5,92.9,479.2,92.9"
+            ></path>
+          </g>
+          </svg>
+          <ul class="items">
+            <li class="title">카테고리</li>
+            <li class="item">스킨 케어 모두 보기</li>
+            <li class="item">클렌저</li>
+            <li class="item">각질 제거</li>
+            <li class="item">트리트먼트 & 마스크</li>
+            <li class="item">토너</li>
+            <li class="item">하이드레이터</li>
+            <li class="item">립 & 아이</li>
+            <li class="item">쉐이빙</li>
+            <li class="item">선 케어</li>
+            <li class="item">키트</li>
+            <li class="item">스킨 케어 세트 추천</li>
+            <li class="item">스킨 케어 세트 기프트</li>
+          </ul>
+          <ul class="items">
+            <li class="title">피부타입</li>
+            <li class="item">중성</li>
+            <li class="item">건성</li>
+            <li class="item">지성</li>
+            <li class="item">복합성</li>
+            <li class="title-second">레인지</li>
+            <li class="item">파슬리 씨드</li>
+            <li class="item">스킨케어 플러스</li>
+            <li class="title-third">자세히 살펴보기</li>
+            <li class="item">내 피부 이해하기</li>
+          </ul>
+          <ul class="items">
+            <li class="title">사랑받는 제품</li>
+            <li class="item">세이지 앤 징크 페이셜 하이드레이팅 로션 SPF15</li>
+            <li class="item">비 트리플 씨 페이셜 밸런싱 젤</li>
+            <li class="item">파슬리 씨드 안티 옥시던트 인텐스 세럼</li>
+          </ul>
+          <img src="./images/header-modal-img1.jpeg" alt="">
+        </div>
+        <div class="header-modal__inner body-hand-modal">
+          <svg
+          aria-labelledby="aesop-2365"
+          class="Icon-module_base__jrPbu Icon-module_dark__3bVJI Logo-module_icon__2mAWS"
+          data-testid="data-testid-Icon"
+          focusable="false"
+          height="40"
+          role="img"
+          tabindex="-1"
+          viewBox="0 0 489.7 154.3"
+          width="120"
+          style="height: 40px; width: 120px; fill: #333"
+        >
+          <title id="aesop-2365">aesop</title>
+          <g>
+            <path
+              d="M48.6,22.5L31.8,62.2h34.2L48.6,22.5z M28.6,70.3c-3.2,7.4-9.6,21.7-14.9,42c-1.9-0.3-3.5-0.9-6.6-0.9c-3.1,0-5,0.6-7.1,0.9C14.3,81.2,38,28.9,49.4,0c1.3,0.2,2.3,0.5,4,0.5c1.4,0,2.3-0.2,3.5-0.5c12.3,33.7,47.8,111.7,48.1,112.3c-2.7-0.5-5.5-0.9-9.5-0.9c-4.2,0-7.2,0.5-10.3,0.9c-5.6-19.2-12.2-33.2-16.2-42H28.6z"
+            ></path>
+            <path
+              d="M172.4,66.6c0-5.3,0-26.6-19.2-26.6c-14,0-20.7,10.6-22.2,26.6H172.4z M130.9,73.3c0,4.5,0,13.6,4.3,21c7.4,12.1,17.8,12.5,22.5,12.5c15.7,0,23.1-9.6,25.5-13l1.9,0.4c-1,4.5-1,7.1-1.1,9.6c-7.1,6.7-16.8,10.5-29.8,10.5c-24.4,0-39.3-15.4-39.3-40.1c0-22.1,12.2-40.7,38.5-40.7c35.8,0,35.3,31.1,35.1,39.8H130.9z"
+            ></path>
+            <path
+              d="M249.6,52.1c-0.6-2.4-1.6-6.4-6.2-9.6c-3.4-2.4-7.8-2.7-10.4-2.7c-9.8,0-14.9,5.1-14.9,12c0,9.3,9.5,12.7,15.1,14.1c14.3,3.7,25.8,6.7,25.8,22.8c0,12.2-8.5,25.8-30.8,25.8c-13,0-22-5.5-23.7-6.7c2.1-3.9,3.4-10.7,3.7-12.8l1.9-0.5c1.1,2.7,2.7,7.1,8.7,10.6c4,2.4,8.2,3,11.7,3c8.4,0,16.2-4,16.2-13.2c0-9.1-5.5-10.9-22.3-16.4c-6.9-2.3-18.3-7.2-18.3-21.3c0-9.1,5.6-23.9,27.8-23.9c11.1,0,17.5,3.4,21.2,5.3c-1.6,4.2-2.7,8-3.2,13.5H249.6z"
+            ></path>
+            <path
+              d="M291.5,73.5c0,22.3,9.8,34.6,24.5,34.6c15.4,0,25.5-13.3,25.5-34.5c0-12.5-3.9-33.8-24.7-33.8C291.5,39.8,291.5,68.6,291.5,73.5 M357.9,73c0,25.5-17.6,41.5-42,41.5c-17,0-40.8-7.7-40.8-40.6c0-25,16.7-40.6,40.8-40.6 C346.3,33.4,357.9,53.4,357.9,73"
+            ></path>
+            <path
+              d="M399.4,49.6c-3.2,4-6.6,9.8-6.6,25.7c0,14.1,3.2,19.4,6.6,23.4c4.1,5,9.6,7.9,17,7.9 c22.9,0,22.9-27.1,22.9-32.3c0-24.2-11.6-33-22-33C408.7,41.2,403.1,44.9,399.4,49.6 M419.3,114.7c-15.1,0-23.6-8.3-26.2-14.9 c0,25.2-0.2,39.8,0.8,54.5c-2.4-0.6-4.5-0.9-8.4-0.9c-4,0-6.1,0.3-8.6,0.9c1.3-20.8,1.8-41.9,1.8-62.7c0-14.6-0.3-34.3-0.8-57.6 c2.2,0.5,4.8,0.9,7.9,0.9c2.9,0,5.6-0.5,7.9-0.9c-0.6,8.8-0.6,11.2-0.6,14.6c2.6-4.2,9.5-15.4,27.3-15.4c16,0,35.6,11.7,35.6,40.3 C455.9,98.8,440.3,114.7,419.3,114.7"
+            ></path>
+            <rect x="131.8" y="13.5" width="44.3" height="5"></rect>
+            <path
+              d="M477.2,98.1c0,1.6,0,3,0,4.4c1.3,0,4.3,0,4.3-2.3C481.5,98.1,479.2,98.1,477.2,98.1 M484.9,109.1 c-0.4,0-0.7-0.1-1.2-0.1c-0.4,0-0.8,0.1-1.5,0.1c-2-2.9-3.6-4.5-4.7-5.8h-0.4c0,1.8,0,3.2,0.2,5.8c-0.5,0-0.7-0.1-1.3-0.1 c-0.6,0-0.8,0.1-1.1,0.1c0.1-1.3,0.2-2.7,0.2-6.2c0-3-0.1-4.4-0.1-5.7c0.9,0,1.5,0,2.9,0c2.9,0,5.9,0,5.9,2.8c0,2.5-2.7,2.9-3.9,3 c0.8,1.1,4.4,5.1,5.1,5.9L484.9,109.1z M479.2,94.8c-4.8,0-8.5,3.8-8.5,8.6c0,4.9,3.6,8.6,8.5,8.6c4.9,0,8.5-3.7,8.5-8.6 C487.8,98.7,484.3,94.8,479.2,94.8 M479.2,92.9c5.9,0,10.5,4.7,10.5,10.5c0,5.9-4.7,10.5-10.5,10.5c-5.8,0-10.5-4.6-10.5-10.5 C468.8,97.5,473.5,92.9,479.2,92.9"
+            ></path>
+          </g>
+          </svg>
+          <ul class="items">
+            <li class="title">카테고리</li>
+            <li class="item">바디 & 핸드 모두 보기</li>
+            <li class="item">핸드</li>
+            <li class="item">바디</li>
+            <li class="item">퍼스널 케어</li>
+            <li class="item">번들</li>
+            <li class="item">핸드 및 바디 케어 기프트</li>
+          </ul>
+          <ul class="items">
+            <li class="title">레인지</li>
+            <li class="item">제라늄 리프</li>
+          </ul>
+          <ul class="items">
+            <li class="title">좋아하는 선물</li>
+            <li class="item">레저렉션 아로마틱 핸드 밤</li>
+            <li class="item">레저렉션 라모틱 핸드 워시</li>
+            <li class="item">제라늄 리프 듀엣</li>
+          </ul>
+          <img src="./images/header-modal-img2.jpeg" alt="">
+        </div>  
+        <div class="header-modal__inner hair-modal">
+          <svg
+          aria-labelledby="aesop-2365"
+          class="Icon-module_base__jrPbu Icon-module_dark__3bVJI Logo-module_icon__2mAWS"
+          data-testid="data-testid-Icon"
+          focusable="false"
+          height="40"
+          role="img"
+          tabindex="-1"
+          viewBox="0 0 489.7 154.3"
+          width="120"
+          style="height: 40px; width: 120px; fill: #333"
+        >
+          <title id="aesop-2365">aesop</title>
+          <g>
+            <path
+              d="M48.6,22.5L31.8,62.2h34.2L48.6,22.5z M28.6,70.3c-3.2,7.4-9.6,21.7-14.9,42c-1.9-0.3-3.5-0.9-6.6-0.9c-3.1,0-5,0.6-7.1,0.9C14.3,81.2,38,28.9,49.4,0c1.3,0.2,2.3,0.5,4,0.5c1.4,0,2.3-0.2,3.5-0.5c12.3,33.7,47.8,111.7,48.1,112.3c-2.7-0.5-5.5-0.9-9.5-0.9c-4.2,0-7.2,0.5-10.3,0.9c-5.6-19.2-12.2-33.2-16.2-42H28.6z"
+            ></path>
+            <path
+              d="M172.4,66.6c0-5.3,0-26.6-19.2-26.6c-14,0-20.7,10.6-22.2,26.6H172.4z M130.9,73.3c0,4.5,0,13.6,4.3,21c7.4,12.1,17.8,12.5,22.5,12.5c15.7,0,23.1-9.6,25.5-13l1.9,0.4c-1,4.5-1,7.1-1.1,9.6c-7.1,6.7-16.8,10.5-29.8,10.5c-24.4,0-39.3-15.4-39.3-40.1c0-22.1,12.2-40.7,38.5-40.7c35.8,0,35.3,31.1,35.1,39.8H130.9z"
+            ></path>
+            <path
+              d="M249.6,52.1c-0.6-2.4-1.6-6.4-6.2-9.6c-3.4-2.4-7.8-2.7-10.4-2.7c-9.8,0-14.9,5.1-14.9,12c0,9.3,9.5,12.7,15.1,14.1c14.3,3.7,25.8,6.7,25.8,22.8c0,12.2-8.5,25.8-30.8,25.8c-13,0-22-5.5-23.7-6.7c2.1-3.9,3.4-10.7,3.7-12.8l1.9-0.5c1.1,2.7,2.7,7.1,8.7,10.6c4,2.4,8.2,3,11.7,3c8.4,0,16.2-4,16.2-13.2c0-9.1-5.5-10.9-22.3-16.4c-6.9-2.3-18.3-7.2-18.3-21.3c0-9.1,5.6-23.9,27.8-23.9c11.1,0,17.5,3.4,21.2,5.3c-1.6,4.2-2.7,8-3.2,13.5H249.6z"
+            ></path>
+            <path
+              d="M291.5,73.5c0,22.3,9.8,34.6,24.5,34.6c15.4,0,25.5-13.3,25.5-34.5c0-12.5-3.9-33.8-24.7-33.8C291.5,39.8,291.5,68.6,291.5,73.5 M357.9,73c0,25.5-17.6,41.5-42,41.5c-17,0-40.8-7.7-40.8-40.6c0-25,16.7-40.6,40.8-40.6 C346.3,33.4,357.9,53.4,357.9,73"
+            ></path>
+            <path
+              d="M399.4,49.6c-3.2,4-6.6,9.8-6.6,25.7c0,14.1,3.2,19.4,6.6,23.4c4.1,5,9.6,7.9,17,7.9 c22.9,0,22.9-27.1,22.9-32.3c0-24.2-11.6-33-22-33C408.7,41.2,403.1,44.9,399.4,49.6 M419.3,114.7c-15.1,0-23.6-8.3-26.2-14.9 c0,25.2-0.2,39.8,0.8,54.5c-2.4-0.6-4.5-0.9-8.4-0.9c-4,0-6.1,0.3-8.6,0.9c1.3-20.8,1.8-41.9,1.8-62.7c0-14.6-0.3-34.3-0.8-57.6 c2.2,0.5,4.8,0.9,7.9,0.9c2.9,0,5.6-0.5,7.9-0.9c-0.6,8.8-0.6,11.2-0.6,14.6c2.6-4.2,9.5-15.4,27.3-15.4c16,0,35.6,11.7,35.6,40.3 C455.9,98.8,440.3,114.7,419.3,114.7"
+            ></path>
+            <rect x="131.8" y="13.5" width="44.3" height="5"></rect>
+            <path
+              d="M477.2,98.1c0,1.6,0,3,0,4.4c1.3,0,4.3,0,4.3-2.3C481.5,98.1,479.2,98.1,477.2,98.1 M484.9,109.1 c-0.4,0-0.7-0.1-1.2-0.1c-0.4,0-0.8,0.1-1.5,0.1c-2-2.9-3.6-4.5-4.7-5.8h-0.4c0,1.8,0,3.2,0.2,5.8c-0.5,0-0.7-0.1-1.3-0.1 c-0.6,0-0.8,0.1-1.1,0.1c0.1-1.3,0.2-2.7,0.2-6.2c0-3-0.1-4.4-0.1-5.7c0.9,0,1.5,0,2.9,0c2.9,0,5.9,0,5.9,2.8c0,2.5-2.7,2.9-3.9,3 c0.8,1.1,4.4,5.1,5.1,5.9L484.9,109.1z M479.2,94.8c-4.8,0-8.5,3.8-8.5,8.6c0,4.9,3.6,8.6,8.5,8.6c4.9,0,8.5-3.7,8.5-8.6 C487.8,98.7,484.3,94.8,479.2,94.8 M479.2,92.9c5.9,0,10.5,4.7,10.5,10.5c0,5.9-4.7,10.5-10.5,10.5c-5.8,0-10.5-4.6-10.5-10.5 C468.8,97.5,473.5,92.9,479.2,92.9"
+            ></path>
+          </g>
+          </svg>
+          <ul class="items">
+            <li class="title">카테고리</li>
+            <li class="item">헤어 모두 보기</li>
+            <li class="item">샴푸</li>
+            <li class="item">컨디셔너</li>
+            <li class="item">트리트먼트</li>
+            <li class="item">그루밍</li>
+          </ul>
+          <ul class="items">
+            <li class="title">조화로운 셀렉션</li>
+            <li class="item">샴푸</li>
+            <li class="item">컨디셔너</li>
+            <li class="item">테임 헤어 세럼</li>
+          </ul>
+          <ul class="items">
+          </ul>
+          <img src="./images/header-modal-img3.jpeg" alt="">
+        </div>
+      </div>
       <div class="inner">
         <svg
           aria-labelledby="aesop-2365"
@@ -124,40 +371,83 @@
         </div>
       </div>
     </section>
+
+    
     <!-- SECTION 2  -->
     <section class="section2">
       <div class="row">
-        <div class="texts-container">
-          <span class="small"> 향수 </span>
-          <h2 class="title">이솝의 퍼스널 향</h2>
-          <p class="description">
-            전통에서 벗어난 매혹적이고 세련된 이솝 향수는 추억과 우리를 이어주는
-            감각적인 다리이자 주변 사람들과의 연결점입니다.
-          </p>
-          <a href="javascript:void(0)"
-            >향수 모두 보기 <span class="material-icons">arrow_forward</span>
-          </a>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide texts-container">
+              <span class="small"> 향수 </span>
+              <h2 class="title">이솝의 퍼스널 향</h2>
+              <p class="description">
+                전통에서 벗어난 매혹적이고 세련된 이솝 향수는 추억과 우리를 이어주는
+                감각적인 다리이자 주변 사람들과의 연결점입니다.
+              </p>
+              <a href="javascript:void(0)"
+                >향수 모두 보기 <span class="material-icons">arrow_forward</span>
+              </a>
+            </div>
+            <div class="swiper-slide slide">
+              <img src="./images/section2-product1.png" alt="" />
+              <span class="title">이더시스 오 드 퍼퓸</span>
+              <span class="description"> 우디,스파이시,앰버리 </span>
+            </div>
+            <div class="swiper-slide slide">
+              <img src="./images/section2-product2.png" alt="" />
+              <span class="title">미라세티 오 드 퍼퓸</span>
+              <span class="description">유향, 우디, 스파이시한 향</span> </span>
+            </div>
+            <div class="swiper-slide slide">
+              <img src="./images/section2-product3.png" alt="" />
+              <span class="title">마르스트 오 드 퍼퓸</span>
+              <span class="description">상쾌한,허브,마린 향</span> </span>
+            </div>
+            <div class="swiper-slide slide">
+              <img src="./images/section2-product4.png" alt="" />
+              <span class="title">에레미아 오 드 퍼퓸</span>
+              <span class="description">그린,플로럴,시트러스 향</span> </span>
+            </div>
+            <div class="swiper-slide slide">
+              <img src="./images/section2-product5.png" alt="" />
+              <span class="title">로즈 오 드 퍼퓸</span>
+              <span class="description">플로럴,그린,우디</span> </span>
+            </div>
+            <div class="swiper-slide slide">
+              <img src="./images/section2-product6.png" alt="" />
+              <span class="title">휠 오 드 퍼퓸</span>
+              <span class="description">흥미를 불러일으키는 향기, 특이한 분위기</span> </span>
+            </div>
+            <div class="swiper-slide slide">
+              <img src="./images/section2-product7.png" alt="" />
+              <span class="title">마라케시 오 드 퍼퓸</span>
+              <span class="description">원초적이고 독특한 향</span> </span>
+            </div>
+            <div class="swiper-slide slide">
+              <img src="./images/section2-product8.png" alt="" />
+              <span class="title">테싯 오 드 퍼퓸</span>
+              <span class="description">상쾌한,그린,시트러스향</span> </span>
+            </div>
+          </div>
         </div>
-        <div class="slide">
-          <img src="./images/section2-product1.png" alt="" />
-          <span class="title">이더시스 오 드 퍼퓸</span>
-          <span class="description"> 우디,스파이시,앰버리 </span>
-        </div>
-        <div class="slide">
-          <img src="./images/section2-product2.png" alt="" />
-          <span class="title">미라세티 오 드 퍼퓸</span>
-          <span class="description">유향, 우디, 스파이시한 향</span> </span>
-        </div>
+        
       </div>
       <div class="pagination-bar">
-        <div class="bar active"></div>
+        <!-- <div class="bar active"></div>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
-        <div class="bar"></div>
+        <div class="bar"></div> -->
+      </div>
+      <div class="prev-btn">
+        <span class="material-icons">chevron_left</span>
+      </div>
+      <div class="next-btn">
+        <span class="material-icons">navigate_next</span>
       </div>
     </section>
 
@@ -214,9 +504,9 @@
 
     <!-- SECTION5  -->
     <section class="section5">
-      <div class="inner-left">
+      <div class="row">
         <h2>탁월한 셀렉션</h2>
-        <div class="swiper-container">
+        <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="./images/section5-img1.png" alt="">
@@ -230,16 +520,31 @@
             </div>
             <div class="swiper-slide">
               <img src="./images/section5-img3.png" alt="">
+              <span class="title">에이 로즈 바이 애니 아더 네임 바디 클렌저</span>
+              <span class="description">우디, 오리엔탈, 플로랄향</span>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/section5-img4.png" alt="">
               <span class="title">마라케시 오 드 퍼퓸</span>
               <span class="description">우디, 오리엔탈, 플로랄향</span>
             </div>
+            <div class="swiper-slide">
+              <img src="./images/section5-img5.png" alt="">
+              <span class="title">휠 오 드 퍼퓸</span>
+              <span class="description">이끼, 안개, 히바 나무</span>
+            </div>
+            
           </div>
         </div>
-        
+        <div class="prev-btn">
+          <span class="material-icons">chevron_left</span>
+        </div>
+        <div class="next-btn">
+          <span class="material-icons">navigate_next</span>
+        </div>
       </div>
       <div class="pagination-bars">
-        <div class="bar active"></div>
-        <div class="bar"></div>
+
       </div>
     </section>
 
@@ -255,23 +560,33 @@
         </div>
         <div class="col-right">
           <div class="swiper">
-            <div class="swier-wrapper">
+            <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="./images/section6-slide1.jpg" alt="">
               </div>
+              <div class="swiper-slide">
+                <img src="./images/section6-slide2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/section6-slide3.jpg" alt="">
+              </div>
             </div>
-          </div>
-          <div class="pagination-bars">
-            <div class="bar active"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
             
           </div>
+          <div class="pagination-bars">
+          </div>
           <span class="pagination-name">이솝 파르나스</span>
+          <div class="prev-btn">
+            <span class="material-icons">chevron_left</span>
+          </div>
+          <div class="next-btn">
+            <span class="material-icons">navigate_next</span>
+          </div>
+          
         </div>
-  
+        
       </div>
-  
+      
     </section>
 
     <!-- footer  -->

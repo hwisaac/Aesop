@@ -1,3 +1,61 @@
+.super-header-modal {
+  display: flex;
+  width: 660px;
+  height: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  background-color: #fffef2;
+  z-index: 9001;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  padding: 0 30px;
+  left: -660px;
+  transition: left 0.5s;
+}
+.super-header-modal.show {
+  left: 0;
+}
+.super-header-modal .close-container .material-symbols-outlined {
+  cursor: pointer;
+}
+.super-header-modal .row {
+  width: 50%;
+  display: flex;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  gap: 20px;
+}
+.super-header-modal .row .title {
+  font-size: 13px;
+}
+.super-header-modal .row .text {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+  line-height: 25px;
+}
+.super-header-modal div:nth-child(1) {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  margin-top: 30px;
+}
+.super-header-modal .row:nth-child(3) div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.super-header-modal div:nth-child(3) div span {
+  color: rgba(0, 0, 0, 0.5);
+}
+.super-header-modal .row:nth-child(1) .material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+}
+.super-header-modal div:last-child {
+  border-bottom: none;
+}
+
 .super-header {
   background-color: #252525;
   color: #fff3f2;
@@ -9,9 +67,10 @@
 }
 .super-header span {
   position: relative;
+  cursor: pointer;
 }
 .super-header span::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 1px;
@@ -26,6 +85,7 @@
 .super-header span:hover:after {
   opacity: 1;
 }
+
 .header {
   background-color: #666;
   height: 77px;
@@ -33,42 +93,140 @@
   display: flex;
   align-items: center;
   color: #fffef2;
-  /* position: relative; */
-  /* margin: 0 auto; */
+  position: absolute;
+  z-index: 9000;
+  transition: background-color 0.5s;
 }
 .header.header--white {
   background-color: #fffef2;
   color: #666666;
   border-bottom: 1px solid #666;
-  z-index: 9999;
+  z-index: 9000;
 }
 .header.header--fixed {
   position: fixed;
   top: 0;
 }
-.header .inner {
+.header {
+  padding: 0 30px;
+  box-sizing: border-box;
   justify-content: space-between;
 }
-.header .inner ul li {
+.header ul li {
   margin-right: 20px;
 }
-.header .inner ul li:hover {
+.header ul li:hover {
   cursor: pointer;
 }
 /* left  */
-.header .inner .left {
+.header .left {
 }
-.header .inner .left__list {
+.header .left__list {
   display: flex;
+  align-items: center;
 }
-.header .inner .left__list li {
+.header .left__list li {
+}
+.header .left__list li.close-item {
+  display: none;
+  /* display: flex; */
+  align-items: center;
+}
+.header .left__list li.close-item .material-icons {
+  margin-left: 5px;
+}
+.header .left__list li.close-item.show {
+  display: flex;
 }
 
 /* right  */
-.header .inner .right {
+.header .right {
 }
-.header .inner .right__list {
+.header .right__list {
   display: flex;
 }
-.header .inner .right__list li {
+.header .right__list li {
+}
+
+/* HEADER MODAL  */
+.header-modal {
+  /* background-color: rgba(255, 255, 0, 0.5); */
+  background-color: #f0efdf;
+  /* display: flex; */
+  display: none;
+  height: calc(100vh - 77px);
+  width: 100vw;
+  /* position: absolute; */
+  position: fixed;
+  top: 77px;
+  color: #333333;
+  z-index: 9;
+  overflow-y: scroll;
+}
+.header-modal.show {
+  display: flex;
+}
+.header-modal__inner {
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+.header-modal__inner svg,
+.header-modal__inner ul.items {
+  margin-top: 100px;
+  width: 200px;
+}
+.header-modal__inner ul.items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.header-modal__inner ul.items:nth-child(2) {
+  margin-left: 250px;
+}
+.header-modal__inner svg {
+  margin-left: 50px;
+  position: fixed;
+}
+.header-modal__inner img {
+  height: calc(100vh - 77px);
+  width: 30%;
+}
+.header-modal__inner .items .title {
+  font-weight: 700;
+  font-size: 16px;
+}
+.header-modal__inner .items .title-second {
+  font-weight: 700;
+  margin-top: 30px;
+  font-size: 16px;
+}
+.header-modal__inner .items .title-third {
+  margin-top: 30px;
+  font-weight: 400;
+}
+.header-modal__inner .items .item {
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  width: auto;
+}
+.header-modal__inner .items .item:hover {
+  text-decoration: underline;
+}
+
+.section1 .header-modal__inner.skin-care-modal {
+}
+.section1 .header-modal__inner.skin-care-modal.show {
+  display: flex;
+}
+
+.section1 .header-modal__inner.body-hand-modal.show {
+  display: flex;
+  background-color: #ebe2d3;
+}
+.section1 .header-modal__inner.hair-modal.show {
+  display: flex;
+  background-color: #ded8d3;
 }

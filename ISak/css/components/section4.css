@@ -12,6 +12,7 @@
   height: 100%;
 }
 .section4 .inner-right .col-right {
+  padding-left: 50px;
   width: 405px;
   box-sizing: border-box;
 }

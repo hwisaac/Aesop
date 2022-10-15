@@ -1,3 +1,4 @@
+/* COMMON */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,37 +10,67 @@ a {
 }
 body {
   background-color: #fffef2;
-  height: 100vh;
 }
-html {
-  height: 100vh;
+
+.btn {
+  outline: none;
+  background-color: transparent;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.5s;
 }
+.btn.btn--dark {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn.btn--dark:hover {
+  background-color: #fffef2;
+  color: black;
+}
+.btn.btn--dark svg {
+  fill: #fff;
+}
+.btn.btn--dark:hover svg {
+  fill: black;
+}
+.btn.btn--light {
+  border: 1px solid rgba(51, 51, 51, 0.2);
+}
+.btn.btn--light:hover {
+  background-color: #333333;
+  color: #fff;
+}
+.btn.btn--light:hover svg {
+  fill: #fff;
+}
+
+/* HEADER */
 header {
   width: 100%;
 }
 .head-top {
+  text-align: center;
   padding: 12px 20px 10px 15px;
   background-color: #252525;
-  text-align: center;
 }
-.head-top-Wrap {
+.head-top-wrap {
   display: inline-block;
   padding-bottom: 5px;
   border: 1px solid transparent;
   cursor: pointer;
 }
-.head-top-Wrap:hover {
+.head-top-wrap:hover {
   border-bottom: 1px solid #fff;
   box-sizing: border-box;
   transition: 0.5s;
 }
-.head-top p {
+.head-top .head-top-wrap p {
   display: inline-block;
   font-size: 14px;
   color: #fff;
   margin-right: 15px;
 }
-.head-top span {
+.head-top .head-top-wrap span {
   display: inline-block;
   color: #fff;
 }
@@ -78,7 +109,90 @@ header {
   cursor: pointer;
 }
 
-/* main */
+/* HEADER-MODAL */
+.head-top .modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -10;
+  opacity: 0;
+}
+.head-top .modal-wrap {
+  text-align: start;
+  width: 50vw;
+  height: 100vh;
+  background-color: #f1f0e8;
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+
+  left: -50vw;
+}
+
+.head-top .modal-wrap i {
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 20px;
+}
+.head-top .modal-area {
+  width: 30vw;
+  margin: auto;
+  padding-top: 200px;
+}
+.modal-contents > li {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+.modal-contents > li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.modal-contents .modal-cont-wrap h4 {
+  margin-bottom: 15px;
+}
+.modal-contents .modal-cont-wrap:first-child > h4 {
+  margin-bottom: 0;
+}
+.modal-contents .modal-cont-wrap p {
+  color: #666;
+  width: 29vw;
+}
+.modal-contents .modal-cont-wrap .modal-cont-down div {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-contents .modal-cont-wrap .modal-cont-down div:first-child {
+  margin-bottom: 40px;
+}
+.modal-contents .modal-cont-wrap .modal-cont-down div span {
+  color: #666;
+}
+.modal-contents .modal-cont-wrap p a {
+  text-decoration: underline;
+}
+
+/* GNB */
+.gnb-main {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 1000;
+  height: calc(100vh - 80px);
+}
+.gnb-main-area.skin {
+  background-color: #f0efe0;
+}
+/* MAIN */
 .main-back-img {
   width: 100%;
   height: 100%;
@@ -92,8 +206,10 @@ header {
   left: 40px;
   display: flex;
 }
-.main-banner-wrap > svg {
+.main-banner-wrap svg {
   fill: white;
+  outline: none;
+  cursor: pointer;
 }
 .main-banner-txt {
   color: #fff;
@@ -112,36 +228,20 @@ header {
   font-size: 16px;
   margin-bottom: 35px;
 }
-.main-banner-txt button {
-  outline: none;
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 20px;
-  cursor: pointer;
-}
-.main-banner-txt button:hover {
-  background-color: #fffef2;
-  color: black;
-  transition: 0.5s;
-}
-.main-banner-txt button:hover > svg {
-  fill: black;
-}
-.main-banner-txt button svg {
-  fill: #fff;
+.main-banner-txt .btn svg {
   margin-left: 150px;
 }
 
-/* section1 */
-.section1 {
-  display: flex;
-  overflow: hidden;
-  margin-left: 80px;
+/* SECTION1 */
+.section1 .swiper {
+  padding-left: 80px;
+  padding-right: 80px;
 }
-.section1-txt-wrap {
-  width: 409px;
-  height: 400px;
+.swiper-wrapper .slide-txt {
+  width: 434px;
+}
+.swiper-wrapper {
+  margin-bottom: 50px;
 }
 .section1-txt-wrap .top {
   font-size: 14px;
@@ -160,18 +260,85 @@ header {
   font-size: 15px;
   cursor: pointer;
 }
-.section1 .slider img {
-  width: 409px;
-  height: 400px;
+.section1 .swiper-slide {
+  width: 436px;
+  cursor: pointer;
+  box-sizing: border-box;
 }
-.sec1-slider-txt {
+.section1 .swiper-slide:hover .sec1-slider-txt > h4 {
+  text-decoration: underline;
+}
+.section1 .swiper-slide img {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+.section1 .swiper-slide .sec1-slider-txt {
   margin-top: 10px;
   text-align: center;
   font-size: 14px;
   line-height: 40px;
 }
 
-/* section2 */
+.section1 .swiper .swiper-button-prev {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  left: -80px;
+  transition: 0.5s;
+}
+.section1 .swiper .swiper-button-next {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  right: -80px;
+  transition: 0.5s;
+}
+.section1 .swiper:hover .swiper-button-prev {
+  left: 0;
+}
+.section1 .swiper:hover .swiper-button-next {
+  right: 0;
+}
+
+.section1 .swiper .swiper-button-prev i,
+.section1 .swiper .swiper-button-next i {
+  color: #fffef2;
+}
+
+.section1 .swiper .swiper-button-prev.swiper-button-disabled {
+  left: -80px;
+}
+.section1 .swiper .swiper-button-next.swiper-button-disabled {
+  right: -80px;
+}
+.section1 .swiper .swiper-button-next:after,
+.section1 .swiper .swiper-button-prev:after {
+  display: none;
+}
+
+.section1 .swiper .swiper-scrollbar {
+  margin: auto;
+  width: 90%;
+  height: 2px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.section1 .swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* transition-duration: 5s; 
+  scrollbar-drag 가 움직일 때의 duration 에 줘야 해서 안 먹는 듯
+  */
+}
+
+/* SECTION2 */
 .section2 {
   display: flex;
   justify-content: space-between;
@@ -195,27 +362,11 @@ header {
 .section2 video {
   width: 60%;
 }
-.sec2-txt > button {
-  cursor: pointer;
-  outline: none;
-  padding: 20px;
-  border: 1px solid rgba(51, 51, 51, 0.2);
-  background-color: transparent;
-}
-.sec2-txt button:hover {
-  background-color: #333333;
-  color: #fff;
-  transition: 0.5s;
-}
-
-.sec2-txt > button > svg {
+.sec2-txt .btn svg {
   margin-left: 200px;
 }
-.sec2-txt button:hover > svg {
-  fill: #fff;
-}
 
-/* section3 */
+/* SECTION3 */
 .section3 {
   margin-top: 150px;
   display: flex;
@@ -236,45 +387,18 @@ header {
   line-height: 25px;
   margin-bottom: 30px;
 }
-.sec3-txt button {
-  cursor: pointer;
-  outline: none;
-  padding: 20px;
-  border: 1px solid rgba(51, 51, 51, 0.2);
-  background-color: transparent;
-}
-.sec3-txt button:hover {
-  background-color: #333333;
-  color: #fff;
-  transition: 0.5s;
-}
-.sec3-txt button svg {
+.sec3-txt .btn svg {
   margin-left: 200px;
 }
-.sec3-txt button:hover > svg {
-  fill: #fff;
-}
 
-/* section4 */
+/* SECTION4 */
 .section4 {
   margin-top: 155px;
-  margin-left: 80px;
 }
 .section4 h2 {
   font-size: 30px;
+  margin-left: 80px;
   margin-bottom: 110px;
-}
-.sec4-slider {
-  display: flex;
-  padding-left: 57px;
-  overflow: hidden;
-}
-.sec4-slider .slider {
-  margin-right: 113px;
-}
-.sec4-slider .slider img {
-  width: 323px;
-  height: 400px;
 }
 .sec4-slider-txt {
   margin-top: 10px;
@@ -282,8 +406,92 @@ header {
   font-size: 14px;
   line-height: 40px;
 }
+.section4 .swiper {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.section4 .swiper .swiper-wrapper {
+  align-items: flex-end;
+}
+.section4 .swiper-slide {
+  width: 436px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
 
-/* section5 */
+.section4 .swiper-slide:hover .sec4-slider-txt > h4 {
+  text-decoration: underline;
+}
+.section4 .swiper-slide img {
+  width: 80%;
+}
+.section4 .swiper-slide .sec4-slider-txt {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.section4 .swiper .swiper-button-prev {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  left: -80px;
+  transition: 0.5s;
+}
+.section4 .swiper .swiper-button-next {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  right: -80px;
+  transition: 0.5s;
+}
+.section4 .swiper:hover .swiper-button-prev {
+  left: 0;
+}
+.section4 .swiper:hover .swiper-button-next {
+  right: 0;
+}
+
+.section4 .swiper .swiper-button-prev i,
+.section4 .swiper .swiper-button-next i {
+  color: #fffef2;
+}
+
+.section4 .swiper .swiper-button-prev.swiper-button-disabled {
+  left: -80px;
+}
+.section4 .swiper .swiper-button-next.swiper-button-disabled {
+  right: -80px;
+}
+.section4 .swiper .swiper-button-next:after,
+.section4 .swiper .swiper-button-prev:after {
+  display: none;
+}
+
+.section4 .swiper .swiper-scrollbar {
+  margin: auto;
+  width: 90%;
+  height: 2px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.section4 .swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* transition-duration: 5s; 
+  scrollbar-drag 가 움직일 때의 duration 에 줘야 해서 안 먹는 듯
+  */
+}
+
+/* SECTION5 */
 .section5 {
   margin-top: 198px;
   display: flex;
@@ -301,39 +509,80 @@ header {
   line-height: 30px;
   margin-bottom: 30px;
 }
-.sec5-txt button {
-  cursor: pointer;
-  outline: none;
-  padding: 20px;
-  border: 1px solid rgba(51, 51, 51, 0.2);
-  background-color: transparent;
-}
-.sec5-txt button:hover {
-  background-color: #333333;
-  color: #fff;
-  transition: 0.5s;
-}
-.sec5-txt button svg {
+.sec5-txt .btn svg {
   margin-left: 130px;
 }
-.sec5-txt button:hover > svg {
-  fill: #fff;
+.section5 .swiper {
+  width: 1100px;
+  margin: 0;
 }
-.sec5-slider {
-  width: 1110px;
-  display: flex;
-  overflow: hidden;
+.section5 .swiper-slide img {
+  width: 100%;
 }
-.sec5-slider .slider img {
-  width: 1110px;
-}
-.sec5-slider .slider p {
+.section5 .swiper-slide p {
   color: #666;
   font-size: 14px;
   margin-top: 95px;
 }
+.section5 .swiper .swiper-button-prev {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  left: -80px;
+  top: 38%;
+  transition: 0.5s;
+}
+.section5 .swiper .swiper-button-next {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  right: -80px;
+  top: 38%;
+  transition: 0.5s;
+}
+.section5 .swiper:hover .swiper-button-prev {
+  left: 0;
+}
+.section5 .swiper:hover .swiper-button-next {
+  right: 0;
+}
 
-/* footer */
+.section5 .swiper .swiper-button-prev i,
+.section5 .swiper .swiper-button-next i {
+  color: #fffef2;
+}
+
+.section5 .swiper .swiper-button-prev.swiper-button-disabled {
+  left: -80px;
+}
+.section5 .swiper .swiper-button-next.swiper-button-disabled {
+  right: -80px;
+}
+.section5 .swiper .swiper-button-next:after,
+.section5 .swiper .swiper-button-prev:after {
+  display: none;
+}
+
+.section5 .swiper .swiper-scrollbar {
+  height: 2px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+}
+
+.section5 .swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* transition-duration: 5s; 
+  scrollbar-drag 가 움직일 때의 duration 에 줘야 해서 안 먹는 듯
+  */
+}
+
+/* FOOTER */
 footer {
   width: 100%;
   margin-top: 150px;
@@ -382,7 +631,7 @@ input[type="checkbox"] + label span:active {
   outline: 2px solid #fff;
 }
 input[type="checkbox"]:checked + label span {
-  background: url(/img/check-mark.png) no-repeat center;
+  background: url(../img/check-mark.png) no-repeat center;
   background-size: 15px;
 }
 label span {
@@ -560,12 +809,13 @@ label span {
 
 /* consulting-btn */
 .consulting-btn {
-  background: url(/img/live-chat-icon.svg) no-repeat center;
+  background: url(../img/live-chat-icon.svg) no-repeat center;
   width: 37px;
   height: 37px;
   position: fixed;
   bottom: 100px;
   right: 50px;
+  z-index: 1000;
   border: 1px solid #fffef2;
   border-radius: 50%;
 }
