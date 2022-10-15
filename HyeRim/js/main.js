@@ -66,7 +66,7 @@ const locaterSwiper = new Swiper('.store.swiper', {
           text = "이솝 한남";
           break;
         default:
-          text = "None";
+          text = "";
           break;
       }
       gsap.to(locateTxt, 0.5, {
@@ -131,4 +131,57 @@ panelBackground.addEventListener('click', () => {
   panelBackground.classList.remove('on');
   topBannerPanel.classList.remove('on');
   document.querySelector('body').style.overflow = "visible";
+})
+
+// NAV
+// jquery
+$(document).ready(function() {
+  let mainMenu = $('.main-menu')
+  let mainMenuLi = mainMenu.find('> li > a');
+  let mainMenuPanel = mainMenu.find('.nav-panel');
+  let mainMenuCloseBtn = $('header .header__closeBtn');
+
+  mainMenuLi.on('click', function(e) {
+    e.preventDefault();
+
+    mainMenu.children('li').removeClass('on');
+    $(this).parent('li').addClass('on');
+    mainMenuPanel.fadeOut(500);
+    mainMenuPanel.find('.nav__image').fadeOut(500);
+    $('header').addClass('on');
+    $('.store__load__input label').removeClass('on');
+
+    if($(this).parent('li').hasClass('on')) {
+      $(this).siblings('.nav-panel').fadeIn(100);
+      $(this).siblings('.nav-panel').find('.flex ul').fadeIn(500);
+      $(this).siblings('.nav-panel').find('.nav__image').fadeIn(500);
+
+      // $('.store__load__input label').removeClass('on');
+
+    if($(this).parent('li.inputAni').hasClass('on')) {
+      $(this).find('.store__load__input input').focus();
+      
+      if($(this).find('.store__load__input input').focus()) {
+        $('.store__load__input label').addClass('on');
+      }
+    } 
+    }
+
+    if($('header').hasClass('on')) {
+      $('body').css('overflow-y', 'hidden')
+    }
+
+  })
+
+  mainMenuCloseBtn.on('click', function(e) {
+    e.preventDefault();
+
+    $('header').removeClass('on');
+    mainMenuPanel.fadeOut(500);
+
+    if(! $('header').hasClass('on')) {
+      $('body').css('overflow-y', 'visible')
+    }
+
+  })
 })
