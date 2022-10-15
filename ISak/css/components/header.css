@@ -65,6 +65,9 @@
   align-items: center;
   transition: 1s;
 }
+.super-header.hidden {
+  display: none;
+}
 .super-header span {
   position: relative;
   cursor: pointer;
@@ -126,6 +129,15 @@
   align-items: center;
 }
 .header .left__list li {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  top: 0;
+
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+.header .left__list li.active {
+  border-bottom: 2px solid black;
 }
 .header .left__list li.close-item {
   display: none;
@@ -170,7 +182,6 @@
   width: 100%;
   display: none;
   justify-content: space-between;
-  border: 1px solid red;
 }
 .header-modal__inner svg,
 .header-modal__inner ul.items {
@@ -209,15 +220,29 @@
 .header-modal__inner .items .item {
   font-size: 16px;
   cursor: pointer;
-  display: block;
+  display: flex;
   width: auto;
 }
-.header-modal__inner .items .item:hover {
-  text-decoration: underline;
+
+.header-modal__inner .items .item p {
+  position: relative;
+  display: inline;
+}
+.header-modal__inner .items .item p::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 0;
+  height: 1px;
+  transition: width 0.5s;
+  background-color: #333;
+  bottom: 0;
+  left: 0;
+}
+.header-modal__inner .items .item p:hover:after {
+  width: 100%;
 }
 
-.section1 .header-modal__inner.skin-care-modal {
-}
 .section1 .header-modal__inner.skin-care-modal.show {
   display: flex;
 }
@@ -229,4 +254,102 @@
 .section1 .header-modal__inner.hair-modal.show {
   display: flex;
   background-color: #ded8d3;
+}
+.section1 .header-modal__inner.perfume-modal.show {
+  display: flex;
+  background-color: #f4ebe4;
+}
+.section1 .header-modal__inner.home-modal.show {
+  display: flex;
+  background-color: #f7f1ec;
+}
+.section1 .header-modal__inner.kit-modal.show {
+  display: flex;
+  background-color: #e8f0e3;
+}
+.section1 .header-modal__inner.gift-modal.show {
+  display: flex;
+  background-color: #ebeadf;
+}
+.section1 .header-modal__inner.reading-modal.show {
+  display: flex;
+  background-color: #ebeadf;
+}
+
+.section1 .header-modal__inner.store-modal.show {
+  display: flex;
+  background-color: #fffef2;
+}
+.section1 .header-modal__inner.search-modal.show {
+  display: flex;
+  background-color: #fffef2;
+}
+.section1 .header-modal__inner .container {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  /* border: 0.1px dotted blue; */
+  height: auto;
+  width: auto;
+  top: 250px;
+  position: fixed;
+}
+.section1 .header-modal__inner .container .btn {
+  justify-content: center;
+  width: 200px;
+}
+.section1 .header-modal__inner .container span.text--bold {
+  margin: 30px 0 40px 0;
+  font-size: 12px;
+}
+.section1 .header-modal__inner .container .textbox {
+  width: 385px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.section1 .header-modal__inner .container .textbox input {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  font-size: 25px;
+  border: none;
+  position: relative;
+}
+
+.section1 .header-modal__inner .container .textbox input:focus {
+}
+
+.section1 .header-modal__inner .container span.material-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  font-size: 18px;
+  color: #333;
+}
+.section1 .header-modal__inner .container span.hover-text {
+  position: absolute;
+  font-size: 20px;
+  color: #666;
+  transition: 0.2s ease-out;
+}
+.section1 .header-modal__inner .container input:focus ~ span.hover-text {
+  font-size: 14px;
+  transform: translateY(-35px);
+}
+.section1 .header-modal__inner .container .search-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 10px;
+}
+.section1 .header-modal__inner .container .search-list .title {
+  color: rgba(0, 0, 0, 0.6);
+}
+.section1 .header-modal__inner .container .search-list .item {
+  font-size: 25px;
+  color: #666;
 }
