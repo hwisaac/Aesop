@@ -77,41 +77,53 @@
 }
 .header-modal {
   display: none;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 20;
 }
-.header-modal.open {
+.header-modal.on {
   display: block;
   padding-top: 80px;
-  /* height: 800px; */
-  z-index: 20;
 }
 .header-modal svg {
   position: absolute;
   top: 170px;
   left: 35px;
-  position: fixed;
 }
-/* .header-modal #modal-skincare {
+.header-modal .header-modal-menu {
   display: none;
-} */
-.header-modal #modal-skincare {
-  display: none;
-  background-color: #f0efe0;
   font-size: 16px;
   height: 100%;
-  /* transition: all 1s; */
-  /* padding-top: 80px; */
+  transition: all 1s;
+}
+.header-modal .header-modal-menu.open {
+  display: block;
+}
+.header-modal #modal-skincare {
+  background-color: #f0efe0;
 }
 .header-modal #modal-body {
-  display: none;
   background-color: #ece3d3;
-  font-size: 16px;
-  height: 100%;
-  /* transition: all 1s; */
-  /* padding-top: 80px; */
 }
-.header-modal #modal-skincare.open,
-.header-modal #modal-body.open {
-  display: block;
+.header-modal #modal-hair {
+  background-color: #ded8d4;
+}
+.header-modal #modal-perfume {
+  background-color: #f5ece4;
+}
+.header-modal #modal-home {
+  background-color: #f7f1ec;
+}
+.header-modal #modal-kit {
+  background-color: #ebeadf;
+}
+.header-modal #modal-gift {
+  background-color: #e9f0e3;
+}
+.header-modal #modal-read {
+  background-color: #fefef2;
 }
 .header-modal .inner {
   height: 100%;
@@ -149,7 +161,7 @@
   line-height: 1.5;
 }
 .header-modal .inner .modal-txt .column .padding {
-  padding-top: 45px;
+  padding-top: 20px;
 }
 .header-modal .inner .column li a {
   position: relative;
@@ -174,19 +186,18 @@
   /* height: 100%; */
   margin-top: -90px;
 }
-#modal-skincare .inner .skincare-detail {
+.header-modal .header-modal-menu .inner .detail {
   position: absolute;
-  bottom: 0;
-  left: 36%;
+  bottom: -20px;
+  left: 35%;
   width: 355px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-#modal-skincare .inner .skincare-detail li.padding {
+.header-modal .header-modal-menu .inner .detail li.padding {
   font-size: 14px;
-  padding-top: 45px;
 }
-#modal-skincare .inner .skincare-detail img {
+.header-modal .header-modal-menu .inner .detail img {
   width: 355px;
 }
