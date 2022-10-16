@@ -236,7 +236,20 @@
   display: flex;
   width: auto;
 }
-
+.header-modal__inner .items .card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 10px;
+}
+.header-modal__inner .items .card:hover .item p::after {
+  width: 100%;
+}
+.header-modal__inner .items .card .card-img {
+  width: 312px;
+  height: 172px;
+  margin-top: 10px;
+}
 .header-modal__inner .items .item p {
   position: relative;
   display: inline;
@@ -246,7 +259,7 @@
   position: absolute;
   height: 1px;
   width: 0;
-  height: 1px;
+  height: 0.5px;
   transition: width 0.5s;
   background-color: #333;
   bottom: 0;
@@ -344,6 +357,8 @@
   align-items: center;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
   position: relative;
+  transition: border-bottom 0.5s;
+  top: 40px;
 }
 .header-modal__inner .container .textbox input {
   background-color: rgba(0, 0, 0, 0);
@@ -378,8 +393,10 @@
 .header-modal__inner .container .search-list {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 40px;
   gap: 10px;
+  position: absolute;
+  top: 60px;
 }
 .header-modal__inner .container .search-list .title {
   color: rgba(0, 0, 0, 0.6);

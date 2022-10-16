@@ -66,6 +66,7 @@ footer .row ul.list li.email .textbox input {
   width: 100%;
   font-size: 18px;
   border: none;
+  color: white;
 }
 footer .row ul.list li.email .textbox input::placeholder {
   color: white;
@@ -85,6 +86,7 @@ footer .row ul.list li.email span.material-icons {
   background-color: #252525;
   color: white;
   border: 1px solid white;
+  border-left: none;
 }
 /* footer .row ul.list li.email span.material-icons.north_east {
   font-size: 50px;
@@ -123,10 +125,10 @@ footer .row-second ul li a {
   border-top: 2px solid white;
   background-color: #252525;
 }
-footer input[type="checkbox"] {
+footer input[type='checkbox'] {
   display: none;
 }
-footer input[type="checkbox"] + label {
+footer input[type='checkbox'] + label {
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -134,9 +136,9 @@ footer input[type="checkbox"] + label {
   -moz-user-select: none;
   -ms-user-select: none;
 }
-footer input[type="checkbox"] + label::before {
+footer input[type='checkbox'] + label::before {
   /* 가짜 체크박스 */
-  content: "";
+  content: '';
   display: inline-block;
   width: 15px; /* 체크박스의 너비를 지정 */
   height: 15px; /* 체크박스의 높이를 지정 */
@@ -151,13 +153,13 @@ footer input[type="checkbox"] + label::before {
   left: -30px;
   top: 3px;
 }
-footer input[type="checkbox"]:active + label::before,
-footer input[type="checkbox"]:active + label:active:before {
+footer input[type='checkbox']:active + label::before,
+footer input[type='checkbox']:active + label:active:before {
   border: 1.5px solid white;
 }
-footer input[type="checkbox"]:checked + label:before {
+footer input[type='checkbox']:checked + label:before {
   /* 체크박스를 체크했을때 */
-  content: "\2714"; /* 체크표시 유니코드 사용 */
+  content: '\2714'; /* 체크표시 유니코드 사용 */
   color: white;
   background: #252525;
   border-color: white;
