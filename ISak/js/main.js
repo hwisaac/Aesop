@@ -233,11 +233,30 @@ function handleMenuBtn() {
   }
 
   headerMenuBools[i] = !headerMenuBools[i];
+  //
+
+  if (i >= 9) {
+    storeTextInputEls[i - 8].focus();
+  }
 }
 
 // 모든 헤더메뉴버튼에 클릭시 이벤트 리스너를 추가한다.
 headerMenuBtns.forEach((el) => el.addEventListener('click', handleMenuBtn));
 
+const storeTextBoxEls = document.querySelectorAll(
+  '.section1 .header-modal__inner .textbox'
+);
+const storeTextInputEls = document.querySelectorAll(
+  '.section1 .header-modal__inner .textbox input'
+);
+storeTextInputEls.forEach((el, index) => {
+  el.addEventListener('focus', () => {
+    storeTextBoxEls[index].style.borderBottom = '1px solid rgba(0,0,0)';
+  });
+  el.addEventListener('blur', () => {
+    storeTextBoxEls[index].style.borderBottom = '1px solid rgba(0,0,0,0.3)';
+  });
+});
 ///////////////////////////////////////////////////////////////////////////////////// Section 2
 
 //section2 버튼
