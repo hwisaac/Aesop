@@ -12,6 +12,11 @@ body {
   background-color: #fffef2;
 }
 
+.logo svg {
+  cursor: pointer;
+  outline: none;
+}
+
 .btn {
   outline: none;
   background-color: transparent;
@@ -76,20 +81,31 @@ header {
 }
 .head-bottom {
   width: 100%;
+  background-color: #333333;
+  color: #fff;
+  fill: #fff;
+  transition: 0.5;
+}
+.head-bottom.fixed {
+  z-index: 100000000;
+  position: fixed;
+  top: 0;
+  background-color: #fffef2;
+  color: #333;
+  fill: #333;
 }
 .head-gnb {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: #333333;
   padding-left: 35px;
 }
 .head-gnb-wrap {
   display: flex;
 }
 .head-gnb-wrap li {
-  color: #fff;
-  margin-right: 28px;
+  color: inherit;
+  margin-right: 32px;
   height: 80px;
   line-height: 80px;
   font-size: 14px;
@@ -98,9 +114,12 @@ header {
 .head-gnb-wrap i {
   font-size: 18px;
 }
+.head-gnb-wrap svg {
+  margin-left: 5px;
+}
 .head-personal {
   display: flex;
-  color: #fff;
+  color: inherit;
 }
 .head-personal p {
   margin-right: 25px;
@@ -181,17 +200,160 @@ header {
   text-decoration: underline;
 }
 
-/* GNB */
+/* GNB-MAIN */
 .gnb-main {
   position: fixed;
   top: 80px;
   left: 0;
-  z-index: 1000;
+  width: 100vw;
+  height: 0;
+
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1000;
+}
+.gnb-main.open {
   height: calc(100vh - 80px);
+  opacity: 1;
+  z-index: 1000;
+}
+.gnb-main .gnb-main-area {
+  display: flex;
+  position: fixed;
+  width: inherit;
+  height: calc(100vh - 80px);
+  opacity: 0;
+  transition: 0.5s;
 }
 .gnb-main-area.skin {
   background-color: #f0efe0;
 }
+.gnb-main-area.skin.up {
+  opacity: 1;
+}
+.gnb-main-area.body {
+  background-color: #ece3d3;
+}
+.gnb-main-area.body.up {
+  opacity: 1;
+}
+.gnb-main-area.hair {
+  background-color: #ded8d4;
+}
+.gnb-main-area.hair.up {
+  opacity: 1;
+}
+.gnb-main-area.perfume {
+  background-color: #f5ece4;
+}
+.gnb-main-area.perfume.up {
+  opacity: 1;
+}
+.gnb-main-area.home {
+  background-color: #f7f1ec;
+}
+.gnb-main-area.home.up {
+  opacity: 1;
+}
+.gnb-main-area.kit {
+  background-color: #e9f0e3;
+}
+.gnb-main-area.kit.up {
+  opacity: 1;
+}
+.gnb-main-area.gift {
+  background-color: #ebeadf;
+}
+.gnb-main-area.gift.up {
+  opacity: 1;
+}
+.gnb-main-area.read {
+  background-color: #fefef2;
+}
+.gnb-main-area.read.up {
+  opacity: 1;
+}
+.gnb-main-area.store {
+  background-color: #fffef2;
+}
+.gnb-main-area.store.up {
+  opacity: 1;
+}
+.gnb-main-area.search {
+  background-color: #fffef2;
+}
+.gnb-main-area.search.up {
+  opacity: 1;
+}
+
+.gnb-main-area .gnb-main-content {
+  padding: 80px 72px 0 40px;
+  width: 70vw;
+  display: flex;
+  /* justify-content: space-between; */
+  position: relative;
+}
+.gnb-main-area .gnb-main-img img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32vw;
+}
+.gnb-main-area .gnb-main-content .logo {
+  margin-right: 215px;
+}
+.gnb-main-content .gnb-main-content-txt {
+  margin-top: 10px;
+  margin-right: 58px;
+}
+.gnb-main-content .gnb-main-content-txt .gnb-main-content-txt-one {
+  margin-bottom: 45px;
+}
+.gnb-main-content .gnb-main-content-txt li {
+  color: #333;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 14px;
+  width: 250px;
+}
+.gnb-main-content .gnb-main-content-txt li a {
+  position: relative;
+}
+.gnb-main-content .gnb-main-content-txt li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #252525;
+  transition: 0.5s;
+}
+.gnb-main-content .gnb-main-content-txt li a:hover::after {
+  width: 100%;
+}
+.gnb-main-content .gnb-main-content-bottom {
+  position: absolute;
+  right: 210px;
+  bottom: 65px;
+}
+.gnb-main-content .gnb-main-content-bottom p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.gnb-main-content .gnb-main-content-bottom h5 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.gnb-main-content .gnb-main-content-bottom h5 svg {
+  fill: #666;
+}
+.gnb-main-content .gnb-main-content-bottom img {
+  width: 23vw;
+}
+
 /* MAIN */
 .main-back-img {
   width: 100%;
@@ -208,8 +370,6 @@ header {
 }
 .main-banner-wrap svg {
   fill: white;
-  outline: none;
-  cursor: pointer;
 }
 .main-banner-txt {
   color: #fff;
