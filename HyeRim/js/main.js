@@ -133,9 +133,9 @@ panelBackground.addEventListener('click', () => {
   document.querySelector('body').style.overflow = "visible";
 })
 
-// NAV
 // jquery
 $(document).ready(function() {
+  // NAV
   let mainMenu = $('.main-menu')
   let mainMenuLi = mainMenu.find('> li > a');
   let mainMenuPanel = mainMenu.find('.nav-panel');
@@ -144,40 +144,49 @@ $(document).ready(function() {
   mainMenuLi.on('click', function(e) {
     e.preventDefault();
 
+    $('header').addClass('on');
     mainMenu.children('li').removeClass('on');
     $(this).parent('li').addClass('on');
     mainMenuPanel.fadeOut(500);
     mainMenuPanel.find('.nav__image').fadeOut(500);
-    $('header').addClass('on');
-    $('.store__load__input label').removeClass('on');
+    $('.pop-search').removeClass('on');
 
-    if($(this).parent('li').hasClass('on')) {
-      $(this).siblings('.nav-panel').fadeIn(100);
-      $(this).siblings('.nav-panel').find('.flex ul').fadeIn(500);
-      $(this).siblings('.nav-panel').find('.nav__image').fadeIn(500);
-
-      // $('.store__load__input label').removeClass('on');
-
-    if($(this).parent('li.inputAni').hasClass('on')) {
-      $(this).find('.store__load__input input').focus();
-      
-      if($(this).find('.store__load__input input').focus()) {
-        $('.store__load__input label').addClass('on');
-      }
-    } 
-    }
-
-    if($('header').hasClass('on')) {
+    if ($('header').hasClass('on')) {
       $('body').css('overflow-y', 'hidden')
     }
 
-  })
+    if ($(this).parent('li').hasClass('on')) {
+      $(this).siblings('.nav-panel').fadeIn(100);
+      $(this).siblings('.nav-panel').find('.flex ul').fadeIn(500);
+      $(this).siblings('.nav-panel').find('.nav__image').fadeIn(500);
+    }
 
+    $('.store__load__input input').focus(function() {
+      $('.store__load__input label').addClass('on'); 
+    });
+  
+    $('.store__load__input input').blur(function() {
+      $('.store__load__input label').removeClass('on'); 
+      if($(this).val()) {
+        $('.store__load__input label').addClass('on'); 
+      }
+    });
+ 
+    if ($(this).parent('li.search-area').hasClass('on')) {
+      $('#searchInput').focus();
+      $('.pop-search').addClass('on');
+    } else {
+      $('.pop-search').removeClass('on');
+    }
+  })
+  
   mainMenuCloseBtn.on('click', function(e) {
     e.preventDefault();
 
     $('header').removeClass('on');
     mainMenuPanel.fadeOut(500);
+    mainMenuLi.parent('li').removeClass('on');
+    $('.pop-search').removeClass('on');
 
     if(! $('header').hasClass('on')) {
       $('body').css('overflow-y', 'visible')
