@@ -56,7 +56,7 @@ body .msg img {
 }
 .shipping-banner .banner-inner #banner-btn p.banner-btn-content {
   font-size: 14px;
-  font-family: "Suisse Medium", sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
 }
 .shipping-banner .banner-inner #banner-btn span.banner-btn-icon {
   fill: #fffef2;
@@ -66,7 +66,6 @@ body .msg img {
 
 /* HEADER */
 .header {
-  /* position: fixed; */
   z-index: 30;
   width: 100%;
   background-color: #333;
@@ -80,6 +79,7 @@ body .msg img {
   background-color: #fffef2;
   color: #333;
   border-bottom: 0.5px solid rgba(51, 51, 51, 0.2);
+  transition: 0.5s;
 }
 .header .header-inner {
   height: 80px;
@@ -705,7 +705,7 @@ body .msg img {
   display: flex;
   align-items: center;
 }
-.footer .inner .inner-1 .communication input[type="checkbox"] {
+.footer .inner .inner-1 .communication input[type='checkbox'] {
   cursor: pointer;
   -webkit-appearance: none;
   width: 12px;
@@ -714,8 +714,8 @@ body .msg img {
   background-color: inherit;
   position: relative;
 }
-.footer .inner .inner-1 .communication input[type="checkbox"]:checked::before {
-  content: "\2713";
+.footer .inner .inner-1 .communication input[type='checkbox']:checked::before {
+  content: '\2713';
   position: absolute;
   top: 50%;
   left: 50%;

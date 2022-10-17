@@ -1,5 +1,5 @@
 // HEADER-MODAL
-// const hBtn = document.querySelector('.h-btn');
+// const hBtn = document.querySelectorAll('.h-btn');
 const hBtn1 = document.querySelector('.h-btn.skincare');
 const hBtn2 = document.querySelector('.h-btn.body');
 const hBtn3 = document.querySelector('.h-btn.hair');
@@ -23,99 +23,43 @@ const hModalKit = document.querySelector('#modal-kit');
 const hModalGift = document.querySelector('#modal-gift');
 const hModalRead = document.querySelector('#modal-read');
 
-// const remove = hModalMenu.forEach((elem) => {
-//   elem.classList.remove('open');
-// });
 const removeOpens = function (except) {
-  var opens = document.querySelectorAll('.open');
+  document.querySelector('.shipping-banner').style.display = 'none';
+  document.querySelector('body').style.overflow = 'hidden';
+  hModal.classList.add('on');
+  const opens = document.querySelectorAll('.open');
   [].forEach.call(opens, function (open) {
     open.classList.remove('open');
   });
   except.classList.add('open');
+  hModalCloseBtn.classList.add('open');
+  modalOpenHeader.classList.add('white-version');
 };
 
 hBtn1.addEventListener('click', function () {
-  document.querySelector('.shipping-banner').style.display = 'none';
-  document.querySelector('body').style.overflow = 'hidden';
-  hModal.classList.add('on');
   removeOpens(hModalSkin);
-  hModalCloseBtn.classList.add('open');
-  modalOpenHeader.classList.add('white-version');
 });
 hBtn2.addEventListener('click', function () {
-  document.querySelector('.shipping-banner').style.display = 'none';
-  document.querySelector('body').style.overflow = 'hidden';
-  hModal.classList.add('on');
   removeOpens(hModalBody);
-  hModalCloseBtn.classList.add('open');
-  modalOpenHeader.classList.add('white-version');
 });
 hBtn3.addEventListener('click', function () {
-  document.querySelector('.shipping-banner').style.display = 'none';
-  document.querySelector('body').style.overflow = 'hidden';
-  hModal.classList.add('on');
   removeOpens(hModalHair);
-  hModalCloseBtn.classList.add('open');
-  modalOpenHeader.classList.add('white-version');
 });
 hBtn4.addEventListener('click', function () {
-  document.querySelector('.shipping-banner').style.display = 'none';
-  document.querySelector('body').style.overflow = 'hidden';
-  hModal.classList.add('on');
   removeOpens(hModalPerfume);
-  hModalCloseBtn.classList.add('open');
-  modalOpenHeader.classList.add('white-version');
 });
 hBtn5.addEventListener('click', function () {
-  document.querySelector('.shipping-banner').style.display = 'none';
-  document.querySelector('body').style.overflow = 'hidden';
-  hModal.classList.add('on');
   removeOpens(hModalHome);
-  hModalCloseBtn.classList.add('open');
-  modalOpenHeader.classList.add('white-version');
 });
 hBtn6.addEventListener('click', function () {
-  document.querySelector('.shipping-banner').style.display = 'none';
-  document.querySelector('body').style.overflow = 'hidden';
-  hModal.classList.add('on');
   removeOpens(hModalKit);
-  hModalCloseBtn.classList.add('open');
-  modalOpenHeader.classList.add('white-version');
 });
 hBtn7.addEventListener('click', function () {
-  document.querySelector('.shipping-banner').style.display = 'none';
-  document.querySelector('body').style.overflow = 'hidden';
-  hModal.classList.add('on');
   removeOpens(hModalGift);
-  hModalCloseBtn.classList.add('open');
-  modalOpenHeader.classList.add('white-version');
 });
 hBtn8.addEventListener('click', function () {
-  document.querySelector('.shipping-banner').style.display = 'none';
-  document.querySelector('body').style.overflow = 'hidden';
-  hModal.classList.add('on');
   removeOpens(hModalRead);
-  hModalCloseBtn.classList.add('open');
-  modalOpenHeader.classList.add('white-version');
 });
-
-// function openSetting(menu) {
-//   document.querySelector('.shipping-banner').style.display = 'none';
-//   document.querySelector('body').style.overflow = 'hidden';
-//   hModal.classList.add('on');
-//   removeOpens(menu);
-//   hModalCloseBtn.classList.add('open');
-//   modalOpenHeader.classList.add('white-version');
-// }
-
-// hBtn1.addEventListener('click', openSetting(hModalSkin));
-// hBtn2.addEventListener('click', openSetting(hModalBody));
-// hBtn3.addEventListener('click', openSetting(hModalHair));
-// hBtn4.addEventListener('click', openSetting(hModalPerfume));
-// hBtn5.addEventListener('click', openSetting(hModalHome));
-// hBtn6.addEventListener('click', openSetting(hModalKit));
-// hBtn7.addEventListener('click', openSetting(hModalGift));
-// hBtn8.addEventListener('click', openSetting(hModalRead));
 
 hModalCloseBtn.addEventListener('click', function () {
   document.querySelector('.shipping-banner').style.display = 'block';
@@ -127,23 +71,59 @@ hModalCloseBtn.addEventListener('click', function () {
 });
 
 // SCROLL - HEADER
-// const prevScroll = window.scrollY;
-// window.onscroll = function () {
-//   const currentScroll = window.scrollY;
-//   if (prevScroll > currentScroll) {
-//     modalOpenHeader.classList.add('white-version');
-//     document.querySelector('.header.white-version').style.top = '0';
-//   } else {
+
+// let before = [];
+
+// window.addEventListener('scroll', (ev) => {
+//   if (before.pop() < window.scrollY) console.log('Down Scroll');
+//   else console.log('Up Scroll');
+//   before.push(window.scrollY);
+// });
+
+// let before = [];
+
+// window.addEventListener('scroll', (ev) => {
+//   if (before.pop() <= window.scrollY)
 //     modalOpenHeader.classList.remove('white-version');
-//     document.getElementById('navbar').style.top = '-80px';
-//   }
-//   prevScroll = currentScroll;
-// };
+//   else if (window.pageYOffset == 0)
+//     modalOpenHeader.classList.remove('white-version');
+//   else modalOpenHeader.classList.add('white-version');
+//   modalOpenHeader.style.transform = 'translateY(-80px)';
+//   setTimeout(() => (modalOpenHeader.style.transform = 'translateY(0)'), 300);
+//   before.push(window.scrollY);
+// });
 
-let before = [];
+let currentDirection = ''; // 현재의 방향을 나타내는 변수
+let lastScrollTop = 0; // 방향을 구하기 위해 사용되는 변수
 
-window.addEventListener('scroll', (ev) => {
-  if (before.pop() < window.scrollY) console.log('Down Scroll');
-  else console.log('Up Scroll');
-  before.push(window.scrollY);
+window.addEventListener('scroll', function () {
+  let currentPos = document.documentElement.scrollTop;
+  if (currentPos > lastScrollTop) {
+    // 아래로 스크롤 중
+    if (currentDirection != 'down') {
+      // 마지막 방향 확인
+      currentDirection = 'down';
+      console.log('down');
+      setTimeout(
+        () => (modalOpenHeader.style.transform = 'translateY(-80px)'),
+        50
+      );
+      setTimeout(() => modalOpenHeader.classList.remove('white-version'), 100);
+    }
+  } else if (this.window.pageYOffset == 0) {
+    modalOpenHeader.classList.remove('white-version');
+  } else if (currentPos < lastScrollTop) {
+    // 위로 스크롤 중
+    if (currentDirection != 'up') {
+      // 마지막 방향 확인
+      currentDirection = 'up';
+      console.log('up');
+      modalOpenHeader.classList.add('white-version');
+      setTimeout(
+        () => (modalOpenHeader.style.transform = 'translateY(0)'),
+        100
+      );
+    }
+  }
+  lastScrollTop = currentPos; // 방향을 구하기 위해 마지막 스크롤 지점을 저장
 });
