@@ -201,24 +201,29 @@ const headerEl = document.querySelector('header');
 
 let headerMoving = function(direction) {
   if (direction === 'up') {
-    headerEl.classList.add('on')
+    headerEl.classList.add('on');
   } else if (direction === "down") {
-    headerEl.classList.remove('on')
+    headerEl.classList.remove('on');
   }
 }
 
 let prevScrollTop = 0;
 
 document.addEventListener('scroll', function() {
-  let nextScrollTop = window.pageYOffset || 0;
+  let nextScrollTop = window.scrollY;
   
   if(nextScrollTop > prevScrollTop) {
     headerMoving('down');
+    if(nextScrollTop > 130) {
+      headerEl.style.top = -50 + 'px';
+    }
   } else if (nextScrollTop < prevScrollTop) {
     headerMoving('up');
-    
+    headerEl.style.top = 0 + 'px';
+
     if(nextScrollTop <= 130) {
-      headerEl.classList.remove('on')
+      headerEl.classList.remove('on');
+      headerEl.style.top = 0 + 'px';
     }
   }
   prevScrollTop = nextScrollTop;
