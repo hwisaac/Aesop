@@ -23,6 +23,14 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    <!-- LODASH  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -110,7 +118,7 @@
     <div class="gnb">
       <div class="gnb-box">
         <ul class="gnb-container">
-          <li class="gnb-item">
+          <li class="gnb-item skin-care">
             <a href="javascript:void(0)">스킨 케어</a>
             <div class="gnb-modal skin-care-modal">
               <div class="category">
@@ -226,7 +234,7 @@
               </div>
             </div>
           </li>
-          <li class="gnb-item">
+          <li class="gnb-item body-hand">
             <a href="javascript:void(0)">바디 & 핸드</a>
             <div class="gnb-modal body-hand-modal">
               <div class="category">
@@ -311,7 +319,7 @@
               </div>
             </div>
           </li>
-          <li class="gnb-item">
+          <li class="gnb-item hair">
             <a href="javascript:void(0)">헤어</a>
             <div class="gnb-modal hair-modal">
               <div class="category">
@@ -386,7 +394,7 @@
               </div>
             </div>
           </li>
-          <li class="gnb-item">
+          <li class="gnb-item perfume">
             <a href="javascript:void(0)">향수</a>
             <div class="gnb-modal perfume-modal">
               <div class="category">
@@ -493,7 +501,7 @@
               </div>
             </div>
           </li>
-          <li class="gnb-item">
+          <li class="gnb-item home">
             <a href="javascript:void(0)">홈</a>
             <div class="gnb-modal home-modal">
               <div class="category">
@@ -565,7 +573,7 @@
               </div>
             </div>
           </li>
-          <li class="gnb-item">
+          <li class="gnb-item kit">
             <a href="javascript:void(0)">키트 & 여행제품</a>
             <div class="gnb-modal kit-modal">
               <div class="category">
@@ -639,7 +647,7 @@
               </div>
             </div>
           </li>
-          <li class="gnb-item">
+          <li class="gnb-item gift">
             <a href="javascript:void(0)">기프트 가이드</a>
             <div class="gnb-modal gift-modal">
               <div class="category">
@@ -716,7 +724,7 @@
               </div>
             </div>
           </li>
-          <li class="gnb-item">
+          <li class="gnb-item reading">
             <a href="javascript:void(0)">읽기</a>
             <div class="gnb-modal reading-modal">
               <div class="category">
@@ -805,7 +813,7 @@
               </div>
             </div>
           </li>
-          <li class="gnb-item">
+          <li class="gnb-item store">
             <a href="javascript:void(0)">스토어</a>
             <div class="gnb-modal store-modal">
               <div class="category">
@@ -846,55 +854,22 @@
                     </g>
                   </svg>
                 </a>
-                <div class="sub">
-                  <h2 class="title">더 아테네움</h2>
-                  <ul class="menu">
-                    <li class="item"><a href="javascript:void(0)">모두보기</a></li>
-                    <li class="item">
-                      <a href="javascript:void(0)">존재의 울림: 이더시스 오 드 퍼<br />퓸</a>
-                    </li>
-                    <li class="item">
-                      <a href="javascript:void(0)"
-                        >인내의 시간 끝에 돌아온, 나눔의<br />
-                        계절: 2022 하비스트 캠페인</a
-                      >
-                    </li>
-                    <li class="item"><a href="javascript:void(0)">각질 관리 가이드</a></li>
-                    <li class="item"><a href="javascript:void(0)">피부의 수분 공급을 위한 가이드</a></li>
-                    <li class="item"><a href="javascript:void(0)">여성 연대의 소리</a></li>
-                  </ul>
+                <form class="container">
+                  <button class="category__btn">현재 위치에서 찾기</button>
+                </form>
+                <div class="text">
+                  <span>또는 도로명으로 검색</span>
                 </div>
-              </div>
-              <div class="category">
-                <div class="container">
-                  <div class="sub">
-                    <h2 class="title">회사 소개</h2>
-                    <ul class="menu">
-                      <li class="item"><a href="javascript:void(0)">브랜드 스토리</a></li>
-                      <li class="item"><a href="javascript:void(0)">채용</a></li>
-                      <li class="item"><a href="javascript:void(0)">이솝 재단</a></li>
-                      <li class="item"><a href="javascript:void(0)">문의 하기</a></li>
-                    </ul>
-
-                    <h2 class="title">철학</h2>
-                    <ul class="menu">
-                      <li class="item"><a href="javascript:void(0)">디자인</a></li>
-                      <li class="item"><a href="javascript:void(0)">제품</a></li>
-                    </ul>
-                  </div>
+                <div class="input-container">
+                  <label for="visitInput-input">
+                    <input type="text" id="visitInput-input" placeholder="또는 도로명으로 검색" />
+                    <div class="material-icons">arrow_forward</div>
+                  </label>
                 </div>
-              </div>
-
-              <div class="category">
-                <img
-                  src="./images/Aesop_Homepage_Navigation_Category_Gifts_2_Desktop_1700x2400px.jpg"
-                  alt=""
-                  class="modal-img"
-                />
               </div>
             </div>
           </li>
-          <li class="gnb-item">
+          <li class="gnb-item search">
             <a class="material-symbols-outlined">search</a>
             <div class="gnb-modal search-modal">
               <div class="category">
@@ -935,51 +910,12 @@
                     </g>
                   </svg>
                 </a>
-                <div class="sub">
-                  <h2 class="title">더 아테네움</h2>
-                  <ul class="menu">
-                    <li class="item"><a href="javascript:void(0)">모두보기</a></li>
-                    <li class="item">
-                      <a href="javascript:void(0)">존재의 울림: 이더시스 오 드 퍼<br />퓸</a>
-                    </li>
-                    <li class="item">
-                      <a href="javascript:void(0)"
-                        >인내의 시간 끝에 돌아온, 나눔의<br />
-                        계절: 2022 하비스트 캠페인</a
-                      >
-                    </li>
-                    <li class="item"><a href="javascript:void(0)">각질 관리 가이드</a></li>
-                    <li class="item"><a href="javascript:void(0)">피부의 수분 공급을 위한 가이드</a></li>
-                    <li class="item"><a href="javascript:void(0)">여성 연대의 소리</a></li>
-                  </ul>
+                <div class="input-container">
+                  <label for="visitInput-input">
+                    <input type="text" id="visitInput-input" />
+                    <div class="material-icons">arrow_forward</div>
+                  </label>
                 </div>
-              </div>
-              <div class="category">
-                <div class="container">
-                  <div class="sub">
-                    <h2 class="title">회사 소개</h2>
-                    <ul class="menu">
-                      <li class="item"><a href="javascript:void(0)">브랜드 스토리</a></li>
-                      <li class="item"><a href="javascript:void(0)">채용</a></li>
-                      <li class="item"><a href="javascript:void(0)">이솝 재단</a></li>
-                      <li class="item"><a href="javascript:void(0)">문의 하기</a></li>
-                    </ul>
-
-                    <h2 class="title">철학</h2>
-                    <ul class="menu">
-                      <li class="item"><a href="javascript:void(0)">디자인</a></li>
-                      <li class="item"><a href="javascript:void(0)">제품</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="category">
-                <img
-                  src="./images/Aesop_Homepage_Navigation_Category_Gifts_2_Desktop_1700x2400px.jpg"
-                  alt=""
-                  class="modal-img"
-                />
               </div>
             </div>
           </li>
@@ -1351,7 +1287,7 @@
           </p>
           <div class="first__info--toggle">
             <div class="input-box">
-              <input type="checkbox" id="age-check" checked />
+              <input type="checkbox" id="age-check" />
               <label for="age-check">본인은 만 14세 이상입니다 (필수) </label>
             </div>
             <div class="privacy-container">
@@ -1515,6 +1451,3 @@
     <div class="footer__box">© Aesop</div>
   </body>
 </html>
-html`
-<div style="${'background-color: ' + this.bgColor }">...</div>
-`
