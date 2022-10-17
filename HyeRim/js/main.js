@@ -194,3 +194,32 @@ $(document).ready(function() {
 
   })
 })
+
+
+// SCROLL
+const headerEl = document.querySelector('header');
+
+let headerMoving = function(direction) {
+  if (direction === 'up') {
+    headerEl.classList.add('on')
+  } else if (direction === "down") {
+    headerEl.classList.remove('on')
+  }
+}
+
+let prevScrollTop = 0;
+
+document.addEventListener('scroll', function() {
+  let nextScrollTop = window.pageYOffset || 0;
+  
+  if(nextScrollTop > prevScrollTop) {
+    headerMoving('down');
+  } else if (nextScrollTop < prevScrollTop) {
+    headerMoving('up');
+    
+    if(nextScrollTop <= 130) {
+      headerEl.classList.remove('on')
+    }
+  }
+  prevScrollTop = nextScrollTop;
+})
