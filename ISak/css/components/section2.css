@@ -54,7 +54,9 @@
   height: 375px;
   object-fit: cover;
 }
-.section2 .row .swiper .swiper-wrapper .swiper-slide.slide .title {
+.section2 .row .swiper .swiper-wrapper .swiper-slide.slide:hover .title {
+  cursor: pointer;
+  text-decoration: underline;
 }
 .section2 .row .swiper .swiper-wrapper .swiper-slide.slide .description {
 }

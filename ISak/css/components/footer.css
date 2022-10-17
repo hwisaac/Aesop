@@ -22,6 +22,7 @@ footer .row ul.list {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
   /* border: 1px solid red; */
 }
 footer .row ul:nth-child(1) {
@@ -52,7 +53,7 @@ footer .row ul.list li.li-inline {
   display: inline;
 }
 footer .row ul.list li#require1 {
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 footer .row ul.list li.email .textbox {
   width: 100%;
@@ -60,6 +61,9 @@ footer .row ul.list li.email .textbox {
   height: 37px;
   border: 1px solid white;
   padding-left: 10px;
+}
+footer .row ul.list li.email.border--wine .textbox {
+  border: 1px solid #ea6956;
 }
 footer .row ul.list li.email .textbox input {
   background-color: #252525;
@@ -88,6 +92,11 @@ footer .row ul.list li.email span.material-icons {
   border: 1px solid white;
   border-left: none;
 }
+footer .row ul.list .email.border--wine span.material-icons {
+  border: 1px solid #ea6956;
+  border-left: none;
+}
+
 /* footer .row ul.list li.email span.material-icons.north_east {
   font-size: 50px;
 } */
@@ -164,7 +173,12 @@ footer input[type='checkbox']:checked + label:before {
   background: #252525;
   border-color: white;
 }
-
+footer .row .list .error-msg {
+  color: #ea6956;
+  position: relative;
+  top: -10px;
+  display: none;
+}
 footer label {
   position: relative;
   left: 30px;
