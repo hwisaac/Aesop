@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="./rice.png" />
     <title>[클론]이솝 스킨케어 | 스킨, 바디 & 핸드 케어 | 이솝 대한민국</title>
+    <!-- 스크롤 매직  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!--SWIPER : 슬라이드 모션-->
     <link
       rel="stylesheet"
@@ -115,16 +117,16 @@
         
           <div class="left">
             <ul class="left__list">
-              <li class="skin-care" id="0">스킨 케어</li>
-              <li class="body-hand" id="1">바디&핸드</li>
-              <li class="hair" id="2">헤어</li>
-              <li class="perfume" id="3">향수</li>
-              <li class="home" id="4">홈</li>
-              <li class="kit" id="5">키트&여행 제품</li>
-              <li class="gift" id="6">기프트 가이드</li>
-              <li class="reading" id="7">읽기</li>
-              <li class="store" id="8">스토어</li>
-              <li class="material-icons material-icons-search" id="9">search</li>
+              <li class="skin-care left-menu-btn" id="0">스킨 케어</li>
+              <li class="body-hand left-menu-btn" id="1">바디&핸드</li>
+              <li class="hair left-menu-btn" id="2">헤어</li>
+              <li class="perfume left-menu-btn" id="3">향수</li>
+              <li class="home left-menu-btn" id="4">홈</li>
+              <li class="kit left-menu-btn" id="5">키트&여행 제품</li>
+              <li class="gift left-menu-btn" id="6">기프트 가이드</li>
+              <li class="reading left-menu-btn" id="7">읽기</li>
+              <li class="store left-menu-btn" id="8">스토어</li>
+              <li class="material-icons material-icons-search left-menu-btn" id="9">search</li>
               <li class="close-item material-icons-close" id="closeBtnInMenu">닫기 <span class="material-icons">close</li>
             </ul>
           </div>
@@ -199,8 +201,11 @@
             <li class="title-second">레인지</li>
             <li class="item"><p>파슬리 씨드</p></li>
             <li class="item"><p>스킨케어 플러스</p></li>
-            <li class="title-third">자세히 살펴보기</li>
-            <li class="item"><p>내 피부 이해하기</p></li>
+            <div class="card">
+              <li class="title-third">자세히 살펴보기</li>
+              <li class="item"><p>내 피부 이해하기</p></li>
+              <img class="card-img" src="./images/header-skincare.jpeg" alt="">
+            </div>
           </ul>
           <ul class="items">
             <li class="title">사랑받는 제품</li>
@@ -377,8 +382,11 @@
             <li class="item"><p>오퓰런트</p></li>
             <li class="title-second"><p>레인지</p></li>
             <li class="item"><p>아더토피아</p></li>
-            <li class="title-third"><p>실험실에서 배운 교훈</p></li>
-            <li class="item"><p>향수 가이드</p></li>
+            <div class="card">
+              <li class="title-third">실험실에서 배운 교훈</li>
+              <li class="item"><p>향수 가이드</p></li>
+              <img class="card-img" src="./images/header-perfume.jpeg" alt="">
+            </div>
           </ul>
           <ul class="items">
             <li class="title">
@@ -670,7 +678,7 @@
           </svg>
           <div class="container">
             <div class="btn btn--reverse">현재 위치에서 찾기</div>
-            <span class="text--bold">또는 도로명으로 검색</span>
+            <!-- <span class="text--bold">또는 도로명으로 검색</span> -->
             <div class="textbox">
               <input type="text">
               <span class="material-icons">
@@ -787,7 +795,7 @@
 
     
     <!-- SECTION 2  -->
-    <section class="section2">
+    <section class="section2 scroll-spy">
       <div class="row">
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -857,7 +865,7 @@
     </section>
 
     <!-- section3  -->
-    <section class="section3">
+    <section class="section3 scroll-spy">
     <div class="inner-left">
       <div class="col-left">
         <span class="small">아로마의 만남</span>
@@ -886,7 +894,7 @@
     </section>
     
     <!-- SECTION 4  -->
-    <section class="section4">
+    <section class="section4 scroll-spy">
       <div class="inner-right">
         <div class="col-left">
           <img src="./images/section4-img.jpg" alt="">
@@ -908,7 +916,7 @@
     </section>
 
     <!-- SECTION5  -->
-    <section class="section5">
+    <section class="section5 scroll-spy">
       <div class="row">
         <h2>탁월한 셀렉션</h2>
         <div class="swiper">
@@ -954,7 +962,7 @@
     </section>
 
     <!-- SECTION 6  -->
-    <section class="section6">
+    <section class="section6 scroll-spy">
       <div class="inner-left">
         <div class="col-left">
           <h2 class="title">스토어 로케이터</h2>
@@ -1001,26 +1009,30 @@
           <li class="title">이솝 커뮤니케이션</li>
           <li>제품, 서비스, 스토어, 이벤트, 문화적 관심사 등 다양한 소식을 받아보실 수 있도록 이솝 이메일을 구독하세요.</li>
           <li>
-            <input type="checkbox" class="checkbox" id="require1">
+            <input type="checkbox" class="require" id="require1">
             <label for="require1">
             본인은 만 14세 이상입니다.(필수)
             </label>
           </li>
+          <li class="error-msg">본인의 만 14세 여부를 확인해주세요.</li>
           <li>
-            <input type="checkbox" id="require2">
+            <input type="checkbox" class="require" id="require2">
             <label for="require2">
               개인정보수집 및 이용에 동의합니다 (필수)
             </label>
           </li>
+          <li class="error-msg">이메일을 통한 광고성 정보 수신을 원하시는 경우 필수 항목입니다.</li>
           <li>
             <div class="contract">
               <p>이솝은 이솝의 제품, 서비스 및 홍보 행사 관련 정보를 마케팅 목적으로, 고객님이 동의 해지하시기 전까지, 고객님께 이메일로 보내 드립니다. 마케팅 목적의 개인정보 수집 및 이용에 동의하지 않으셔도 되고, 그러한 경우, 마케팅 정보를 수령하실 수 없습니다.</p>
             </div>
           </li>
-          <li><input class="checkbox" type="checkbox" id="require3">
+          <li><input class="require" type="checkbox" id="require3">
             <label for="require3">
               마케팅 정보 수신에 동의합니다 (필수)
-            </label></li>
+            </label>
+          </li>
+            <li class="error-msg">이메일을 통한 광고성 정보 수신을 원하시는 경우 필수 항목입니다.</li>
           <li>
             <div class="contract2">
               <p>뉴스레터 이메일을 통한 광고성 정보 수신에 동의합니다.</p>
@@ -1028,11 +1040,13 @@
           </li>
           <li class="email">
             <div class="textbox">
-              <input type="text" placeholder="이메일 주소">
+              <input type="text" placeholder="이메일 주소" class="require">
             </div>
             
-            <span class="material-icons">arrow_forward</span>
+            <span class="material-icons border-wine" id="enterEmail">arrow_forward</span>
+            
           </li>
+          <li class="error-msg">유효한 이메일 주소를 입력하세요</li>
         </ul>
         <ul class="list">
           <li class="title">주문 및 지원</li>

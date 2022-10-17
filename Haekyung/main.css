@@ -67,7 +67,7 @@ body .msg img {
 /* HEADER */
 .header {
   /* position: fixed; */
-  z-index: 20;
+  z-index: 30;
   width: 100%;
   background-color: #333;
   color: #fffef2;
@@ -75,9 +75,11 @@ body .msg img {
 }
 .header.white-version {
   position: fixed;
+  top: 0;
   width: 100%;
   background-color: #fffef2;
   color: #333;
+  border-bottom: 0.5px solid rgba(51, 51, 51, 0.2);
 }
 .header .header-inner {
   height: 80px;
@@ -109,12 +111,11 @@ body .msg img {
   border: none;
   cursor: pointer;
 }
-.header .header-inner ul.menu li:last-child button {
+.header .header-inner ul.menu li button.h-btn.h-close {
   display: none;
 }
-.header .header-inner ul.menu li:last-child.open button {
+.header .header-inner ul.menu li button.h-btn.h-close.open {
   display: flex;
-  align-items: center;
 }
 .header .header-inner ul.login-menu {
   height: 80px;
@@ -182,7 +183,7 @@ body .msg img {
   margin-bottom: 30px;
 }
 .sec1 .inner .center-box a.btn--white {
-  width: 50%;
+  width: 70%;
   border: 1px solid #fffef2;
   padding: 19px 55px 19px 23px;
   text-decoration: none;
@@ -190,6 +191,11 @@ body .msg img {
   display: flex;
   align-items: center;
   position: relative;
+  transition: 0.5s;
+}
+.sec1 .inner .center-box a.btn--white:hover {
+  background-color: #fffef2;
+  color: #333;
 }
 .sec1 .inner .center-box .btn--white .btn--white--text {
   font-size: 14px;

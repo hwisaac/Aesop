@@ -83,89 +83,20 @@ window.addEventListener(
 /////////////////////////////////////////////////////////////////////// MODAL FOR HEADER MENUES
 const headerModalArea = document.querySelector('.section1 .header-modal');
 //// BUTTONS ELEMENT
-const skinCareBtnEl = document.querySelector(
-  '.section1 .header .left__list .skin-care'
-);
-const bodyHandBtnEl = document.querySelector(
-  '.section1 .header .left__list .body-hand'
-);
-const hairBtnEl = document.querySelector('.section1 .header .left__list .hair');
-const perfumeBtnEl = document.querySelector(
-  '.section1 .header .left__list .perfume'
-);
-const homeBtnEl = document.querySelector('.section1 .header .left__list .home');
-const kitBtnEl = document.querySelector('.section1 .header .left__list .kit');
-const giftBtnEl = document.querySelector('.section1 .header .left__list .gift');
-const readingBtnEl = document.querySelector(
-  '.section1 .header .left__list .reading'
-);
-const storeBtnEl = document.querySelector(
-  '.section1 .header .left__list .store'
-);
-const searchBtnEl = document.querySelector(
-  '.section1 .header .left__list .material-icons-search'
+const headerLeftBtnsEl = document.querySelectorAll(
+  '.section1 .header .left__list .left-menu-btn'
 );
 const headerCloseBtnEl = document.querySelector('#closeBtnInMenu');
-
 //// MODAL ELEMENTS
-const skinCareModalEl = document.querySelector('.section1 .skin-care-modal');
-const bodyHandModalEl = document.querySelector('.section1 .body-hand-modal');
-const hairModalEl = document.querySelector('.section1 .hair-modal');
-const perfumeModalEl = document.querySelector('.section1 .perfume-modal');
-const homeModalEl = document.querySelector('.section1 .home-modal');
-const kitModalEl = document.querySelector('.section1 .kit-modal');
-const giftModalEl = document.querySelector('.section1 .gift-modal');
-const readingModalEl = document.querySelector('.section1 .reading-modal');
-const storeModalEl = document.querySelector('.section1 .store-modal');
-const searchModalEl = document.querySelector('.section1 .search-modal');
 
-//위에 선언된 요소들을 리스트에 담기
-let headerMenuBools = [
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-];
-let headerMenuBtns = [
-  skinCareBtnEl,
-  bodyHandBtnEl,
-  hairBtnEl,
-  perfumeBtnEl,
-  homeBtnEl,
-  kitBtnEl,
-  giftBtnEl,
-  readingBtnEl,
-  storeBtnEl,
-  searchBtnEl,
-];
-let headerMenuContents = [
-  skinCareModalEl,
-  bodyHandModalEl,
-  hairModalEl,
-  perfumeModalEl,
-  homeModalEl,
-  kitModalEl,
-  giftModalEl,
-  readingModalEl,
-  storeModalEl,
-  searchModalEl,
-];
+const menuModalsEl = document.querySelectorAll(
+  '.section1 .header-modal__inner'
+);
 
 //  버튼bools를 false &  버튼들 active 제거 & 컨텐츠 모두 닫기 & 닫기 버튼 제거
 function turnOffAllHeaderMenu() {
-  for (let i = 0; i < headerMenuBools.length; i++) {
-    headerMenuBools[i] = false;
-  }
-  // headerMenuBools.forEach((bool) => (bool = false)); // bools false로 이상하게 작동 안하네?
-
-  headerMenuContents.forEach((content) => content.classList.remove('show')); // 컨텐츠 모두 제거
-  headerMenuBtns.forEach((btn) => btn.classList.remove('active')); // 모든 버튼 밑줄 제거
+  menuModalsEl.forEach((content) => content.classList.remove('show')); // 컨텐츠 모두 제거
+  headerLeftBtnsEl.forEach((btn) => btn.classList.remove('active')); // 모든 버튼 밑줄 제거
   headerCloseBtnEl.classList.remove('show'); // close 버튼 제거
 }
 
@@ -219,25 +150,41 @@ function handleMenuBtn() {
   //버튼에 active 클래스 달아서 밑줄 표시
   this.classList.add('active');
 
-  // boolean 값을 기반으로 헤더 매뉴를 on 또는 off
-  if (headerMenuBools[i]) {
+  // 모달에 show 클래스 달린 유무에 따라 on 또는 off
+  if (menuModalsEl[i].classList.contains('show')) {
     // true 인 경우(이미 켜진경우) 꺼준다.
     headerModalArea.classList.remove('show');
-    headerMenuContents[i].classList.remove('show');
+    menuModalsEl[i].classList.remove('show');
     headerCloseBtnEl.classList.remove('show');
   } else {
     //false 인 경우(안켜진 상태) 켜준다.
     headerModalArea.classList.add('show');
-    headerMenuContents[i].classList.add('show');
+    menuModalsEl[i].classList.add('show');
     headerCloseBtnEl.classList.add('show');
   }
 
-  headerMenuBools[i] = !headerMenuBools[i];
+  if (i >= 9) {
+    storeTextInputEls[i - 8].focus();
+  }
 }
 
 // 모든 헤더메뉴버튼에 클릭시 이벤트 리스너를 추가한다.
-headerMenuBtns.forEach((el) => el.addEventListener('click', handleMenuBtn));
+headerLeftBtnsEl.forEach((el) => el.addEventListener('click', handleMenuBtn));
 
+const storeTextBoxEls = document.querySelectorAll(
+  '.section1 .header-modal__inner .textbox'
+);
+const storeTextInputEls = document.querySelectorAll(
+  '.section1 .header-modal__inner .textbox input'
+);
+storeTextInputEls.forEach((el, index) => {
+  el.addEventListener('focus', () => {
+    storeTextBoxEls[index].style.borderBottom = '1px solid rgba(0,0,0)';
+  });
+  el.addEventListener('blur', () => {
+    storeTextBoxEls[index].style.borderBottom = '1px solid rgba(0,0,0,0.3)';
+  });
+});
 ///////////////////////////////////////////////////////////////////////////////////// Section 2
 
 //section2 버튼
@@ -312,6 +259,7 @@ console.log('s6 swiper');
 const s6_swiper = new Swiper('.section6 .swiper', {
   // observer: true,
   // observeParents: true,
+  autoplay: true,
   speed: 900,
   rewind: true,
   slidesPerView: 1,
@@ -361,9 +309,67 @@ const s6_colRight = document.querySelector('.section6 .col-right');
 s6_colRight.addEventListener('mouseover', () => {
   s6_nextBtnEl.classList.add('show');
   s6_prevBtnEl.classList.add('show');
+  s6_swiper.autoplay.stop();
 });
 
 s6_colRight.addEventListener('mouseout', () => {
   s6_nextBtnEl.classList.remove('show');
   s6_prevBtnEl.classList.remove('show');
+  s6_swiper.autoplay.start();
+});
+
+////////////////////////////////////////////////////////////////////// footer
+//require 요소들 : 조건
+const ft_requireEls = document.querySelectorAll('footer .require');
+// 에러메세지 요소들 : 조건이 안맞으면 띄움
+const ft_errMsgEls = document.querySelectorAll('footer .error-msg');
+// 이메일버튼
+const ft_emailBtnEl = document.querySelector('footer #enterEmail');
+const ft_emailEl = document.querySelector('footer .email');
+
+ft_emailBtnEl.addEventListener('click', () => {
+  for (let i = 0; i < 3; i++) {
+    if (ft_requireEls[i].checked) {
+      // 체크가 된 경우 display : none;
+      ft_errMsgEls[i].style.display = 'none';
+    } else {
+      // 체크 안된 경우 display 를 초기화 하여 나타냄
+      ft_errMsgEls[i].style.display = 'flex';
+    }
+  }
+  const textInput = ft_requireEls[3].value;
+  if (checkEmail(textInput)) {
+    //유효한 이메일이면 에러 없앰
+    ft_emailEl.classList.remove('border--wine');
+    ft_errMsgEls[3].style.display = 'none';
+  } else {
+    //입력한 메일이 유효하지 않으면 에러띄우기
+    ft_emailEl.classList.add('border--wine');
+    ft_errMsgEls[3].style.display = 'flex';
+  }
+});
+
+//이메일 유효 체크 함수
+function checkEmail(str) {
+  let reg_email =
+    /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+
+  if (!reg_email.test(str)) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+// 스크롤 효과
+
+const spyEls = document.querySelectorAll('.scroll-spy');
+console.log(spyEls, 'scroll 스파이');
+spyEls.forEach((el, i) => {
+  new ScrollMagic.Scene({
+    triggerElement: el, //감시할 요소
+    triggerHook: 0.8, //화면 80% 위치에 트리거
+  })
+    .setClassToggle(el, 'show') //show 를 토글
+    .addTo(new ScrollMagic.Controller());
 });

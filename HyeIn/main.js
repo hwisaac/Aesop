@@ -23,12 +23,13 @@ const gnbRead = document.querySelector(".head-read");
 const gnbReadCont = document.querySelector(".gnb-main-area.read");
 const gnbStore = document.querySelector(".head-store");
 const gnbStoreCont = document.querySelector(".gnb-main-area.store");
-const gnbSearch = document.querySelector(".head-search");
+const gnbSearch = document.querySelector(".head-search i");
 const gnbSearchCont = document.querySelector(".gnb-main-area.search");
 const gnbCloseBtn = document.querySelector(".head-close-btn");
 
 gnbSkin.addEventListener("click", (e) => {
   body.style.overflow = "hidden";
+  gnbCloseBtn.classList.add("active");
 
   gnbDepthAll.forEach((each) => {
     each.classList.remove("up");
@@ -43,6 +44,9 @@ gnbSkin.addEventListener("click", (e) => {
   }
 });
 gnbBody.addEventListener("click", (e) => {
+  body.style.overflow = "hidden";
+  gnbCloseBtn.classList.add("active");
+
   gnbDepthAll.forEach((each) => {
     each.classList.remove("up");
   });
@@ -56,6 +60,9 @@ gnbBody.addEventListener("click", (e) => {
   }
 });
 gnbHair.addEventListener("click", (e) => {
+  body.style.overflow = "hidden";
+  gnbCloseBtn.classList.add("active");
+
   gnbDepthAll.forEach((each) => {
     each.classList.remove("up");
   });
@@ -69,6 +76,9 @@ gnbHair.addEventListener("click", (e) => {
   }
 });
 gnbPerfume.addEventListener("click", (e) => {
+  body.style.overflow = "hidden";
+  gnbCloseBtn.classList.add("active");
+
   gnbDepthAll.forEach((each) => {
     each.classList.remove("up");
   });
@@ -82,19 +92,25 @@ gnbPerfume.addEventListener("click", (e) => {
   }
 });
 gnbHome.addEventListener("click", (e) => {
+  body.style.overflow = "hidden";
+  gnbCloseBtn.classList.add("active");
+
   gnbDepthAll.forEach((each) => {
     each.classList.remove("up");
   });
   if (e.target == gnbHome) {
     header.classList.add("fixed");
     gnbDepth.classList.add("open");
-    gnbPerfumeCont.classList.add("up");
+    gnbHomeCont.classList.add("up");
   } else {
     header.classList.remove("fixed");
     gnbDepth.classList.remove("open");
   }
 });
 gnbKit.addEventListener("click", (e) => {
+  body.style.overflow = "hidden";
+  gnbCloseBtn.classList.add("active");
+
   gnbDepthAll.forEach((each) => {
     each.classList.remove("up");
   });
@@ -108,6 +124,9 @@ gnbKit.addEventListener("click", (e) => {
   }
 });
 gnbGift.addEventListener("click", (e) => {
+  body.style.overflow = "hidden";
+  gnbCloseBtn.classList.add("active");
+
   gnbDepthAll.forEach((each) => {
     each.classList.remove("up");
   });
@@ -121,6 +140,9 @@ gnbGift.addEventListener("click", (e) => {
   }
 });
 gnbRead.addEventListener("click", (e) => {
+  body.style.overflow = "hidden";
+  gnbCloseBtn.classList.add("active");
+
   gnbDepthAll.forEach((each) => {
     each.classList.remove("up");
   });
@@ -134,6 +156,9 @@ gnbRead.addEventListener("click", (e) => {
   }
 });
 gnbStore.addEventListener("click", (e) => {
+  body.style.overflow = "hidden";
+  gnbCloseBtn.classList.add("active");
+
   gnbDepthAll.forEach((each) => {
     each.classList.remove("up");
   });
@@ -147,6 +172,9 @@ gnbStore.addEventListener("click", (e) => {
   }
 });
 gnbSearch.addEventListener("click", (e) => {
+  body.style.overflow = "hidden";
+  gnbCloseBtn.classList.add("active");
+
   gnbDepthAll.forEach((each) => {
     each.classList.remove("up");
   });
@@ -161,8 +189,13 @@ gnbSearch.addEventListener("click", (e) => {
 });
 
 gnbCloseBtn.addEventListener("click", (e) => {
+  gnbDepthAll.forEach((each) => {
+    each.classList.remove("up");
+  });
   header.classList.remove("fixed");
   gnbDepth.classList.remove("open");
+  gnbCloseBtn.classList.remove("active");
+  body.style.overflowY = "scroll";
 });
 
 /* HEADER-SCROLL */
@@ -172,11 +205,9 @@ addEventListener("scroll", () => {
   let scrollY = window.scrollY;
   if (scrollY < lastScrollY && scrollY > 40) {
     lastScrollY = scrollY;
-    console.log("스크롤업");
     header.classList.add("fixed");
   } else {
     lastScrollY = scrollY;
-    console.log("스크롤다운");
     header.classList.remove("fixed");
   }
   console.log(lastScrollY);
