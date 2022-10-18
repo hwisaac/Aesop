@@ -27,7 +27,7 @@ const removeOpens = function (except) {
   document.querySelector('.shipping-banner').style.display = 'none';
   document.querySelector('body').style.overflow = 'hidden';
   hModal.classList.add('on');
-  gsap.fromTo('.header-modal.on', 0.5, { scaleY: 0 }, { scaleY: 1 });
+  gsap.fromTo('.header-modal.on', 0.5, { height: 0, scaleY: 0 }, { scaleY: 1 });
   const opens = document.querySelectorAll('.open');
   opens.forEach((open) => open.classList.remove('open'));
   except.classList.add('open');
