@@ -56,7 +56,7 @@ window.addEventListener(
 
     console.log(_direction, window.scrollY); // 콘솔창에 스크롤 방향을 출력
 
-    if (window.scrollY === 0 /*&& !isMenuModalOpen */) {
+    if (window.scrollY === 0) {
       //최상단에 도착하면 모든 옵션 삭제
       removeHeaderOptions();
     } else if (_direction === 'down' && window.scrollY > 40 + 77) {
@@ -338,6 +338,7 @@ ft_emailBtnEl.addEventListener('click', () => {
     }
   }
   const textInput = ft_requireEls[3].value;
+  console.dir(ft_requireEls[3]);
   if (checkEmail(textInput)) {
     //유효한 이메일이면 에러 없앰
     ft_emailEl.classList.remove('border--wine');
