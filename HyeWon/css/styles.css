@@ -1021,7 +1021,7 @@ h3 {
 /* Footer */
 #footer {
   padding: 50px 40px;
-  height: 780px;
+  /* height: 780px; */
   background-color: var(--color-dark-gray);
   color: var(--color-light-white);
   font-size: var(--font-regular);
@@ -1109,6 +1109,10 @@ h3 {
   padding: 1px 2px;
 }
 
+#footer .container.first .first__info .first__info--toggle .last-input-box.border--red {
+  border: 1px solid #ea6956;
+}
+
 #footer .container.first .first__info .first__info--toggle .last-input-box input {
   outline: none;
   border: none;
@@ -1119,9 +1123,14 @@ h3 {
   margin-top: 0;
   height: 37px;
   border-right: 1px solid var(--color-light-white);
+  color: var(--color-light-white);
 }
 
-#footer .container.first .first__info .first__info--toggle .input-email input::placeholder {
+#footer .container.first .first__info .first__info--toggle .last-input-box.border--red input {
+  border-right: 1px solid #ea6956;
+}
+
+#footer .container.first .first__info .first__info--toggle .last-input-box input::placeholder {
   color: var(--color-light-white);
 }
 
@@ -1159,6 +1168,14 @@ h3 {
   height: 72px;
   background-color: var(--color-dark-gray);
   color: var(--color-light-white);
+  font-size: 16px;
+}
+
+#footer .check-msg {
+  display: none;
+  position: relative;
+  color: #ea6956;
+  margin: 10px 0;
   font-size: 16px;
 }
 

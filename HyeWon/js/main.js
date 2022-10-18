@@ -340,6 +340,54 @@ window.addEventListener(
       // 원래 Gnb가 위치한 자리에 도달하면 Gnb를 속성값 제거 및 absolute 변경
       gnbBox.classList.remove('gnb--white');
       gnbBox.style.position = 'absolute';
+    } else if (wheel < 0) {
+      gnbBox.style.position = 'absolute';
     }
   }, 10)
 );
+
+// Footer
+const emailInputEl = document.querySelector('#footer #newsletter-email');
+
+// 이메일주소 Input이 focused 될때, placehoder 제거
+emailInputEl.addEventListener('focus', () => {
+  emailInputEl.removeAttribute('placeholder', '이메일주소');
+});
+
+// 이메일주소 Input이 focus가 해제 될때, placehoder 제거
+emailInputEl.addEventListener('blur', () => {
+  emailInputEl.setAttribute('placeholder', '이메일주소');
+});
+
+// 제어요소
+const checkinputEls = document.querySelectorAll('#footer .check');
+// 체크박스 체크하지 않았을경우, check message 띄움
+const checkMsgEls = document.querySelectorAll('#footer .check-msg');
+
+const emailEl = document.querySelector('#footer .last-input-box');
+const emailBtnEl = emailEl.querySelector('.email-btn');
+emailBtnEl.addEventListener('click', () => {
+  console.log('click');
+  checkinputEls.forEach((inputBoxEl, index) => {
+    if (checkinputEls[index].checked) {
+      checkMsgEls[index].style.display = 'none';
+      emailEl.classList.remove('border--red');
+    } else {
+      checkMsgEls[index].style.display = 'block';
+      emailEl.classList.add('border--red');
+    }
+  });
+  email();
+});
+
+//
+function email() {
+  const x = document.querySelector('#footer #newsletter-email');
+  if (x.required) {
+    x.classList.remove('border--red');
+  } else {
+    x.classList.add('border--red');
+  }
+}
+
+emailBtnEl.addEventListener('click', email);
