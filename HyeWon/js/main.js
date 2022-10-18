@@ -144,8 +144,7 @@ const gnbContainer = document.querySelector('.gnb .gnb-container');
 const gnbBox = document.querySelector('.gnb .gnb-box');
 const gnbModals = document.querySelectorAll('.gnb-item .gnb-modal');
 
-// 내코드
-
+// SkinCar category
 const openSkinCare = () => {
   gnbModals.forEach((gnbModal) => {
     gnbModal.classList.remove('open');
@@ -162,6 +161,7 @@ const openSkinCare = () => {
 };
 skinCareEl.addEventListener('click', openSkinCare);
 
+// BodyHand category
 const openBodyHand = () => {
   gnbModals.forEach((gnbModal) => {
     gnbModal.classList.remove('open');
@@ -176,6 +176,7 @@ const openBodyHand = () => {
 };
 bodyHandEl.addEventListener('click', openBodyHand);
 
+// Hair category
 const openHair = () => {
   gnbModals.forEach((gnbModal) => {
     gnbModal.classList.remove('open');
@@ -190,6 +191,7 @@ const openHair = () => {
 };
 hairEl.addEventListener('click', openHair);
 
+// Perfume categoty
 const openPerfume = () => {
   gnbModals.forEach((gnbModal) => {
     gnbModal.classList.remove('open');
@@ -205,6 +207,7 @@ const openPerfume = () => {
 };
 perfumeEl.addEventListener('click', openPerfume);
 
+// Home categoty
 const openHome = () => {
   gnbModals.forEach((gnbModal) => {
     gnbModal.classList.remove('open');
@@ -220,6 +223,7 @@ const openHome = () => {
 };
 homeEl.addEventListener('click', openHome);
 
+// Kit categoty
 const openKit = () => {
   gnbModals.forEach((gnbModal) => {
     gnbModal.classList.remove('open');
@@ -235,6 +239,7 @@ const openKit = () => {
 };
 kitEl.addEventListener('click', openKit);
 
+// Gift categoty
 const openGift = () => {
   gnbModals.forEach((gnbModal) => {
     gnbModal.classList.remove('open');
@@ -250,6 +255,7 @@ const openGift = () => {
 };
 giftEl.addEventListener('click', openGift);
 
+// Reading categoty
 const openReading = () => {
   gnbModals.forEach((gnbModal) => {
     gnbModal.classList.remove('open');
@@ -265,6 +271,7 @@ const openReading = () => {
 };
 readingEl.addEventListener('click', openReading);
 
+// Store categoty
 const openStore = () => {
   gnbModals.forEach((gnbModal) => {
     gnbModal.classList.remove('open');
@@ -280,6 +287,7 @@ const openStore = () => {
 };
 storeEl.addEventListener('click', openStore);
 
+// Search categoty
 const openSearch = () => {
   gnbModals.forEach((gnbModal) => {
     gnbModal.classList.remove('open');
@@ -295,6 +303,7 @@ const openSearch = () => {
 };
 searchEl.addEventListener('click', openSearch);
 
+// close button
 const closeGnbModal = () => {
   closeBtn.classList.add('hidden');
   if (closeBtn.classList.contains('hidden')) {
@@ -308,7 +317,7 @@ const closeGnbModal = () => {
 };
 closeBtn.addEventListener('click', closeGnbModal);
 
-// Gnb 효과 속성값 제거 및 변경
+// Gnb 효과 속성값 제거 및 변경
 function removeGnbBoxEffect() {
   gnbBox.classList.remove('header--white');
   gnbBox.style.position = 'absolute';
@@ -327,7 +336,7 @@ window.addEventListener(
       // Gnb가 보이지 않을때, Gnb를 흰색으로 변경 및 fixed 시킴
       gnbBox.classList.add('gnb--white');
       gnbBox.style.position = 'fixed';
-    } else if (wheel > 0 && window.scrollY < 60) {
+    } else if (wheel > 0 && window.scrollY < 55) {
       // 원래 Gnb가 위치한 자리에 도달하면 Gnb를 속성값 제거 및 absolute 변경
       gnbBox.classList.remove('gnb--white');
       gnbBox.style.position = 'absolute';
