@@ -90,6 +90,7 @@ gnbBody.addEventListener("click", (e) => {
     });
   });
 });
+3;
 gnbHair.addEventListener("click", (e) => {
   body.style.overflow = "hidden";
   gnbCloseBtn.classList.add("active");
@@ -363,16 +364,21 @@ window.addEventListener("click", (e) => {
 /* HEADER-SCROLL */
 let lastScrollY = 0;
 
-window.addEventListener("scroll", () => {
-  let scrollY = window.scrollY;
-  if (scrollY < lastScrollY && scrollY > 40) {
-    lastScrollY = scrollY;
+addEventListener("scroll", (e) => {
+  const scrollY = window.scrollY;
+  const direction = scrollY > lastScrollY ? "Scroll Down" : "Scroll Up";
+  lastScrollY = scrollY;
+
+  if (direction == "Scroll Up" && scrollY > 40) {
     header.classList.add("scroll--fixed");
     header.style.top = 0;
-  } else {
-    lastScrollY = scrollY;
+  } else if (header.classList.contains("fixed")) {
     header.classList.remove("scroll--fixed");
-    /* header.style.top = -80 + "px"; */
+  } else if (direction == "Scroll Down") {
+    header.classList.remove("scroll--fixed");
+    header.style.top = -80 + "px";
+  } else {
+    header.classList.remove("scroll--fixed");
   }
 });
 
